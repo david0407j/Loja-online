@@ -5,6 +5,12 @@ FROM python:${PYTHON_VERSION}
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
+# install psycopg2 dependencies.
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN mkdir -p /code
 
 WORKDIR /code
@@ -13,6 +19,9 @@ RUN pip install pipenv
 COPY Pipfile Pipfile.lock /code/
 RUN pipenv install --deploy --system
 COPY . /code
+
+ENV SECRET_KEY "a8sLisigyGhzPadltvWNXZ27EAO8bL53wD2MSN99JjK873P7Xy"
+RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
 

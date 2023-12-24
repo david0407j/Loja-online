@@ -1,13 +1,16 @@
-# fly.toml app configuration file generated for loja-online-1 on 2023-12-22T23:50:00-03:00
+# fly.toml app configuration file generated for loja-online-1-muddy-leaf-2236 on 2023-12-24T13:09:51-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "loja-online-1"
+app = "loja-online-1-muddy-leaf-2236"
 primary_region = "gru"
 console_command = "/code/manage.py shell"
 
 [build]
+
+[deploy]
+  release_command = "python manage.py migrate --noinput"
 
 [env]
   PORT = "8000"
