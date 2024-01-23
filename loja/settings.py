@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'collectfast',
+    
     'loja.base'
 ]
 
@@ -80,6 +81,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'loja.wsgi.application'
 
 # configuração Debug Tollbar
+
 INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')
 
 if DEBUG:
