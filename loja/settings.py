@@ -45,8 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'collectfast',
-    
-    'loja.base'
+    'loja.base',
+    'loja.aperitivos',
 ]
 
 MIDDLEWARE = [
