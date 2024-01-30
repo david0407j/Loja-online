@@ -1,10 +1,7 @@
 {
     "python.testing.pytestArgs": [
-        "loja"
+        "."
     ],
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
-    "cSpell.words": [
-        "aperitivos"
-    ]
+    "python.testing.pytestEnabled": true
 }

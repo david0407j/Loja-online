@@ -4,11 +4,31 @@ import pytest
 
 
 @pytest.fixture
+
 def resp(client):
     return client.get(reverse('aperitivos:masculino', args=('masculino',)))
+
+
+def test_titulo_Masculino(resp):
+   assert_contains(resp, 'Reizinho-imports' )
+
+
 
 def test_status_code(resp):
     assert resp.status_code == 200
 
-def test_titulo_Masculino(resp):
-   assert_contains(resp, '<h1>masculino aperitivos: masculino</h1>' )
+def test_conteudo_link(resp):
+    assert_contains(resp, 'href="http://127.0.0.1:8000/"')
+
+
+
+def test_Produtos_Carrinho(resp):
+   assert_contains(resp, 'Produtos importados' )
+
+
+
+
+
+
+
+
