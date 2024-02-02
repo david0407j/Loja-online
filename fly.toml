@@ -1,19 +1,21 @@
-# fly.toml app configuration file generated for loja-online-1-muddy-leaf-2236 on 2023-12-24T13:09:51-03:00
+# fly.toml app configuration file generated for loja-online-1-patient-waterfall-4667-hidden-hill-1854 on 2024-01-31T12:04:15-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "loja-online-1-muddy-leaf-2236"
-primary_region = "gru"
-console_command = "/code/manage.py shell"
+app = 'loja-online-1-patient-waterfall-4667-hidden-hill-1854'
+primary_region = 'gru'
+console_command = '/code/manage.py shell'
 
 [build]
 
 [deploy]
-  release_command = "python manage.py migrate --noinput"
+release_command = "./pos-release.sh"
+
+  
 
 [env]
-  PORT = "8000"
+  PORT = '8000'
 
 [http_service]
   internal_port = 8000
@@ -21,13 +23,13 @@ console_command = "/code/manage.py shell"
   auto_stop_machines = true
   auto_start_machines = true
   min_machines_running = 0
-  processes = ["app"]
+  processes = ['app']
 
 [[vm]]
-  cpu_kind = "shared"
+  cpu_kind = 'shared'
   cpus = 1
   memory_mb = 1024
 
 [[statics]]
-  guest_path = "/code/static"
-  url_prefix = "/static/"
+  guest_path = '/code/static'
+  url_prefix = '/static/'

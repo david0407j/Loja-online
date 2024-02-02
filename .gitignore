@@ -132,7 +132,6 @@ venv.bak/
 
 # postgres file  for local developemnt
 .pgdata
-
 # Spyder project settings
 .spyderproject
 .spyproject

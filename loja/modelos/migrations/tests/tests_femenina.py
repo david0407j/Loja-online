@@ -6,11 +6,11 @@ import pytest
 @pytest.fixture
 
 def resp(client):
-    return client.get(reverse('aperitivos:masculino', args=('masculino',)))
+    return client.get(reverse('modelos:femenina', args=('femenina',)))
 
 
 def test_titulo_Masculino(resp):
-   assert_contains(resp, 'masculino' )
+   assert_contains(resp, 'femenina' )
 
 
 
@@ -20,11 +20,3 @@ def test_status_code(resp):
 
 def test_Produtos_Carrinho(resp):
    assert_contains(resp, 'Produtos importados' )
-
-
-
-
-
-
-
-

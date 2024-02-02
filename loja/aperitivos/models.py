@@ -3,10 +3,13 @@ from django.urls import reverse
 
 
 class masculino(models.Model):
-    titulo = models.CharField(max_length=32)
-    slug = models.SlugField(max_length=32)
+    produtos = models.CharField(max_length=32)
+    camisa= models.SlugField(max_length=32)
     masculino = models.CharField(max_length=32)
-   
-def get_absolute_url(self):
+    creation = models.DateTimeField(auto_now_add=True)
+
+    def get_absolute_url(self):
         return reverse('aperitivos:masculino', args=(self.slug,))
 
+    def __str__(self):
+        return f'masculino:{self.produtos}'

@@ -4,3 +4,7 @@ def masculino(request, slug):
     return render(request, 'aperitivos/masculino.html')
 
 
+
+
+
+

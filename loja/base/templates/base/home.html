@@ -1,142 +1,54 @@
+{% extends 'base/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
+<title>{% block title %}Reizinho-imports- home{% endblock title %}</title>
+{% block body %}
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <h5 class="card-header">
+                    O sucesso é a soma de pequenos esforços repetidos dia após dia.
+                </h5>
+                <p class="card-text">
+                    <img src="{% static 'img/xereu.ico' %}" alt="Foto Reizinho"
+                        class="img-thumbnail float-left mr-3" />
+                    instagram da loja
+                    <a href="https://www.instagram.com/reizinhoimportsofc?igsh=NTJvcWVqY2tlcGIz"
+                        target="_blank">Reizinho-importe</a>
+                    <img src="{% static 'img/reizinho.ico' %}" class="img-fluid" alt="...">
+                    O empreendedorismo é o processo de identificar oportunidades, desenvolver ideias inovadoras e
+                    criar valor por meio da implementação dessas ideias. Os empreendedores são indivíduos
+                    visionários que estão dispostos a assumir riscos, enfrentar desafios e buscar soluções criativas
+                    para problemas.
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    O empreendedorismo envolve a capacidade de liderança, a habilidade de tomar decisões
+                    estratégicas e a determinação de perseverar diante das adversidades. Os empreendedores são
+                    agentes de mudança que buscam impactar positivamente suas comunidades e o mundo ao seu redor.
 
-    <title>Reizinho-imports</title>
-    <meta name="description" content="">
-    <meta name="author" content="Reizinho">
-    <link rel="icon" href="{% static 'img/xereu.ico' %}" />
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/css/style.css" rel="stylesheet">
-    <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/scripts.js"></script>
-</head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-<!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/styles.css" rel="stylesheet" />
-</head>
+                    Além disso, o empreendedorismo promove a inovação, o crescimento econômico e a criação de
+                    empregos. Os empreendedores desempenham um papel crucial no desenvolvimento de novas
+                    tecnologias, produtos e serviços que melhoram a qualidade de vida das pessoas.
 
-<body>
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container px-4 px-lg-5">
-    <a class="navbar-brand" href="">Pagina Inicial</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-        class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/aperitivos/masculino">Masculino</a></li>
-        <li class="nav-item"><a class="nav-link" href="#!">Feminino</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">Produtos</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#!">Tenis</a></li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            <li><a class="dropdown-item" href="#!">Bones Perfumes</a></li>
-            <li><a class="dropdown-item" href="#!">:jaquetas Meia</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-dark" type="submit">
-          <i class="bi-cart-fill me-1"></i>
-          Carrinho
-          <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-        </button>
-      </form>
-    </div>
-  </div>
-</nav>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'base:home' %}">Reizinho-importe</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-    <div class="jumbotron">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <h5 class="card-header">
-                        O sucesso é a soma de pequenos esforços repetidos dia após dia.
-                    </h5>
-                    <p class="card-text">
-                        <img src="{% static 'img/xereu.ico' %}" alt="Foto Reizinho"
-                            class="img-thumbnail float-left mr-3" />
-                        instagram da loja
-                        <a href="https://www.instagram.com/reizinhoimportsofc?igsh=NTJvcWVqY2tlcGIz"
-                            target="_blank">Reizinho-importe</a>
-                        <img src="{% static 'img/reizinho.ico' %}" class="img-fluid" alt="...">
-                        O empreendedorismo é o processo de identificar oportunidades, desenvolver ideias inovadoras e
-                        criar valor por meio da implementação dessas ideias. Os empreendedores são indivíduos
-                        visionários que estão dispostos a assumir riscos, enfrentar desafios e buscar soluções criativas
-                        para problemas.
-
-                        O empreendedorismo envolve a capacidade de liderança, a habilidade de tomar decisões
-                        estratégicas e a determinação de perseverar diante das adversidades. Os empreendedores são
-                        agentes de mudança que buscam impactar positivamente suas comunidades e o mundo ao seu redor.
-
-                        Além disso, o empreendedorismo promove a inovação, o crescimento econômico e a criação de
-                        empregos. Os empreendedores desempenham um papel crucial no desenvolvimento de novas
-                        tecnologias, produtos e serviços que melhoram a qualidade de vida das pessoas.
-
-                        Em resumo, o empreendedorismo é uma força dinâmica que impulsiona o progresso e a inovação em
-                        todas as áreas da sociedade, contribuindo para um futuro mais próspero e sustentável.
-                    </p>
-                    <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Produtos da Loja</h1>
-                </div>
-                <img src="{% static 'img/tenis.ico' %}" class="rounded float-start" alt="Tenis"><img
-                    src="{% static 'img/bone.ico' %}" class="rounded float-start" alt="bone">
-                <img src="{% static 'img/calçao.ico' %}" class="rounded float-end" alt="calção"><img
-                    src="{% static 'img/jaqueta.ico' %}" class="rounded float-end" alt="jaqueta">
-                <img src="{% static 'img/meia.ico' %}" class="rounded float-start" alt="meia"><img
-                    src="{% static 'img/basquete.ico' %}" class="rounded float-start" alt="basquete">
-                <img src="{% static 'img/perfume.ico' %}" class="rounded float-end" alt="perfume"><img
-                    src="{% static 'img/feminino.ico' %}" class="rounded float-end" alt="Feminina">
-                <img src="{% static 'img/tenis2.ico' %}" class="rounded float-start" alt="tenis2"><img
-                    src="{% static 'img/mila.ico' %}" class="rounded float-start" alt="mila">
-                  <img  src="{% static 'img/flamengo.ico' %}" class="rounded float-start" alt="flamengo">
-
-
+                    Em resumo, o empreendedorismo é uma força dinâmica que impulsiona o progresso e a inovação em
+                    todas as áreas da sociedade, contribuindo para um futuro mais próspero e sustentável.
+                </p>
+                <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Produtos da Loja</h1>
             </div>
+            <img src="{% static 'img/tenis.ico' %}" class="rounded float-start" alt="Tenis"><img
+                src="{% static 'img/bone.ico' %}" class="rounded float-start" alt="bone">
+            <img src="{% static 'img/calçao.ico' %}" class="rounded float-end" alt="calção"><img
+                src="{% static 'img/jaqueta.ico' %}" class="rounded float-end" alt="jaqueta">
+            <img src="{% static 'img/meia.ico' %}" class="rounded float-start" alt="meia"><img
+                src="{% static 'img/basquete.ico' %}" class="rounded float-start" alt="basquete">
+            <img src="{% static 'img/perfume.ico' %}" class="rounded float-end" alt="perfume"><img
+                src="{% static 'img/feminino.ico' %}" class="rounded float-end" alt="Feminina">
+            <img src="{% static 'img/tenis2.ico' %}" class="rounded float-start" alt="tenis2"><img
+                src="{% static 'img/mila.ico' %}" class="rounded float-start" alt="mila">
+              <img  src="{% static 'img/flamengo.ico' %}" class="rounded float-start" alt="flamengo">
+
+
         </div>
     </div>
-    </div>
-
-    <footer class="main-footer mt-5 pt-4 text-light">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h3>Entre em Contato</h3>
-                    <address>
-                        +55 31 999877987
-                        <br/>
-                        <a href="https://mail.google.com/mail/u/0/#inbox" class="text-light">djunio239@gmail.com</a>
-                    </address>
-                </div>
-            </div>
-        </div>
-        <div class="rights pb-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        {% now 'Y' %} Python Pro. Todos direitos reservados.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
+</div>
+</div>
+{% endblock body %}
