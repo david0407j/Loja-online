@@ -14,15 +14,13 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir -p /code
 
 WORKDIR /code
+RUN pip install pipenv
+COPY Pipfile Pipfile.lock /code/
+RUN pipenv install --deploy --system
 
-COPY requirements.txt /tmp/requirements.txt
-RUN set -ex && \
-    pip install --upgrade pip && \
-    pip install -r /tmp/requirements.txt && \
-    rm -rf /root/.cache/
 COPY . /code
 
 EXPOSE 8000
 
 # TODO: replace demo.wsgi with <project_name>.wsgi
-CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "demo.wsgi"]
+CMD ["gunicorn", "--bind", ":8000", "--workers", "2", "loja.wsgi"]

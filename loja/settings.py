@@ -14,6 +14,8 @@ import os
 from functools import partial
 import dj_database_url
 from decouple import config, Csv
+from sentry_sdk.integrations.django import DjangoIntegration
+import sentry_sdk
 
 
 
@@ -49,6 +51,7 @@ INSTALLED_APPS = [
     'loja.aperitivos',
     'loja.modelos',
     'loja.produtos',
+    
 ]
 
 MIDDLEWARE = [
@@ -193,6 +196,5 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 SENTRY_DSN = config('SENTRY_DSN', default=None)
-
 if SENTRY_DSN:
     sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])
