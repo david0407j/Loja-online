@@ -95,11 +95,566 @@
         "documentation": {}
     },
     {
-        "label": "HttpResponse",
-        "importPath": "django.http ",
-        "description": "django.http ",
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
         "isExtraImport": true,
-        "detail": "django.http ",
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "assert_contains",
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "isExtraImport": true,
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
+        "label": "assert_contains",
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "isExtraImport": true,
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
+        "label": "assert_contains",
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "isExtraImport": true,
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
+        "label": "assert_contains",
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "isExtraImport": true,
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
+        "label": "assert_contains",
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "isExtraImport": true,
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "ModelAdmin",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Masculino",
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "Masculino",
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "masculino",
+        "importPath": "loja.aperitivos.views",
+        "description": "loja.aperitivos.views",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.views",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "loja.base.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "loja.base.models",
+        "description": "loja.base.models",
+        "detail": "loja.base.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "loja.base.models",
+        "description": "loja.base.models",
+        "isExtraImport": true,
+        "detail": "loja.base.models",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "IS_POPUP_VAR",
+        "importPath": "django.contrib.admin.options",
+        "description": "django.contrib.admin.options",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin.options",
+        "documentation": {}
+    },
+    {
+        "label": "unquote",
+        "importPath": "django.contrib.admin.utils",
+        "description": "django.contrib.admin.utils",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin.utils",
+        "documentation": {}
+    },
+    {
+        "label": "update_session_auth_hash",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "AdminPasswordChangeForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserChangeForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionDenied",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponseRedirect",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateResponse",
+        "importPath": "django.template.response",
+        "description": "django.template.response",
+        "isExtraImport": true,
+        "detail": "django.template.response",
+        "documentation": {}
+    },
+    {
+        "label": "method_decorator",
+        "importPath": "django.utils.decorators",
+        "description": "django.utils.decorators",
+        "isExtraImport": true,
+        "detail": "django.utils.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "escape",
+        "importPath": "django.utils.html",
+        "description": "django.utils.html",
+        "isExtraImport": true,
+        "detail": "django.utils.html",
+        "documentation": {}
+    },
+    {
+        "label": "gettext",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_protect",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "sensitive_post_parameters",
+        "importPath": "django.views.decorators.debug",
+        "description": "django.views.decorators.debug",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.debug",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractBaseUser",
+        "importPath": "django.contrib.auth.base_user",
+        "description": "django.contrib.auth.base_user",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.base_user",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.base_user",
+        "description": "django.contrib.auth.base_user",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.base_user",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionsMixin",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "importPath": "loja.base.views",
+        "description": "loja.base.views",
+        "isExtraImport": true,
+        "detail": "loja.base.views",
+        "documentation": {}
+    },
+    {
+        "label": "femenina",
+        "importPath": "loja.modelos.views",
+        "description": "loja.modelos.views",
+        "isExtraImport": true,
+        "detail": "loja.modelos.views",
+        "documentation": {}
+    },
+    {
+        "label": "outros",
+        "importPath": "loja.produtos.views",
+        "description": "loja.produtos.views",
+        "isExtraImport": true,
+        "detail": "loja.produtos.views",
         "documentation": {}
     },
     {
@@ -108,6 +663,14 @@
         "description": "django.core.asgi",
         "isExtraImport": true,
         "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -144,27 +707,20 @@
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
+        "label": "DjangoIntegration",
+        "importPath": "sentry_sdk.integrations.django",
+        "description": "sentry_sdk.integrations.django",
         "isExtraImport": true,
-        "detail": "django.contrib",
+        "detail": "sentry_sdk.integrations.django",
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "sentry_sdk",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "home",
-        "importPath": "loja.base.views",
-        "description": "loja.base.views",
-        "isExtraImport": true,
-        "detail": "loja.base.views",
+        "importPath": "sentry_sdk",
+        "description": "sentry_sdk",
+        "detail": "sentry_sdk",
         "documentation": {}
     },
     {
@@ -180,7 +736,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-1\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-2\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -189,7 +745,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-1\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-2\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -198,7 +754,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-1\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-2\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -207,7 +763,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-1\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-2\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -216,7 +772,7 @@
         "kind": 5,
         "importPath": ".venv.bin.activate_this",
         "description": ".venv.bin.activate_this",
-        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-1\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"loja-online-2\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.7/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path.decode(\"utf-8\") if \"\" else path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
         "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
@@ -266,12 +822,426 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.aperitivos.migrations.0001_initial",
+        "description": "loja.aperitivos.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Masculino',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('produto', models.CharField(max_length=32)),",
+        "detail": "loja.aperitivos.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "resp",
+        "kind": 2,
+        "importPath": "loja.aperitivos.tests.tests_masculino",
+        "description": "loja.aperitivos.tests.tests_masculino",
+        "peekOfCode": "def resp(client):\n    return client.get(reverse('aperitivos:masculino', args=('masculino',)))\ndef test_titulo_Masculino(resp):\n   assert_contains(resp, 'masculino' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.aperitivos.tests.tests_masculino",
+        "documentation": {}
+    },
+    {
+        "label": "test_titulo_Masculino",
+        "kind": 2,
+        "importPath": "loja.aperitivos.tests.tests_masculino",
+        "description": "loja.aperitivos.tests.tests_masculino",
+        "peekOfCode": "def test_titulo_Masculino(resp):\n   assert_contains(resp, 'masculino' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.aperitivos.tests.tests_masculino",
+        "documentation": {}
+    },
+    {
+        "label": "test_status_code",
+        "kind": 2,
+        "importPath": "loja.aperitivos.tests.tests_masculino",
+        "description": "loja.aperitivos.tests.tests_masculino",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.aperitivos.tests.tests_masculino",
+        "documentation": {}
+    },
+    {
+        "label": "test_Produtos_Carrinho",
+        "kind": 2,
+        "importPath": "loja.aperitivos.tests.tests_masculino",
+        "description": "loja.aperitivos.tests.tests_masculino",
+        "peekOfCode": "def test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.aperitivos.tests.tests_masculino",
+        "documentation": {}
+    },
+    {
+        "label": "MasculinoAdmin",
+        "kind": 6,
+        "importPath": "loja.aperitivos.admin",
+        "description": "loja.aperitivos.admin",
+        "peekOfCode": "class MasculinoAdmin(ModelAdmin):\n    pass",
+        "detail": "loja.aperitivos.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Masculino",
+        "kind": 6,
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "peekOfCode": "class Masculino(models.Model):\n    produto = models.CharField(max_length=32)\n    nome = models.SlugField(max_length=32)\n    preco = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    descricao = models.TextField(null=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('aperitivos:masculino', args=(self.slug,))\n    def __str__(self):",
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "loja.aperitivos.urls",
+        "description": "loja.aperitivos.urls",
+        "peekOfCode": "app_name = 'aperitivos'\nurlpatterns = [\n    path('<slug:nome>', masculino, name='masculino'),\n]",
+        "detail": "loja.aperitivos.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "loja.aperitivos.urls",
+        "description": "loja.aperitivos.urls",
+        "peekOfCode": "urlpatterns = [\n    path('<slug:nome>', masculino, name='masculino'),\n]",
+        "detail": "loja.aperitivos.urls",
+        "documentation": {}
+    },
+    {
+        "label": "masculino",
+        "kind": 2,
+        "importPath": "loja.aperitivos.views",
+        "description": "loja.aperitivos.views",
+        "peekOfCode": "def masculino(request, nome):\n    masculinos = Masculino.objects.all()\n    return render(request, 'aperitivos/masculino.html', context={'masculinos': masculinos})",
+        "detail": "loja.aperitivos.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.base.migrations.0001_initial",
+        "description": "loja.base.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "loja.base.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "resp",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def resp(client):\n   resp = client.get(reverse('base:home'))\n   return resp\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>' )\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_status_code",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>' )\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_title",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>' )\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')\ndef test_conteudo_link_home(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/\"')",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_home_link",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')\ndef test_conteudo_link_home(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/\"')\ndef test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_conteudo_link",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')\ndef test_conteudo_link_home(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/\"')\ndef test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_email",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')\ndef test_conteudo_link_home(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/\"')\ndef test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_conteudo_link_home",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_conteudo_link_home(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/\"')\ndef test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_conteudo_link_modelos",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_conteudo_link",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "kind": 6,
+        "importPath": "loja.base.admin",
+        "description": "loja.base.admin",
+        "peekOfCode": "class UserAdmin(admin.ModelAdmin):\n    add_form_template = \"admin/auth/user/add_form.html\"\n    change_user_password_template = None\n    fieldsets = (\n        (None, {\"fields\": (\"first_name\", \"email\", \"password\")}),\n        (\n            _(\"Permissions\"),\n            {\n                \"fields\": (\n                    \"is_active\",",
+        "detail": "loja.base.admin",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_protect_m",
+        "kind": 5,
+        "importPath": "loja.base.admin",
+        "description": "loja.base.admin",
+        "peekOfCode": "csrf_protect_m = method_decorator(csrf_protect)\nsensitive_post_parameters_m = method_decorator(sensitive_post_parameters())\n@admin.register(User)\nclass UserAdmin(admin.ModelAdmin):\n    add_form_template = \"admin/auth/user/add_form.html\"\n    change_user_password_template = None\n    fieldsets = (\n        (None, {\"fields\": (\"first_name\", \"email\", \"password\")}),\n        (\n            _(\"Permissions\"),",
+        "detail": "loja.base.admin",
+        "documentation": {}
+    },
+    {
+        "label": "sensitive_post_parameters_m",
+        "kind": 5,
+        "importPath": "loja.base.admin",
+        "description": "loja.base.admin",
+        "peekOfCode": "sensitive_post_parameters_m = method_decorator(sensitive_post_parameters())\n@admin.register(User)\nclass UserAdmin(admin.ModelAdmin):\n    add_form_template = \"admin/auth/user/add_form.html\"\n    change_user_password_template = None\n    fieldsets = (\n        (None, {\"fields\": (\"first_name\", \"email\", \"password\")}),\n        (\n            _(\"Permissions\"),\n            {",
+        "detail": "loja.base.admin",
+        "documentation": {}
+    },
+    {
+        "label": "UserManager",
+        "kind": 6,
+        "importPath": "loja.base.models",
+        "description": "loja.base.models",
+        "peekOfCode": "class UserManager(BaseUserManager):\n    use_in_migrations = True\n    def _create_user(self, email, password, **extra_fields):\n        \"\"\"\n        Create and save a user with the given email, and password.\n        \"\"\"\n        if not email:\n            raise ValueError('The given email must be set')\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)",
+        "detail": "loja.base.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "loja.base.models",
+        "description": "loja.base.models",
+        "peekOfCode": "class User(AbstractBaseUser, PermissionsMixin):\n    \"\"\"\n    app base User class\n    Email and password are required. Other fields are optional.\n    \"\"\"\n    first_name = models.CharField(_(\"first name\"), max_length=150, blank=True)\n    email = models.EmailField(_(\"email address\"), unique=True)\n    is_staff = models.BooleanField(\n        _(\"staff status\"),\n        default=False,",
+        "detail": "loja.base.models",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "loja.base.urls",
+        "description": "loja.base.urls",
+        "peekOfCode": "app_name = 'base'\nurlpatterns = [\n    path('', home, name='home'),\n]",
+        "detail": "loja.base.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "loja.base.urls",
+        "description": "loja.base.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', home, name='home'),\n]",
+        "detail": "loja.base.urls",
+        "documentation": {}
+    },
+    {
         "label": "home",
         "kind": 2,
         "importPath": "loja.base.views",
         "description": "loja.base.views",
-        "peekOfCode": "def home(request):\n    return HttpResponse('ola mundo ')",
+        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')",
         "detail": "loja.base.views",
+        "documentation": {}
+    },
+    {
+        "label": "resp",
+        "kind": 2,
+        "importPath": "loja.modelos.migrations.tests.tests_femenina",
+        "description": "loja.modelos.migrations.tests.tests_femenina",
+        "peekOfCode": "def resp(client):\n    return client.get(reverse('modelos:femenina', args=('femenina',)))\ndef test_titulo_Masculino(resp):\n   assert_contains(resp, 'femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.migrations.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "test_titulo_Masculino",
+        "kind": 2,
+        "importPath": "loja.modelos.migrations.tests.tests_femenina",
+        "description": "loja.modelos.migrations.tests.tests_femenina",
+        "peekOfCode": "def test_titulo_Masculino(resp):\n   assert_contains(resp, 'femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.migrations.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "test_status_code",
+        "kind": 2,
+        "importPath": "loja.modelos.migrations.tests.tests_femenina",
+        "description": "loja.modelos.migrations.tests.tests_femenina",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.migrations.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "test_Produtos_Carrinho",
+        "kind": 2,
+        "importPath": "loja.modelos.migrations.tests.tests_femenina",
+        "description": "loja.modelos.migrations.tests.tests_femenina",
+        "peekOfCode": "def test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.migrations.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "resp",
+        "kind": 2,
+        "importPath": "loja.modelos.tests.tests_femenina",
+        "description": "loja.modelos.tests.tests_femenina",
+        "peekOfCode": "def resp(client):\n    return client.get(reverse('modelos:femenina', args=('femenina',)))\ndef test_femenina(resp):\n   assert_contains(resp, 'femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "test_femenina",
+        "kind": 2,
+        "importPath": "loja.modelos.tests.tests_femenina",
+        "description": "loja.modelos.tests.tests_femenina",
+        "peekOfCode": "def test_femenina(resp):\n   assert_contains(resp, 'femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "test_status_code",
+        "kind": 2,
+        "importPath": "loja.modelos.tests.tests_femenina",
+        "description": "loja.modelos.tests.tests_femenina",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "test_titulo_produtos",
+        "kind": 2,
+        "importPath": "loja.modelos.tests.tests_femenina",
+        "description": "loja.modelos.tests.tests_femenina",
+        "peekOfCode": "def test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "loja.modelos.urls",
+        "description": "loja.modelos.urls",
+        "peekOfCode": "app_name = 'modelos'\nurlpatterns = [\n    path('<slug:slug>', femenina, name='femenina'),\n]",
+        "detail": "loja.modelos.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "loja.modelos.urls",
+        "description": "loja.modelos.urls",
+        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', femenina, name='femenina'),\n]",
+        "detail": "loja.modelos.urls",
+        "documentation": {}
+    },
+    {
+        "label": "femenina",
+        "kind": 2,
+        "importPath": "loja.modelos.views",
+        "description": "loja.modelos.views",
+        "peekOfCode": "def femenina(request, slug):\n    return render(request, 'modolos/femenina.html')",
+        "detail": "loja.modelos.views",
+        "documentation": {}
+    },
+    {
+        "label": "resp",
+        "kind": 2,
+        "importPath": "loja.produtos.templates.produtos.tests.tests_outros",
+        "description": "loja.produtos.templates.produtos.tests.tests_outros",
+        "peekOfCode": "def resp(client):\n    return client.get(reverse('produtos:outros', args=('outros',)))\ndef test_titulo_Masculino(resp):\n   assert_contains(resp, 'outros' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_(resp):\n   assert_contains(resp, 'Variedades de Produtos' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.produtos.templates.produtos.tests.tests_outros",
+        "documentation": {}
+    },
+    {
+        "label": "test_titulo_Masculino",
+        "kind": 2,
+        "importPath": "loja.produtos.templates.produtos.tests.tests_outros",
+        "description": "loja.produtos.templates.produtos.tests.tests_outros",
+        "peekOfCode": "def test_titulo_Masculino(resp):\n   assert_contains(resp, 'outros' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_(resp):\n   assert_contains(resp, 'Variedades de Produtos' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.produtos.templates.produtos.tests.tests_outros",
+        "documentation": {}
+    },
+    {
+        "label": "test_status_code",
+        "kind": 2,
+        "importPath": "loja.produtos.templates.produtos.tests.tests_outros",
+        "description": "loja.produtos.templates.produtos.tests.tests_outros",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_(resp):\n   assert_contains(resp, 'Variedades de Produtos' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.produtos.templates.produtos.tests.tests_outros",
+        "documentation": {}
+    },
+    {
+        "label": "test_Produtos_",
+        "kind": 2,
+        "importPath": "loja.produtos.templates.produtos.tests.tests_outros",
+        "description": "loja.produtos.templates.produtos.tests.tests_outros",
+        "peekOfCode": "def test_Produtos_(resp):\n   assert_contains(resp, 'Variedades de Produtos' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.produtos.templates.produtos.tests.tests_outros",
+        "documentation": {}
+    },
+    {
+        "label": "test_titulo",
+        "kind": 2,
+        "importPath": "loja.produtos.templates.produtos.tests.tests_outros",
+        "description": "loja.produtos.templates.produtos.tests.tests_outros",
+        "peekOfCode": "def test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.produtos.templates.produtos.tests.tests_outros",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "loja.produtos.urls",
+        "description": "loja.produtos.urls",
+        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('<slug:slug>', outros, name='outros'),\n]",
+        "detail": "loja.produtos.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "loja.produtos.urls",
+        "description": "loja.produtos.urls",
+        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', outros, name='outros'),\n]",
+        "detail": "loja.produtos.urls",
+        "documentation": {}
+    },
+    {
+        "label": "outros",
+        "kind": 2,
+        "importPath": "loja.produtos.views",
+        "description": "loja.produtos.views",
+        "peekOfCode": "def outros(request, slug):\n    return render(request, 'produtos/outros.html')",
+        "detail": "loja.produtos.views",
         "documentation": {}
     },
     {
@@ -284,11 +1254,38 @@
         "documentation": {}
     },
     {
+        "label": "_test_case",
+        "kind": 5,
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "peekOfCode": "_test_case = TestCase()\nassert_contains = _test_case.assertContains\nassert_not_contains = _test_case.assertNotContains",
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
+        "label": "assert_contains",
+        "kind": 5,
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "peekOfCode": "assert_contains = _test_case.assertContains\nassert_not_contains = _test_case.assertNotContains",
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
+        "label": "assert_not_contains",
+        "kind": 5,
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "peekOfCode": "assert_not_contains = _test_case.assertNotContains",
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
         "label": "BASE_DIR",
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\n# Application definition",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -297,7 +1294,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -306,7 +1303,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -315,7 +1312,16 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'loja.base'",
+        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "loja.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "loja.settings",
+        "description": "loja.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -324,7 +1330,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'loja.base'\n]\nMIDDLEWARE = [",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',\n    'loja.base',\n    'loja.aperitivos',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -540,7 +1546,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', home),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('aperitivos/', include('loja.aperitivos.urls')),\n    path('modelos/', include('loja.modelos.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n]\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(",
         "detail": "loja.urls",
         "documentation": {}
     },

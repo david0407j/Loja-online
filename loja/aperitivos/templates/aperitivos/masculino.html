@@ -13,210 +13,28 @@
     </div>
   </header>
   <!-- Section-->
-  <section class="py-5">
-    <div class="container px-4 px-lg-5 mt-5">
-      <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Product image-->
-            <img class="card-img-top" src="{% static 'img/Arsenal.ico' %}" alt="Arsenal" />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Arsenal</h5>
-                <!-- Product price-->
-                $180.00
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="">add no Carrinho</a></div>
+  {% for masculino in masculinos %}
+  <div class="container px-4 px-lg-5 mt-5">
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+      <div class="col mb-5">
+        <div class="card h-100">
+          <!-- Product image-->
+          <img class="card-img-top" src="{{'masculino.img.url'}}" alt="Arsenal" />
+          <!-- Product details-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Product name-->
+              <h5 class="fw-bolder">Arsenal</h5>
+              <!-- Product price-->
+              $180.00
             </div>
           </div>
-        </div>
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Sale badge-->
-            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Modelo jogador </div>
-            <!-- Product image-->
-            <img class="card-img-top" src="{% static 'img/cruzeiro.ico' %}" alt="cruzeiro" />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Cruzeiro</h5>
-                <!-- Product reviews-->
-                <div class="d-flex justify-content-center small text-warning mb-2">
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                </div>
-                <!-- Product price-->
-                <span class="text-muted text-decoration-line-through"></span>
-                220.00
-                
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="">Add no Carrinho</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Sale badge-->
-            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Modelo jogador</div>
-            <!-- Product image-->
-            <img class="card-img-top" src="{% static 'img/real.ico' %}" alt="Real" />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Real Madrid</h5>
-                <!-- Product price-->
-                <span class="text-muted text-decoration-line-through"></span>
-                $200.00
-                
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add no Carrinho</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Product image-->
-            <img class="card-img-top" src="{% static 'img/hh.ico' %}" alt="Manchester united" />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Manchester united</h5>
-                <!-- Product reviews-->
-                <div class="d-flex justify-content-center small text-warning mb-2">
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                </div>
-                <!-- Product price-->
-                $140.00
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add no Carrinho</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Sale badge-->
-            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Modelo jogador</div>
-            <!-- Product image-->
-            <img class="card-img-top" src="{% static 'img/psg.ico' %}" alt="Psg" />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Paris saint-germain</h5>
-                <!-- Product price-->
-                <span class="text-muted text-decoration-line-through"></span>
-                $150.00
-                
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add no Carrinho</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Product image-->
-            <img class="card-img-top" src="{% static 'img/galo.ico' %}" alt="Galo" />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Atletico mg</h5>
-                <!-- Product price-->
-                $280.00
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">add no Carrinho</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Sale badge-->
-            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Modelo jogador</div>
-            <!-- Product image-->
-            <img class="card-img-top" src="{% static 'img/ADM.ico' %}" alt="Atletico madrid" />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Atletico madrid</h5>
-                <!-- Product reviews-->
-                <div class="d-flex justify-content-center small text-warning mb-2">
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                </div>
-                <!-- Product price-->
-                <span class="text-muted text-decoration-line-through"></span>
-                $220.00
-                
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add no Carrinho</a></div>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-5">
-          <div class="card h-100">
-            <!-- Product image-->
-            <img class="card-img-top" src="{% static 'img/mila.ico' %}" alt="Mila " />
-            <!-- Product details-->
-            <div class="card-body p-4">
-              <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder">Mila</h5>
-                <!-- Product reviews-->
-                <div class="d-flex justify-content-center small text-warning mb-2">
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                  <div class="bi-star-fill"></div>
-                </div>
-                <!-- Product price-->
-                $140.00
-              </div>
-            </div>
-            <!-- Product actions-->
-            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add no Carrinho</a></div>
-            </div>
+          <!-- Product actions-->
+          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="">add no Carrinho</a></div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+  </div>
+  {% endfor %}
 {% endblock body %}

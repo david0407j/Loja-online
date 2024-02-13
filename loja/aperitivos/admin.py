@@ -1,9 +1,10 @@
 
 from django.contrib.admin import ModelAdmin, register
 
-from loja.aperitivos.models import produtos
+from loja.aperitivos.models import Masculino
 
 
-@register(produtos)
-class produtosAdmin(ModelAdmin):
+@register(Masculino)
+class MasculinoAdmin(ModelAdmin):
     pass
+  
