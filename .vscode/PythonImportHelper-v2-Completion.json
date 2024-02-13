@@ -724,6 +724,14 @@
         "documentation": {}
     },
     {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -1420,7 +1428,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'pt-br'\nTIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
+        "peekOfCode": "LANGUAGE_CODE = 'pt-br'\nTIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1429,7 +1437,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'",
+        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1438,7 +1446,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1447,7 +1455,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1456,7 +1464,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')\nCOLLECTFAST_ENABLED = False",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1465,7 +1473,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1474,7 +1482,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1483,7 +1491,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1492,7 +1500,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }\n    AWS_PRELOAD_METADATA = True",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }\n    AWS_PRELOAD_METADATA = True",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1501,7 +1509,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }\n    AWS_PRELOAD_METADATA = True\n    AWS_AUTO_CREATE_BUCKET = False",
+        "peekOfCode": "AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }\n    AWS_PRELOAD_METADATA = True\n    AWS_AUTO_CREATE_BUCKET = False",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1546,7 +1554,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('aperitivos/', include('loja.aperitivos.urls')),\n    path('modelos/', include('loja.modelos.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n]\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('aperitivos/', include('loja.aperitivos.urls')),\n    path('modelos/', include('loja.modelos.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(",
         "detail": "loja.urls",
         "documentation": {}
     },
