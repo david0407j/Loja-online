@@ -16,4 +16,4 @@ class Masculino(models.Model):
         return reverse('aperitivos:masculino', args=(self.slug,))
 
     def __str__(self):
-        return f'camisa:{self.produto}'
+        return f'material:{self.produto}'
