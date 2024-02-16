@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from loja.modelos.models import Femenina
+
 
 def femenina(request, slug):
-    return render(request, 'modolos/femenina.html')
+    femenina = Femenina.objects.all()
+    return render(request, 'modelos/femenina.html', context={'femenina': femenina})

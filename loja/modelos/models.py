@@ -2,9 +2,7 @@ from django.db import models
 from django.urls import reverse
 
 
-
-
-class Masculino(models.Model):
+class Femenina(models.Model):
     produto = models.CharField(max_length=32)
     nome = models.SlugField(max_length=32)
     preco = models.CharField(max_length=32)
@@ -16,4 +14,4 @@ class Masculino(models.Model):
         return reverse('aperitivos:masculino', args=(self.slug,))
 
     def __str__(self):
-        return f'Camiseta:{self.produto}'
+        return f'Camisete:{self.produto}'
