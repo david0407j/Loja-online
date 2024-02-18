@@ -5,5 +5,5 @@ from loja.produtos.views import outros
 
 app_name = 'produtos'
 urlpatterns = [
-    path('<slug:slug>', outros, name='outros'),
+    path('<slug:nome>', outros, name='outros'),
 ]

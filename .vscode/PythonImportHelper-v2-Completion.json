@@ -191,7 +191,47 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -239,22 +279,6 @@
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
         "label": "reverse",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -272,6 +296,14 @@
     },
     {
         "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -357,6 +389,22 @@
         "importPath": "pytest",
         "description": "pytest",
         "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "ModelAdmin",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
         "documentation": {}
     },
     {
@@ -719,6 +767,22 @@
         "description": "loja.modelos.models",
         "isExtraImport": true,
         "detail": "loja.modelos.models",
+        "documentation": {}
+    },
+    {
+        "label": "Variedade",
+        "importPath": "loja.produtos.models",
+        "description": "loja.produtos.models",
+        "isExtraImport": true,
+        "detail": "loja.produtos.models",
+        "documentation": {}
+    },
+    {
+        "label": "Variedade",
+        "importPath": "loja.produtos.models",
+        "description": "loja.produtos.models",
+        "isExtraImport": true,
+        "detail": "loja.produtos.models",
         "documentation": {}
     },
     {
@@ -1289,6 +1353,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0001_initial",
+        "description": "loja.produtos.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Variedade',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('produto', models.CharField(max_length=32)),",
+        "detail": "loja.produtos.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
         "label": "resp",
         "kind": 2,
         "importPath": "loja.produtos.templates.produtos.tests.tests_outros",
@@ -1334,11 +1407,29 @@
         "documentation": {}
     },
     {
+        "label": "VariedadeAdmin",
+        "kind": 6,
+        "importPath": "loja.produtos.admin",
+        "description": "loja.produtos.admin",
+        "peekOfCode": "class VariedadeAdmin(ModelAdmin):\n    pass",
+        "detail": "loja.produtos.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Variedade",
+        "kind": 6,
+        "importPath": "loja.produtos.models",
+        "description": "loja.produtos.models",
+        "peekOfCode": "class Variedade(models.Model):\n    produto = models.CharField(max_length=32)\n    nome = models.SlugField(max_length=32)\n    preco = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    descricao = models.TextField(null=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('aperitivos:masculino', args=(self.slug,))\n    def __str__(self):",
+        "detail": "loja.produtos.models",
+        "documentation": {}
+    },
+    {
         "label": "app_name",
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('<slug:slug>', outros, name='outros'),\n]",
+        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('<slug:nome>', outros, name='outros'),\n]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1347,7 +1438,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', outros, name='outros'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('<slug:nome>', outros, name='outros'),\n]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1356,7 +1447,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def outros(request, slug):\n    return render(request, 'produtos/outros.html')",
+        "peekOfCode": "def outros(request, nome):\n    variedade = Variedade.objects.all()\n    return render(request, 'produtos/outros.html', context={'variedade': variedade})",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
