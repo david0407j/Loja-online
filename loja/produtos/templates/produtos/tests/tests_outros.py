@@ -4,7 +4,6 @@ import pytest
 
 
 @pytest.fixture
-
 def resp(client):
     return client.get(reverse('produtos:outros', args=('outros',)))
 

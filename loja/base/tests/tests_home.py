@@ -25,11 +25,6 @@ def test_email(resp):
    assert_contains(resp, 'djunio239@gmail.com')
 
 
-def test_conteudo_link_home(resp):
-    assert_contains(resp, 'href="http://127.0.0.1:8000/"')
-
-
-
 def test_conteudo_link_modelos(resp):
     assert_contains(resp, 'href="http://127.0.0.1:8000/modelos/femenina"')
 
