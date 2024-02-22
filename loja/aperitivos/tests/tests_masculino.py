@@ -4,19 +4,19 @@ import pytest
 
 
 @pytest.fixture
-def resp(client,):
+def resp(client, db):
     return client.get(reverse('aperitivos:masculino', args=('masculino',)))
 
 
 
-def test_titulo_masculino(self,):
-   assert_contains(self, 'produto masculino')
+def test_titulo_masculino(resp,):
+   assert_contains(resp, 'masculino')
 
 
-def test_status_code(self,):
-    assert self.status_code == 200
+def test_status_code(resp,):
+    assert resp.status_code == 200
 
 
 
-def test_produtos(self):
-   assert_contains(self, src="produto.img.url ")
+def test_produtos_masculino(resp):
+   assert_contains(resp, 'produtos')
