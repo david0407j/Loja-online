@@ -2,18 +2,21 @@ from django.urls import reverse
 from loja.django_assertions import assert_contains
 import pytest
 
+
 @pytest.fixture
 def resp(client,):
     return client.get(reverse('aperitivos:masculino', args=('masculino',)))
 
 
-def test_titulo_Masculino(resp):
-   assert_contains(resp, 'Mas' )
+
+def test_titulo_masculino(self,):
+   assert_contains(self, 'produto masculino')
 
 
-def test_status_code(resp):
-    assert resp.status_code == 200
+def test_status_code(self,):
+    assert self.status_code == 200
 
 
-def test_Produtos_Carrinho(resp):
-   assert_contains(resp, 'Produtos importados' )
+
+def test_produtos(self):
+   assert_contains(self, src="produto.img.url ")

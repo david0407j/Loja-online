@@ -5,24 +5,24 @@ import pytest
 
 @pytest.fixture
 def resp(client):
-    return client.get(reverse('produtos:outros', args=('outros',)))
-
-
-def test_titulo_Masculino(resp):
-   assert_contains(resp, 'outros' )
+    return client.get(reverse('produto:outros', args=('outros',)))
 
 
 
 def test_status_code(resp):
     assert resp.status_code == 200
 
-
-def test_Produtos_(resp):
-   assert_contains(resp, 'Variedades de Produtos' )
-
-
-
 def test_titulo(resp):
+   assert_contains(resp, 'outros' )
+
+
+
+def test_produtos_(resp):
+   assert_contains(resp, 'variedades produtos' )
+
+
+
+def test_titulo_importados(resp):
    assert_contains(resp, 'Produtos importados' )
 
 
