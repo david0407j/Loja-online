@@ -129,7 +129,6 @@ env.bak/
 venv.bak/
 .pytest_cache
 
-
 # postgres file  for local developemnt
 .pgdata
 # Spyder project settings
