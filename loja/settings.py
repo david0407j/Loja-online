@@ -49,7 +49,6 @@ INSTALLED_APPS = [
     'collectfast',
     'loja.base',
     'loja.aperitivos',
-    'loja.modelos',
     'loja.produtos',
     
     

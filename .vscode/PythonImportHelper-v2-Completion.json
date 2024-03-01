@@ -94,6 +94,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -142,14 +158,6 @@
         "documentation": {}
     },
     {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -207,30 +215,6 @@
     },
     {
         "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -318,14 +302,6 @@
         "documentation": {}
     },
     {
-        "label": "assert_contains",
-        "importPath": "loja.django_assertions",
-        "description": "loja.django_assertions",
-        "isExtraImport": true,
-        "detail": "loja.django_assertions",
-        "documentation": {}
-    },
-    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
@@ -367,23 +343,7 @@
         "documentation": {}
     },
     {
-        "label": "ModelAdmin",
-        "importPath": "django.contrib.admin",
-        "description": "django.contrib.admin",
-        "isExtraImport": true,
-        "detail": "django.contrib.admin",
-        "documentation": {}
-    },
-    {
-        "label": "register",
-        "importPath": "django.contrib.admin",
-        "description": "django.contrib.admin",
-        "isExtraImport": true,
-        "detail": "django.contrib.admin",
-        "documentation": {}
-    },
-    {
-        "label": "Masculino",
+        "label": "Categoria",
         "importPath": "loja.aperitivos.models",
         "description": "loja.aperitivos.models",
         "isExtraImport": true,
@@ -391,11 +351,35 @@
         "documentation": {}
     },
     {
-        "label": "Masculino",
+        "label": "Produto",
         "importPath": "loja.aperitivos.models",
         "description": "loja.aperitivos.models",
         "isExtraImport": true,
         "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "Categoria",
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "Produto",
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "feminina",
+        "importPath": "loja.aperitivos.views",
+        "description": "loja.aperitivos.views",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.views",
         "documentation": {}
     },
     {
@@ -404,14 +388,6 @@
         "description": "loja.aperitivos.views",
         "isExtraImport": true,
         "detail": "loja.aperitivos.views",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -689,30 +665,6 @@
         "documentation": {}
     },
     {
-        "label": "Femenina",
-        "importPath": "loja.modelos.views",
-        "description": "loja.modelos.views",
-        "isExtraImport": true,
-        "detail": "loja.modelos.views",
-        "documentation": {}
-    },
-    {
-        "label": "femenina",
-        "importPath": "loja.modelos.views",
-        "description": "loja.modelos.views",
-        "isExtraImport": true,
-        "detail": "loja.modelos.views",
-        "documentation": {}
-    },
-    {
-        "label": "Femenina",
-        "importPath": "loja.modelos.models",
-        "description": "loja.modelos.models",
-        "isExtraImport": true,
-        "detail": "loja.modelos.models",
-        "documentation": {}
-    },
-    {
         "label": "Variedade",
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
@@ -918,6 +870,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.aperitivos.migrations.0002_categoria_produto_delete_masculino",
+        "description": "loja.aperitivos.migrations.0002_categoria_produto_delete_masculino",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('aperitivos', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Categoria',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=32)),",
+        "detail": "loja.aperitivos.migrations.0002_categoria_produto_delete_masculino",
+        "documentation": {}
+    },
+    {
         "label": "resp",
         "kind": 2,
         "importPath": "loja.aperitivos.tests.tests_masculino",
@@ -954,20 +915,38 @@
         "documentation": {}
     },
     {
-        "label": "MasculinoAdmin",
+        "label": "ProdutoAdmin",
         "kind": 6,
         "importPath": "loja.aperitivos.admin",
         "description": "loja.aperitivos.admin",
-        "peekOfCode": "class MasculinoAdmin(ModelAdmin):\n    pass",
+        "peekOfCode": "class ProdutoAdmin(ModelAdmin):\n    pass\n@register(Categoria)\nclass CategoriaAdmin(ModelAdmin):\n    pass",
         "detail": "loja.aperitivos.admin",
         "documentation": {}
     },
     {
-        "label": "Masculino",
+        "label": "CategoriaAdmin",
+        "kind": 6,
+        "importPath": "loja.aperitivos.admin",
+        "description": "loja.aperitivos.admin",
+        "peekOfCode": "class CategoriaAdmin(ModelAdmin):\n    pass",
+        "detail": "loja.aperitivos.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Produto",
         "kind": 6,
         "importPath": "loja.aperitivos.models",
         "description": "loja.aperitivos.models",
-        "peekOfCode": "class Masculino(models.Model):\n    produto = models.CharField(max_length=32)\n    nome = models.SlugField(max_length=32)\n    preco = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    descricao = models.TextField(null=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('aperitivos:masculino', args=(self.slug,))\n    def __str__(self):",
+        "peekOfCode": "class Produto(models.Model):\n    name = models.CharField(max_length=32)\n    slug = models.SlugField(max_length=32)\n    price = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('aperitivos:masculino', args=(self.slug,))\n    def __str__(self):\n        return f'Time:{self.name}'",
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "Categoria",
+        "kind": 6,
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "peekOfCode": "class Categoria(models.Model):\n    name = models.CharField(max_length=32)\n    slug = models.SlugField(max_length=32)\n    valor = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('aperitivos:femenino', args=(self.slug,))\n    def __str__(self):\n        return f'Time:{self.name}'",
         "detail": "loja.aperitivos.models",
         "documentation": {}
     },
@@ -976,7 +955,7 @@
         "kind": 5,
         "importPath": "loja.aperitivos.urls",
         "description": "loja.aperitivos.urls",
-        "peekOfCode": "app_name = 'aperitivos'\nurlpatterns = [\n    path('<slug:nome>', masculino, name='masculino'),\n]",
+        "peekOfCode": "app_name = 'aperitivos'\nurlpatterns = [\n    path('<slug:slug>', masculino, name='masculino'),\n    path('', feminina, name='masculino'),\n]",
         "detail": "loja.aperitivos.urls",
         "documentation": {}
     },
@@ -985,7 +964,7 @@
         "kind": 5,
         "importPath": "loja.aperitivos.urls",
         "description": "loja.aperitivos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('<slug:nome>', masculino, name='masculino'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', masculino, name='masculino'),\n    path('', feminina, name='masculino'),\n]",
         "detail": "loja.aperitivos.urls",
         "documentation": {}
     },
@@ -994,7 +973,16 @@
         "kind": 2,
         "importPath": "loja.aperitivos.views",
         "description": "loja.aperitivos.views",
-        "peekOfCode": "def masculino(request, nome):\n    masculinos = Masculino.objects.all()\n    return render(request, 'aperitivos/masculino.html', context={'masculinos': masculinos})",
+        "peekOfCode": "def masculino(request, slug):\n    masculinos = Produto.objects.all()\n    return render(request, 'aperitivos/masculino.html', context={'masculinos': masculinos})\ndef feminina(request):\n    feminina = Categoria.objects.all()\n    return render(request, 'aperitivos/feminina.html', context={'feminina': feminina})",
+        "detail": "loja.aperitivos.views",
+        "documentation": {}
+    },
+    {
+        "label": "feminina",
+        "kind": 2,
+        "importPath": "loja.aperitivos.views",
+        "description": "loja.aperitivos.views",
+        "peekOfCode": "def feminina(request):\n    feminina = Categoria.objects.all()\n    return render(request, 'aperitivos/feminina.html', context={'feminina': feminina})",
         "detail": "loja.aperitivos.views",
         "documentation": {}
     },
@@ -1149,87 +1137,6 @@
         "description": "loja.base.views",
         "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')",
         "detail": "loja.base.views",
-        "documentation": {}
-    },
-    {
-        "label": "resp",
-        "kind": 2,
-        "importPath": "loja.modelos.tests.tests_femenina",
-        "description": "loja.modelos.tests.tests_femenina",
-        "peekOfCode": "def resp(client, db):\n    return client.get(reverse('modelos:  femenina', args=(' produtos femenina',)))\ndef test_femenina(resp):\n   assert_contains(resp, 'produto femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.modelos.tests.tests_femenina",
-        "documentation": {}
-    },
-    {
-        "label": "test_femenina",
-        "kind": 2,
-        "importPath": "loja.modelos.tests.tests_femenina",
-        "description": "loja.modelos.tests.tests_femenina",
-        "peekOfCode": "def test_femenina(resp):\n   assert_contains(resp, 'produto femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.modelos.tests.tests_femenina",
-        "documentation": {}
-    },
-    {
-        "label": "test_status_code",
-        "kind": 2,
-        "importPath": "loja.modelos.tests.tests_femenina",
-        "description": "loja.modelos.tests.tests_femenina",
-        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.modelos.tests.tests_femenina",
-        "documentation": {}
-    },
-    {
-        "label": "test_titulo_produtos",
-        "kind": 2,
-        "importPath": "loja.modelos.tests.tests_femenina",
-        "description": "loja.modelos.tests.tests_femenina",
-        "peekOfCode": "def test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.modelos.tests.tests_femenina",
-        "documentation": {}
-    },
-    {
-        "label": "FemeninaAdmin",
-        "kind": 6,
-        "importPath": "loja.modelos.admin",
-        "description": "loja.modelos.admin",
-        "peekOfCode": "class FemeninaAdmin(ModelAdmin):\n    pass",
-        "detail": "loja.modelos.admin",
-        "documentation": {}
-    },
-    {
-        "label": "Femenina",
-        "kind": 6,
-        "importPath": "loja.modelos.models",
-        "description": "loja.modelos.models",
-        "peekOfCode": "class Femenina(models.Model):\n    produto = models.CharField(max_length=32)\n    nome = models.SlugField(max_length=32)\n    preco = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    descricao = models.TextField(null=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('aperitivos:masculino', args=(self.slug,))\n    def __str__(self):",
-        "detail": "loja.modelos.models",
-        "documentation": {}
-    },
-    {
-        "label": "app_name",
-        "kind": 5,
-        "importPath": "loja.modelos.urls",
-        "description": "loja.modelos.urls",
-        "peekOfCode": "app_name = 'modelos'\nurlpatterns = [\n    path('<slug:slug>', femenina, name='femenina'),\n]",
-        "detail": "loja.modelos.urls",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "loja.modelos.urls",
-        "description": "loja.modelos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', femenina, name='femenina'),\n]",
-        "detail": "loja.modelos.urls",
-        "documentation": {}
-    },
-    {
-        "label": "femenina",
-        "kind": 2,
-        "importPath": "loja.modelos.views",
-        "description": "loja.modelos.views",
-        "peekOfCode": "def femenina(request, slug):\n    femenina = Femenina.objects.all()\n    return render(request, 'modelos/femenina.html', context={'femenina': femenina})",
-        "detail": "loja.modelos.views",
         "documentation": {}
     },
     {
@@ -1633,7 +1540,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('aperitivos/', include('loja.aperitivos.urls')),\n    path('modelos/', include('loja.modelos.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('aperitivos/', include('loja.aperitivos.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(\n        path('__debug__/', include(debug_toolbar.urls))",
         "detail": "loja.urls",
         "documentation": {}
     },
