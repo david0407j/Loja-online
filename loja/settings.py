@@ -48,7 +48,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'collectfast',
     'loja.base',
-    'loja.vendas',
+    'loja.aperitivos',
+    'loja.modelos',
+    'loja.produtos',
     
     
 ]
