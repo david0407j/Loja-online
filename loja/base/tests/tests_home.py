@@ -22,10 +22,10 @@ def test_conteudo_link(resp):
 
 
 def test_email(resp):
-   assert_contains(resp, 'djunio239@gmail.com')
+   assert_contains(resp, 'reizinhomp@gmail.com')
 
 
-def test_conteudo_link_modelos(resp):
+def test_conteudo_link_infatil(resp):
     assert_contains(resp, 'href="http://127.0.0.1:8000/modelos/femenina"')
 
 

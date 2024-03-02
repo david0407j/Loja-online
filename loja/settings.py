@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'loja.base',
     'loja.aperitivos',
     'loja.produtos',
+    'loja.modelos'
     
     
 ]

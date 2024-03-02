@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from loja.aperitivos.models import Categoria, Produto
+from loja.aperitivos.models import  Produto
 
 
 def masculino(request, slug):
@@ -7,6 +7,3 @@ def masculino(request, slug):
     return render(request, 'aperitivos/masculino.html', context={'masculinos': masculinos})
 
 
-def feminina(request):
-    feminina = Categoria.objects.all()
-    return render(request, 'aperitivos/feminina.html', context={'feminina': feminina})

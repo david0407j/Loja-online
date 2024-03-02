@@ -110,6 +110,14 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -174,6 +182,46 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -215,6 +263,30 @@
     },
     {
         "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -302,6 +374,14 @@
         "documentation": {}
     },
     {
+        "label": "assert_contains",
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "isExtraImport": true,
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
@@ -343,7 +423,23 @@
         "documentation": {}
     },
     {
-        "label": "Categoria",
+        "label": "ModelAdmin",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Produto",
         "importPath": "loja.aperitivos.models",
         "description": "loja.aperitivos.models",
         "isExtraImport": true,
@@ -356,30 +452,6 @@
         "description": "loja.aperitivos.models",
         "isExtraImport": true,
         "detail": "loja.aperitivos.models",
-        "documentation": {}
-    },
-    {
-        "label": "Categoria",
-        "importPath": "loja.aperitivos.models",
-        "description": "loja.aperitivos.models",
-        "isExtraImport": true,
-        "detail": "loja.aperitivos.models",
-        "documentation": {}
-    },
-    {
-        "label": "Produto",
-        "importPath": "loja.aperitivos.models",
-        "description": "loja.aperitivos.models",
-        "isExtraImport": true,
-        "detail": "loja.aperitivos.models",
-        "documentation": {}
-    },
-    {
-        "label": "feminina",
-        "importPath": "loja.aperitivos.views",
-        "description": "loja.aperitivos.views",
-        "isExtraImport": true,
-        "detail": "loja.aperitivos.views",
         "documentation": {}
     },
     {
@@ -388,6 +460,14 @@
         "description": "loja.aperitivos.views",
         "isExtraImport": true,
         "detail": "loja.aperitivos.views",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -665,11 +745,27 @@
         "documentation": {}
     },
     {
-        "label": "Variedade",
-        "importPath": "loja.produtos.models",
-        "description": "loja.produtos.models",
+        "label": "Categoria",
+        "importPath": "loja.modelos.views",
+        "description": "loja.modelos.views",
         "isExtraImport": true,
-        "detail": "loja.produtos.models",
+        "detail": "loja.modelos.views",
+        "documentation": {}
+    },
+    {
+        "label": "infantil",
+        "importPath": "loja.modelos.views",
+        "description": "loja.modelos.views",
+        "isExtraImport": true,
+        "detail": "loja.modelos.views",
+        "documentation": {}
+    },
+    {
+        "label": "Categoria",
+        "importPath": "loja.modelos.models",
+        "description": "loja.modelos.models",
+        "isExtraImport": true,
+        "detail": "loja.modelos.models",
         "documentation": {}
     },
     {
@@ -681,7 +777,15 @@
         "documentation": {}
     },
     {
-        "label": "outros",
+        "label": "Variedade",
+        "importPath": "loja.produtos.models",
+        "description": "loja.produtos.models",
+        "isExtraImport": true,
+        "detail": "loja.produtos.models",
+        "documentation": {}
+    },
+    {
+        "label": "variedade",
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
         "isExtraImport": true,
@@ -879,39 +983,48 @@
         "documentation": {}
     },
     {
-        "label": "resp",
-        "kind": 2,
-        "importPath": "loja.aperitivos.tests.tests_masculino",
-        "description": "loja.aperitivos.tests.tests_masculino",
-        "peekOfCode": "def resp(client,):\n    return client.get(reverse('aperitivos:masculino', args=('masculino',)))\ndef test_titulo_Masculino(resp):\n   assert_contains(resp, 'Mas' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.aperitivos.tests.tests_masculino",
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.aperitivos.migrations.0003_delete_categoria",
+        "description": "loja.aperitivos.migrations.0003_delete_categoria",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('aperitivos', '0002_categoria_produto_delete_masculino'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='Categoria',\n        ),\n    ]",
+        "detail": "loja.aperitivos.migrations.0003_delete_categoria",
         "documentation": {}
     },
     {
-        "label": "test_titulo_Masculino",
+        "label": "resp",
         "kind": 2,
-        "importPath": "loja.aperitivos.tests.tests_masculino",
-        "description": "loja.aperitivos.tests.tests_masculino",
-        "peekOfCode": "def test_titulo_Masculino(resp):\n   assert_contains(resp, 'Mas' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.aperitivos.tests.tests_masculino",
+        "importPath": "loja.aperitivos.tests.tests_unissexo",
+        "description": "loja.aperitivos.tests.tests_unissexo",
+        "peekOfCode": "def resp(client, db):\n    return client.get(reverse('aperitivos:masculino', args=('masculino',)))\ndef test_titulo_masculino(resp):\n   assert_contains(resp, 'masculino' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.aperitivos.tests.tests_unissexo",
+        "documentation": {}
+    },
+    {
+        "label": "test_titulo_masculino",
+        "kind": 2,
+        "importPath": "loja.aperitivos.tests.tests_unissexo",
+        "description": "loja.aperitivos.tests.tests_unissexo",
+        "peekOfCode": "def test_titulo_masculino(resp):\n   assert_contains(resp, 'masculino' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.aperitivos.tests.tests_unissexo",
         "documentation": {}
     },
     {
         "label": "test_status_code",
         "kind": 2,
-        "importPath": "loja.aperitivos.tests.tests_masculino",
-        "description": "loja.aperitivos.tests.tests_masculino",
+        "importPath": "loja.aperitivos.tests.tests_unissexo",
+        "description": "loja.aperitivos.tests.tests_unissexo",
         "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.aperitivos.tests.tests_masculino",
+        "detail": "loja.aperitivos.tests.tests_unissexo",
         "documentation": {}
     },
     {
         "label": "test_Produtos_Carrinho",
         "kind": 2,
-        "importPath": "loja.aperitivos.tests.tests_masculino",
-        "description": "loja.aperitivos.tests.tests_masculino",
+        "importPath": "loja.aperitivos.tests.tests_unissexo",
+        "description": "loja.aperitivos.tests.tests_unissexo",
         "peekOfCode": "def test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.aperitivos.tests.tests_masculino",
+        "detail": "loja.aperitivos.tests.tests_unissexo",
         "documentation": {}
     },
     {
@@ -919,16 +1032,7 @@
         "kind": 6,
         "importPath": "loja.aperitivos.admin",
         "description": "loja.aperitivos.admin",
-        "peekOfCode": "class ProdutoAdmin(ModelAdmin):\n    pass\n@register(Categoria)\nclass CategoriaAdmin(ModelAdmin):\n    pass",
-        "detail": "loja.aperitivos.admin",
-        "documentation": {}
-    },
-    {
-        "label": "CategoriaAdmin",
-        "kind": 6,
-        "importPath": "loja.aperitivos.admin",
-        "description": "loja.aperitivos.admin",
-        "peekOfCode": "class CategoriaAdmin(ModelAdmin):\n    pass",
+        "peekOfCode": "class ProdutoAdmin(ModelAdmin):\n    pass",
         "detail": "loja.aperitivos.admin",
         "documentation": {}
     },
@@ -942,20 +1046,11 @@
         "documentation": {}
     },
     {
-        "label": "Categoria",
-        "kind": 6,
-        "importPath": "loja.aperitivos.models",
-        "description": "loja.aperitivos.models",
-        "peekOfCode": "class Categoria(models.Model):\n    name = models.CharField(max_length=32)\n    slug = models.SlugField(max_length=32)\n    valor = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('aperitivos:femenino', args=(self.slug,))\n    def __str__(self):\n        return f'Time:{self.name}'",
-        "detail": "loja.aperitivos.models",
-        "documentation": {}
-    },
-    {
         "label": "app_name",
         "kind": 5,
         "importPath": "loja.aperitivos.urls",
         "description": "loja.aperitivos.urls",
-        "peekOfCode": "app_name = 'aperitivos'\nurlpatterns = [\n    path('<slug:slug>', masculino, name='masculino'),\n    path('', feminina, name='masculino'),\n]",
+        "peekOfCode": "app_name = 'aperitivos'\nurlpatterns = [\n    path('<slug:slug>', masculino, name='masculino'),\n]",
         "detail": "loja.aperitivos.urls",
         "documentation": {}
     },
@@ -964,7 +1059,7 @@
         "kind": 5,
         "importPath": "loja.aperitivos.urls",
         "description": "loja.aperitivos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', masculino, name='masculino'),\n    path('', feminina, name='masculino'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', masculino, name='masculino'),\n]",
         "detail": "loja.aperitivos.urls",
         "documentation": {}
     },
@@ -973,16 +1068,7 @@
         "kind": 2,
         "importPath": "loja.aperitivos.views",
         "description": "loja.aperitivos.views",
-        "peekOfCode": "def masculino(request, slug):\n    masculinos = Produto.objects.all()\n    return render(request, 'aperitivos/masculino.html', context={'masculinos': masculinos})\ndef feminina(request):\n    feminina = Categoria.objects.all()\n    return render(request, 'aperitivos/feminina.html', context={'feminina': feminina})",
-        "detail": "loja.aperitivos.views",
-        "documentation": {}
-    },
-    {
-        "label": "feminina",
-        "kind": 2,
-        "importPath": "loja.aperitivos.views",
-        "description": "loja.aperitivos.views",
-        "peekOfCode": "def feminina(request):\n    feminina = Categoria.objects.all()\n    return render(request, 'aperitivos/feminina.html', context={'feminina': feminina})",
+        "peekOfCode": "def masculino(request, slug):\n    masculinos = Produto.objects.all()\n    return render(request, 'aperitivos/masculino.html', context={'masculinos': masculinos})",
         "detail": "loja.aperitivos.views",
         "documentation": {}
     },
@@ -1009,7 +1095,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>' )\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>' )\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1018,7 +1104,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>' )\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')\ndef test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')",
+        "peekOfCode": "def test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>' )\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1027,7 +1113,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')\ndef test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "peekOfCode": "def test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>' )\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1036,7 +1122,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')\ndef test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "peekOfCode": "def test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1045,16 +1131,16 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_email(resp):\n   assert_contains(resp, 'djunio239@gmail.com')\ndef test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "peekOfCode": "def test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
     {
-        "label": "test_conteudo_link_modelos",
+        "label": "test_conteudo_link_infatil",
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_conteudo_link_modelos(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "peekOfCode": "def test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1140,11 +1226,110 @@
         "documentation": {}
     },
     {
+        "label": "resp",
+        "kind": 2,
+        "importPath": "loja.modelos.migrations.tests.tests_femenina",
+        "description": "loja.modelos.migrations.tests.tests_femenina",
+        "peekOfCode": "def resp(client):\n    return client.get(reverse('modelos:femenina', args=('femenina',)))\ndef test_titulo_Masculino(resp):\n   assert_contains(resp, 'femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.migrations.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "test_titulo_Masculino",
+        "kind": 2,
+        "importPath": "loja.modelos.migrations.tests.tests_femenina",
+        "description": "loja.modelos.migrations.tests.tests_femenina",
+        "peekOfCode": "def test_titulo_Masculino(resp):\n   assert_contains(resp, 'femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.migrations.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "test_status_code",
+        "kind": 2,
+        "importPath": "loja.modelos.migrations.tests.tests_femenina",
+        "description": "loja.modelos.migrations.tests.tests_femenina",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.migrations.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "test_Produtos_Carrinho",
+        "kind": 2,
+        "importPath": "loja.modelos.migrations.tests.tests_femenina",
+        "description": "loja.modelos.migrations.tests.tests_femenina",
+        "peekOfCode": "def test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.migrations.tests.tests_femenina",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.modelos.migrations.0001_initial",
+        "description": "loja.modelos.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Masculino',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('produto', models.CharField(max_length=32)),",
+        "detail": "loja.modelos.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.modelos.migrations.0002_categoria_delete_masculino",
+        "description": "loja.modelos.migrations.0002_categoria_delete_masculino",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('modelos', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Categoria',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=32)),",
+        "detail": "loja.modelos.migrations.0002_categoria_delete_masculino",
+        "documentation": {}
+    },
+    {
+        "label": "CategoriaAdmin",
+        "kind": 6,
+        "importPath": "loja.modelos.admin",
+        "description": "loja.modelos.admin",
+        "peekOfCode": "class CategoriaAdmin(ModelAdmin):\n    pass",
+        "detail": "loja.modelos.admin",
+        "documentation": {}
+    },
+    {
+        "label": "Categoria",
+        "kind": 6,
+        "importPath": "loja.modelos.models",
+        "description": "loja.modelos.models",
+        "peekOfCode": "class Categoria(models.Model):\n    name = models.CharField(max_length=32)\n    slug = models.SlugField(max_length=32)\n    price = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('modelos:femenina', args=(self.slug,))\n    def __str__(self):\n        return f'Time:{self.name}'",
+        "detail": "loja.modelos.models",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "loja.modelos.urls",
+        "description": "loja.modelos.urls",
+        "peekOfCode": "app_name = 'modelos'\nurlpatterns = [\n    path('<slug:slug>', infantil, name='infantil'),\n]",
+        "detail": "loja.modelos.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "loja.modelos.urls",
+        "description": "loja.modelos.urls",
+        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', infantil, name='infantil'),\n]",
+        "detail": "loja.modelos.urls",
+        "documentation": {}
+    },
+    {
+        "label": "infantil",
+        "kind": 2,
+        "importPath": "loja.modelos.views",
+        "description": "loja.modelos.views",
+        "peekOfCode": "def infantil(request, slug):\n    infantil = Categoria.objects.all()\n    return render(request, 'modelos/infantil.html', context={'infantil': infantil})",
+        "detail": "loja.modelos.views",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "loja.produtos.migrations.0001_initial",
         "description": "loja.produtos.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Variedade',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('produto', models.CharField(max_length=32)),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Variedade',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=32)),",
         "detail": "loja.produtos.migrations.0001_initial",
         "documentation": {}
     },
@@ -1207,7 +1392,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Variedade(models.Model):\n    produto = models.CharField(max_length=32)\n    nome = models.SlugField(max_length=32)\n    preco = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    descricao = models.TextField(null=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('aperitivos:masculino', args=(self.slug,))\n    def __str__(self):",
+        "peekOfCode": "class Variedade(models.Model):\n    name = models.CharField(max_length=32)\n    slug = models.SlugField(max_length=32)\n    price = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('produtos:variedade', args=(self.slug,))\n    def __str__(self):\n        return f'Produtos:{self.name}'",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1216,7 +1401,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('<slug:nome>', outros, name='outros'),\n]",
+        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('<slug:nome>', variedade, name='variedade'),\n]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1225,16 +1410,16 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('<slug:nome>', outros, name='outros'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('<slug:nome>', variedade, name='variedade'),\n]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
     {
-        "label": "outros",
+        "label": "variedade",
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def outros(request, nome):\n    variedade = Variedade.objects.all()\n    return render(request, 'produtos/outros.html', context={'variedade': variedade})",
+        "peekOfCode": "def variedade(request, nome):\n    variedade = Variedade.objects.all()\n    return render(request, 'produtos/variedade.html', context={'variedade': variedade})",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1540,7 +1725,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('aperitivos/', include('loja.aperitivos.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(\n        path('__debug__/', include(debug_toolbar.urls))",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('aperitivos/', include('loja.aperitivos.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('modelos/', include('loja.modelos.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(",
         "detail": "loja.urls",
         "documentation": {}
     },
