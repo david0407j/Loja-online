@@ -1226,42 +1226,6 @@
         "documentation": {}
     },
     {
-        "label": "resp",
-        "kind": 2,
-        "importPath": "loja.modelos.migrations.tests.tests_femenina",
-        "description": "loja.modelos.migrations.tests.tests_femenina",
-        "peekOfCode": "def resp(client):\n    return client.get(reverse('modelos:femenina', args=('femenina',)))\ndef test_titulo_Masculino(resp):\n   assert_contains(resp, 'femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.modelos.migrations.tests.tests_femenina",
-        "documentation": {}
-    },
-    {
-        "label": "test_titulo_Masculino",
-        "kind": 2,
-        "importPath": "loja.modelos.migrations.tests.tests_femenina",
-        "description": "loja.modelos.migrations.tests.tests_femenina",
-        "peekOfCode": "def test_titulo_Masculino(resp):\n   assert_contains(resp, 'femenina' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.modelos.migrations.tests.tests_femenina",
-        "documentation": {}
-    },
-    {
-        "label": "test_status_code",
-        "kind": 2,
-        "importPath": "loja.modelos.migrations.tests.tests_femenina",
-        "description": "loja.modelos.migrations.tests.tests_femenina",
-        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.modelos.migrations.tests.tests_femenina",
-        "documentation": {}
-    },
-    {
-        "label": "test_Produtos_Carrinho",
-        "kind": 2,
-        "importPath": "loja.modelos.migrations.tests.tests_femenina",
-        "description": "loja.modelos.migrations.tests.tests_femenina",
-        "peekOfCode": "def test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.modelos.migrations.tests.tests_femenina",
-        "documentation": {}
-    },
-    {
         "label": "Migration",
         "kind": 6,
         "importPath": "loja.modelos.migrations.0001_initial",
@@ -1277,6 +1241,42 @@
         "description": "loja.modelos.migrations.0002_categoria_delete_masculino",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('modelos', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Categoria',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=32)),",
         "detail": "loja.modelos.migrations.0002_categoria_delete_masculino",
+        "documentation": {}
+    },
+    {
+        "label": "resp",
+        "kind": 2,
+        "importPath": "loja.modelos.tests.tests_infantil",
+        "description": "loja.modelos.tests.tests_infantil",
+        "peekOfCode": "def resp(client, db):\n    return client.get(reverse('modelos:infantil', args=('infantil',)))\ndef test_infantil(resp):\n   assert_contains(resp, 'infantil' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.tests.tests_infantil",
+        "documentation": {}
+    },
+    {
+        "label": "test_infantil",
+        "kind": 2,
+        "importPath": "loja.modelos.tests.tests_infantil",
+        "description": "loja.modelos.tests.tests_infantil",
+        "peekOfCode": "def test_infantil(resp):\n   assert_contains(resp, 'infantil' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.tests.tests_infantil",
+        "documentation": {}
+    },
+    {
+        "label": "test_status_code",
+        "kind": 2,
+        "importPath": "loja.modelos.tests.tests_infantil",
+        "description": "loja.modelos.tests.tests_infantil",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.tests.tests_infantil",
+        "documentation": {}
+    },
+    {
+        "label": "test_titulo_produtos",
+        "kind": 2,
+        "importPath": "loja.modelos.tests.tests_infantil",
+        "description": "loja.modelos.tests.tests_infantil",
+        "peekOfCode": "def test_titulo_produtos(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.modelos.tests.tests_infantil",
         "documentation": {}
     },
     {
@@ -1336,46 +1336,46 @@
     {
         "label": "resp",
         "kind": 2,
-        "importPath": "loja.produtos.tests.tests_outros",
-        "description": "loja.produtos.tests.tests_outros",
-        "peekOfCode": "def resp(client, bd):\n    return client.get(reverse('produtos:outros', args=('outros',)))\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'variedade produtos' )\ndef test_varidade_produtos(resp):\n    assert resp.status_code == 200\ndef test_Produtos_(resp):\n   assert_contains(resp, 'Variedades de Produtos' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.produtos.tests.tests_outros",
+        "importPath": "loja.produtos.tests.tests_variedade",
+        "description": "loja.produtos.tests.tests_variedade",
+        "peekOfCode": "def resp(client, db):\n    return client.get(reverse('produtos:variedade', args=('variedade',)))\ndef test_titulo_produtos(resp):\n   assert_contains(resp, 'produtos' )\ndef test_varidade_produtos(resp):\n    assert resp.status_code == 200\ndef test_variedades(resp):\n   assert_contains(resp, 'Variedade' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.produtos.tests.tests_variedade",
         "documentation": {}
     },
     {
         "label": "test_titulo_produtos",
         "kind": 2,
-        "importPath": "loja.produtos.tests.tests_outros",
-        "description": "loja.produtos.tests.tests_outros",
-        "peekOfCode": "def test_titulo_produtos(resp):\n   assert_contains(resp, 'variedade produtos' )\ndef test_varidade_produtos(resp):\n    assert resp.status_code == 200\ndef test_Produtos_(resp):\n   assert_contains(resp, 'Variedades de Produtos' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.produtos.tests.tests_outros",
+        "importPath": "loja.produtos.tests.tests_variedade",
+        "description": "loja.produtos.tests.tests_variedade",
+        "peekOfCode": "def test_titulo_produtos(resp):\n   assert_contains(resp, 'produtos' )\ndef test_varidade_produtos(resp):\n    assert resp.status_code == 200\ndef test_variedades(resp):\n   assert_contains(resp, 'Variedade' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.produtos.tests.tests_variedade",
         "documentation": {}
     },
     {
         "label": "test_varidade_produtos",
         "kind": 2,
-        "importPath": "loja.produtos.tests.tests_outros",
-        "description": "loja.produtos.tests.tests_outros",
-        "peekOfCode": "def test_varidade_produtos(resp):\n    assert resp.status_code == 200\ndef test_Produtos_(resp):\n   assert_contains(resp, 'Variedades de Produtos' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.produtos.tests.tests_outros",
+        "importPath": "loja.produtos.tests.tests_variedade",
+        "description": "loja.produtos.tests.tests_variedade",
+        "peekOfCode": "def test_varidade_produtos(resp):\n    assert resp.status_code == 200\ndef test_variedades(resp):\n   assert_contains(resp, 'Variedade' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.produtos.tests.tests_variedade",
         "documentation": {}
     },
     {
-        "label": "test_Produtos_",
+        "label": "test_variedades",
         "kind": 2,
-        "importPath": "loja.produtos.tests.tests_outros",
-        "description": "loja.produtos.tests.tests_outros",
-        "peekOfCode": "def test_Produtos_(resp):\n   assert_contains(resp, 'Variedades de Produtos' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.produtos.tests.tests_outros",
+        "importPath": "loja.produtos.tests.tests_variedade",
+        "description": "loja.produtos.tests.tests_variedade",
+        "peekOfCode": "def test_variedades(resp):\n   assert_contains(resp, 'Variedade' )\ndef test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
+        "detail": "loja.produtos.tests.tests_variedade",
         "documentation": {}
     },
     {
         "label": "test_titulo",
         "kind": 2,
-        "importPath": "loja.produtos.tests.tests_outros",
-        "description": "loja.produtos.tests.tests_outros",
+        "importPath": "loja.produtos.tests.tests_variedade",
+        "description": "loja.produtos.tests.tests_variedade",
         "peekOfCode": "def test_titulo(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.produtos.tests.tests_outros",
+        "detail": "loja.produtos.tests.tests_variedade",
         "documentation": {}
     },
     {

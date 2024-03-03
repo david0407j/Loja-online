@@ -6,11 +6,11 @@ import pytest
 @pytest.fixture
 
 def resp(client, db):
-    return client.get(reverse('modelos:  femenina', args=(' produtos femenina',)))
+    return client.get(reverse('modelos:infantil', args=('infantil',)))
 
 
-def test_femenina(resp):
-   assert_contains(resp, 'produto femenina' )
+def test_infantil(resp):
+   assert_contains(resp, 'infantil' )
 
 
 
