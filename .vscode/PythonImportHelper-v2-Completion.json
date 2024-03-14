@@ -78,6 +78,39 @@
         "documentation": {}
     },
     {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -103,14 +136,6 @@
     },
     {
         "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -391,55 +416,47 @@
         "documentation": {}
     },
     {
-        "label": "ModelAdmin",
-        "importPath": "django.contrib.admin",
-        "description": "django.contrib.admin",
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
         "isExtraImport": true,
-        "detail": "django.contrib.admin",
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
-        "label": "register",
-        "importPath": "django.contrib.admin",
-        "description": "django.contrib.admin",
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
         "isExtraImport": true,
-        "detail": "django.contrib.admin",
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
-        "label": "ModelAdmin",
-        "importPath": "django.contrib.admin",
-        "description": "django.contrib.admin",
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
         "isExtraImport": true,
-        "detail": "django.contrib.admin",
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
-        "label": "register",
-        "importPath": "django.contrib.admin",
-        "description": "django.contrib.admin",
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
         "isExtraImport": true,
-        "detail": "django.contrib.admin",
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
-        "label": "ModelAdmin",
-        "importPath": "django.contrib.admin",
-        "description": "django.contrib.admin",
+        "label": "Carrinho",
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
         "isExtraImport": true,
-        "detail": "django.contrib.admin",
+        "detail": "loja.aperitivos.models",
         "documentation": {}
     },
     {
-        "label": "register",
-        "importPath": "django.contrib.admin",
-        "description": "django.contrib.admin",
-        "isExtraImport": true,
-        "detail": "django.contrib.admin",
-        "documentation": {}
-    },
-    {
-        "label": "Produto",
+        "label": "Categoria",
         "importPath": "loja.aperitivos.models",
         "description": "loja.aperitivos.models",
         "isExtraImport": true,
@@ -455,7 +472,31 @@
         "documentation": {}
     },
     {
-        "label": "masculino",
+        "label": "Produto",
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "update_session_auth_hash",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Produto",
         "importPath": "loja.aperitivos.views",
         "description": "loja.aperitivos.views",
         "isExtraImport": true,
@@ -521,46 +562,6 @@
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "messages",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
         "label": "IS_POPUP_VAR",
         "importPath": "django.contrib.admin.options",
         "description": "django.contrib.admin.options",
@@ -574,14 +575,6 @@
         "description": "django.contrib.admin.utils",
         "isExtraImport": true,
         "detail": "django.contrib.admin.utils",
-        "documentation": {}
-    },
-    {
-        "label": "update_session_auth_hash",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
         "documentation": {}
     },
     {
@@ -742,6 +735,38 @@
         "description": "loja.base.views",
         "isExtraImport": true,
         "detail": "loja.base.views",
+        "documentation": {}
+    },
+    {
+        "label": "ModelAdmin",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ModelAdmin",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "importPath": "django.contrib.admin",
+        "description": "django.contrib.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin",
         "documentation": {}
     },
     {
@@ -969,26 +994,17 @@
         "kind": 6,
         "importPath": "loja.aperitivos.migrations.0001_initial",
         "description": "loja.aperitivos.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Masculino',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('produto', models.CharField(max_length=32)),",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Categoria',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
         "detail": "loja.aperitivos.migrations.0001_initial",
         "documentation": {}
     },
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loja.aperitivos.migrations.0002_categoria_produto_delete_masculino",
-        "description": "loja.aperitivos.migrations.0002_categoria_produto_delete_masculino",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('aperitivos', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Categoria',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=32)),",
-        "detail": "loja.aperitivos.migrations.0002_categoria_produto_delete_masculino",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.aperitivos.migrations.0003_delete_categoria",
-        "description": "loja.aperitivos.migrations.0003_delete_categoria",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('aperitivos', '0002_categoria_produto_delete_masculino'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='Categoria',\n        ),\n    ]",
-        "detail": "loja.aperitivos.migrations.0003_delete_categoria",
+        "importPath": "loja.aperitivos.migrations.0002_alter_categoria_nome",
+        "description": "loja.aperitivos.migrations.0002_alter_categoria_nome",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('aperitivos', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='categoria',\n            name='nome',\n            field=models.CharField(max_length=32, unique=True),\n        ),",
+        "detail": "loja.aperitivos.migrations.0002_alter_categoria_nome",
         "documentation": {}
     },
     {
@@ -1028,12 +1044,12 @@
         "documentation": {}
     },
     {
-        "label": "ProdutoAdmin",
+        "label": "Categoria",
         "kind": 6,
-        "importPath": "loja.aperitivos.admin",
-        "description": "loja.aperitivos.admin",
-        "peekOfCode": "class ProdutoAdmin(ModelAdmin):\n    pass",
-        "detail": "loja.aperitivos.admin",
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32,unique=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    slug = models.SlugField(max_length=512)\n    valor = models.DecimalField(max_digits=12, decimal_places=2)\n    criado_em = models.DateTimeField(auto_now_add=True)",
+        "detail": "loja.aperitivos.models",
         "documentation": {}
     },
     {
@@ -1041,7 +1057,25 @@
         "kind": 6,
         "importPath": "loja.aperitivos.models",
         "description": "loja.aperitivos.models",
-        "peekOfCode": "class Produto(models.Model):\n    name = models.CharField(max_length=32)\n    slug = models.SlugField(max_length=32)\n    price = models.CharField(max_length=32)\n    creation = models.DateTimeField(auto_now_add=True)\n    img = models.ImageField(upload_to='img/')\n    def get_absolute_url(self):\n        return reverse('aperitivos:masculino', args=(self.slug,))\n    def __str__(self):\n        return f'Time:{self.name}'",
+        "peekOfCode": "class Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    slug = models.SlugField(max_length=512)\n    valor = models.DecimalField(max_digits=12, decimal_places=2)\n    criado_em = models.DateTimeField(auto_now_add=True)\n    imagem = models.ImageField(upload_to='img/')\n    def __str__(self):\n        return f'{self.descricao}'\n    def get_absolute_url(self):",
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "Carrinho",
+        "kind": 6,
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "peekOfCode": "class Carrinho(models.Model):\n    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)\n    produtos = models.ManyToManyField(Produto, through='CarrinhoItem')\nclass CarrinhoItem(models.Model):\n    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)\n    carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)\n    quantidade = models.IntegerField(default=1)",
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "CarrinhoItem",
+        "kind": 6,
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "peekOfCode": "class CarrinhoItem(models.Model):\n    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)\n    carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)\n    quantidade = models.IntegerField(default=1)",
         "detail": "loja.aperitivos.models",
         "documentation": {}
     },
@@ -1050,7 +1084,7 @@
         "kind": 5,
         "importPath": "loja.aperitivos.urls",
         "description": "loja.aperitivos.urls",
-        "peekOfCode": "app_name = 'aperitivos'\nurlpatterns = [\n    path('<slug:slug>', masculino, name='masculino'),\n]",
+        "peekOfCode": "app_name = 'aperitivos'\nurlpatterns = [\n    path('<slug:slug>', Produto, name='Produto'),\n]",
         "detail": "loja.aperitivos.urls",
         "documentation": {}
     },
@@ -1059,16 +1093,16 @@
         "kind": 5,
         "importPath": "loja.aperitivos.urls",
         "description": "loja.aperitivos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', masculino, name='masculino'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', Produto, name='Produto'),\n]",
         "detail": "loja.aperitivos.urls",
         "documentation": {}
     },
     {
-        "label": "masculino",
+        "label": "Produto",
         "kind": 2,
         "importPath": "loja.aperitivos.views",
         "description": "loja.aperitivos.views",
-        "peekOfCode": "def masculino(request, slug):\n    masculinos = Produto.objects.all()\n    return render(request, 'aperitivos/masculino.html', context={'masculinos': masculinos})",
+        "peekOfCode": "def Produto(request, slug):\n    Produto = Produto.objects.all()\n    return render(request, 'aperitivos/masculino.html', context={'masculinos': masculinos})",
         "detail": "loja.aperitivos.views",
         "documentation": {}
     },

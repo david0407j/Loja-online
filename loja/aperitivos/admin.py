@@ -1,11 +1,13 @@
 
-from django.contrib.admin import ModelAdmin, register
+from django.contrib import admin 
 
-from loja.aperitivos.models import  Produto
+from loja.aperitivos.models import Carrinho, Categoria, Produto
 
 
-@register(Produto)
-class ProdutoAdmin(ModelAdmin):
-    pass
 
+admin.site.register(Produto)
+
+admin.site.register(Categoria)
+
+admin.site.register(Carrinho)
 
