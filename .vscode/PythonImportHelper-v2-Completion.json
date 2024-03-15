@@ -143,6 +143,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -480,6 +512,22 @@
         "documentation": {}
     },
     {
+        "label": "Carrinho",
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
+        "label": "CarrinhoItem",
+        "importPath": "loja.aperitivos.models",
+        "description": "loja.aperitivos.models",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.models",
+        "documentation": {}
+    },
+    {
         "label": "get_user_model",
         "importPath": "django.contrib.auth",
         "description": "django.contrib.auth",
@@ -496,7 +544,23 @@
         "documentation": {}
     },
     {
-        "label": "Produto",
+        "label": "produto_alguma_coisa",
+        "importPath": "loja.aperitivos.views",
+        "description": "loja.aperitivos.views",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.views",
+        "documentation": {}
+    },
+    {
+        "label": "meu_carrinho",
+        "importPath": "loja.aperitivos.views",
+        "description": "loja.aperitivos.views",
+        "isExtraImport": true,
+        "detail": "loja.aperitivos.views",
+        "documentation": {}
+    },
+    {
+        "label": "adicionar_no_carrinho",
         "importPath": "loja.aperitivos.views",
         "description": "loja.aperitivos.views",
         "isExtraImport": true,
@@ -1008,6 +1072,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.aperitivos.migrations.0003_alter_produto_valor",
+        "description": "loja.aperitivos.migrations.0003_alter_produto_valor",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('aperitivos', '0002_alter_categoria_nome'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='produto',\n            name='valor',\n            field=models.CharField(max_length=32),\n        ),",
+        "detail": "loja.aperitivos.migrations.0003_alter_produto_valor",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.aperitivos.migrations.0004_produto_active_produto_featured",
+        "description": "loja.aperitivos.migrations.0004_produto_active_produto_featured",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('aperitivos', '0003_alter_produto_valor'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='produto',\n            name='active',\n            field=models.BooleanField(default=True),\n        ),",
+        "detail": "loja.aperitivos.migrations.0004_produto_active_produto_featured",
+        "documentation": {}
+    },
+    {
         "label": "resp",
         "kind": 2,
         "importPath": "loja.aperitivos.tests.tests_unissexo",
@@ -1048,7 +1130,7 @@
         "kind": 6,
         "importPath": "loja.aperitivos.models",
         "description": "loja.aperitivos.models",
-        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32,unique=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    slug = models.SlugField(max_length=512)\n    valor = models.DecimalField(max_digits=12, decimal_places=2)\n    criado_em = models.DateTimeField(auto_now_add=True)",
+        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32,unique=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    slug = models.SlugField(max_length=512)\n    valor = models.CharField(max_length=32)\n    criado_em = models.DateTimeField(auto_now_add=True)",
         "detail": "loja.aperitivos.models",
         "documentation": {}
     },
@@ -1057,7 +1139,7 @@
         "kind": 6,
         "importPath": "loja.aperitivos.models",
         "description": "loja.aperitivos.models",
-        "peekOfCode": "class Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    slug = models.SlugField(max_length=512)\n    valor = models.DecimalField(max_digits=12, decimal_places=2)\n    criado_em = models.DateTimeField(auto_now_add=True)\n    imagem = models.ImageField(upload_to='img/')\n    def __str__(self):\n        return f'{self.descricao}'\n    def get_absolute_url(self):",
+        "peekOfCode": "class Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    slug = models.SlugField(max_length=512)\n    valor = models.CharField(max_length=32)\n    criado_em = models.DateTimeField(auto_now_add=True)\n    imagem = models.ImageField(upload_to='img/')\n    featured = models.BooleanField(default = False)\n    active  = models.BooleanField(default = True)\n    def __str__(self):",
         "detail": "loja.aperitivos.models",
         "documentation": {}
     },
@@ -1066,7 +1148,7 @@
         "kind": 6,
         "importPath": "loja.aperitivos.models",
         "description": "loja.aperitivos.models",
-        "peekOfCode": "class Carrinho(models.Model):\n    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)\n    produtos = models.ManyToManyField(Produto, through='CarrinhoItem')\nclass CarrinhoItem(models.Model):\n    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)\n    carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)\n    quantidade = models.IntegerField(default=1)",
+        "peekOfCode": "class Carrinho(models.Model):\n    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)\n    produtos = models.ManyToManyField(Produto, through='CarrinhoItem')\n    def __str__(self):\n        produtos = [item.descricao for item in self.produtos.all()]\n        return f'{self.user.id}: ({produtos})'\nclass CarrinhoItem(models.Model):\n    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)\n    carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)\n    quantidade = models.IntegerField(default=1)",
         "detail": "loja.aperitivos.models",
         "documentation": {}
     },
@@ -1084,7 +1166,7 @@
         "kind": 5,
         "importPath": "loja.aperitivos.urls",
         "description": "loja.aperitivos.urls",
-        "peekOfCode": "app_name = 'aperitivos'\nurlpatterns = [\n    path('<slug:slug>', Produto, name='Produto'),\n]",
+        "peekOfCode": "app_name = 'aperitivos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<slug:slug>', produto_alguma_coisa, name='Produto'),\n ]",
         "detail": "loja.aperitivos.urls",
         "documentation": {}
     },
@@ -1093,16 +1175,34 @@
         "kind": 5,
         "importPath": "loja.aperitivos.urls",
         "description": "loja.aperitivos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('<slug:slug>', Produto, name='Produto'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<slug:slug>', produto_alguma_coisa, name='Produto'),\n ]",
         "detail": "loja.aperitivos.urls",
         "documentation": {}
     },
     {
-        "label": "Produto",
+        "label": "produto_alguma_coisa",
         "kind": 2,
         "importPath": "loja.aperitivos.views",
         "description": "loja.aperitivos.views",
-        "peekOfCode": "def Produto(request, slug):\n    Produto = Produto.objects.all()\n    return render(request, 'aperitivos/masculino.html', context={'masculinos': masculinos})",
+        "peekOfCode": "def produto_alguma_coisa(request, slug):\n    produtos = Produto.objects.all()\n    return render(request, 'aperitivos/masculino.html', context={'masculinos': produtos})\ndef meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    return render(request, 'aperitivos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})\ndef adicionar_no_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()",
+        "detail": "loja.aperitivos.views",
+        "documentation": {}
+    },
+    {
+        "label": "meu_carrinho",
+        "kind": 2,
+        "importPath": "loja.aperitivos.views",
+        "description": "loja.aperitivos.views",
+        "peekOfCode": "def meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    return render(request, 'aperitivos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})\ndef adicionar_no_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)",
+        "detail": "loja.aperitivos.views",
+        "documentation": {}
+    },
+    {
+        "label": "adicionar_no_carrinho",
+        "kind": 2,
+        "importPath": "loja.aperitivos.views",
+        "description": "loja.aperitivos.views",
+        "peekOfCode": "def adicionar_no_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    novo_item = CarrinhoItem(produto=produto, quantidade=1, carrinho=meu_carrinho)\n    novo_item.save()\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    return render(request, 'aperitivos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})",
         "detail": "loja.aperitivos.views",
         "documentation": {}
     },
