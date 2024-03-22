@@ -16,7 +16,7 @@ class Produto(models.Model):
   
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     descricao = models.CharField(max_length=128)
-    slug = models.SlugField(max_length=512)
+    nome = models.SlugField(max_length=512)
     valor = models.CharField(max_length=32)
     criado_em = models.DateTimeField(auto_now_add=True)
     imagem = models.ImageField(upload_to='img/')
@@ -24,7 +24,7 @@ class Produto(models.Model):
     active  = models.BooleanField(default = True)
 
     def __str__(self):
-        return f'{self.descricao}'
+        return f'{self.descricao} ({self.categoria})'
 
     def get_absolute_url(self):
         return reverse('produto:categoria', args=(self.slug,))

@@ -168,6 +168,14 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -586,6 +594,14 @@
         "documentation": {}
     },
     {
+        "label": "Categoria",
+        "importPath": "loja.produtos.models",
+        "description": "loja.produtos.models",
+        "isExtraImport": true,
+        "detail": "loja.produtos.models",
+        "documentation": {}
+    },
+    {
         "label": "CarrinhoItem",
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
@@ -611,14 +627,6 @@
     },
     {
         "label": "adicionar_no_carrinho",
-        "importPath": "loja.produtos.views",
-        "description": "loja.produtos.views",
-        "isExtraImport": true,
-        "detail": "loja.produtos.views",
-        "documentation": {}
-    },
-    {
-        "label": "variedade_infantil",
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
         "isExtraImport": true,
@@ -969,6 +977,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0003_rename_slug_produto_nome",
+        "description": "loja.produtos.migrations.0003_rename_slug_produto_nome",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0002_delete_infantil_remove_produto_infantil'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='produto',\n            old_name='slug',\n            new_name='nome',\n        ),",
+        "detail": "loja.produtos.migrations.0003_rename_slug_produto_nome",
+        "documentation": {}
+    },
+    {
         "label": "resp",
         "kind": 2,
         "importPath": "loja.produtos.tests.tests_unissexo",
@@ -1009,7 +1026,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32,unique=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    slug = models.SlugField(max_length=512)\n    valor = models.CharField(max_length=32)\n    criado_em = models.DateTimeField(auto_now_add=True)",
+        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32,unique=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    nome = models.SlugField(max_length=512)\n    valor = models.CharField(max_length=32)\n    criado_em = models.DateTimeField(auto_now_add=True)",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1018,7 +1035,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    slug = models.SlugField(max_length=512)\n    valor = models.CharField(max_length=32)\n    criado_em = models.DateTimeField(auto_now_add=True)\n    imagem = models.ImageField(upload_to='img/')\n    featured = models.BooleanField(default = False)\n    active  = models.BooleanField(default = True)\n    def __str__(self):",
+        "peekOfCode": "class Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    nome = models.SlugField(max_length=512)\n    valor = models.CharField(max_length=32)\n    criado_em = models.DateTimeField(auto_now_add=True)\n    imagem = models.ImageField(upload_to='img/')\n    featured = models.BooleanField(default = False)\n    active  = models.BooleanField(default = True)\n    def __str__(self):",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1045,7 +1062,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<slug:slug>', produto_alguma_coisa, name='Produto'),\n    path('', variedade_infantil, name='produto'),\n ]",
+        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='Produto')\n ]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1054,17 +1071,8 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<slug:slug>', produto_alguma_coisa, name='Produto'),\n    path('', variedade_infantil, name='produto'),\n ]",
+        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='Produto')\n ]",
         "detail": "loja.produtos.urls",
-        "documentation": {}
-    },
-    {
-        "label": "variedade_infantil",
-        "kind": 2,
-        "importPath": "loja.produtos.views",
-        "description": "loja.produtos.views",
-        "peekOfCode": "def variedade_infantil(request):\n    produtos = Produto.objects.order_by('criado_em').all()\n    return render(request, 'produtos/produtos.html', context={'infantil': produtos})\ndef produto_alguma_coisa(request, slug):\n    produtos = Produto.objects.all()\n    return render(request, 'produtos/masculino.html', context={'masculinos': produtos})\ndef meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)",
-        "detail": "loja.produtos.views",
         "documentation": {}
     },
     {
@@ -1072,7 +1080,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def produto_alguma_coisa(request, slug):\n    produtos = Produto.objects.all()\n    return render(request, 'produtos/masculino.html', context={'masculinos': produtos})\ndef meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})\ndef adicionar_no_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()",
+        "peekOfCode": "def produto_alguma_coisa(request, nome_categoria):\n    categoria = Categoria.objects.filter(nome__iexact=nome_categoria).first()\n    if not categoria:\n        categorias_validas = [c.nome for c in Categoria.objects.all()]\n        raise Exception(f\"Categoria '{nome_categoria}' nao encontrada. Utilize uma das {categorias_validas}\")\n    produtos_da_categoria = Produto.objects.filter(categoria_id=categoria.id)\n    return render(request, 'produtos/masculino.html', context={'camisetas': produtos_da_categoria})\ndef meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:",
         "detail": "loja.produtos.views",
         "documentation": {}
     },

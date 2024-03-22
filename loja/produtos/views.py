@@ -1,14 +1,15 @@
 from django.shortcuts import render
-from loja.produtos.models import  Produto, Carrinho, CarrinhoItem
-
-def variedade_infantil(request):
-    produtos = Produto.objects.order_by('criado_em').all()
-    return render(request, 'produtos/produtos.html', context={'infantil': produtos})
+from loja.produtos.models import  Produto, Carrinho, Categoria, CarrinhoItem
  
 
-def produto_alguma_coisa(request, slug):
-    produtos = Produto.objects.all()
-    return render(request, 'produtos/masculino.html', context={'masculinos': produtos})
+def produto_alguma_coisa(request, nome_categoria):
+    categoria = Categoria.objects.filter(nome__iexact=nome_categoria).first()
+    if not categoria:
+        categorias_validas = [c.nome for c in Categoria.objects.all()]
+        raise Exception(f"Categoria '{nome_categoria}' nao encontrada. Utilize uma das {categorias_validas}")
+
+    produtos_da_categoria = Produto.objects.filter(categoria_id=categoria.id)
+    return render(request, 'produtos/masculino.html', context={'camisetas': produtos_da_categoria})
  
  
 def meu_carrinho(request):
@@ -31,5 +32,4 @@ def adicionar_no_carrinho(request, produto_id: int):
     meu_carrinho = Carrinho.objects.filter(user=request.user).first()
 
     return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})
-
 

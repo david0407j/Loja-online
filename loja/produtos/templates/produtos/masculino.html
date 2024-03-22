@@ -7,7 +7,8 @@
   <div class="text-center text-white">
     <h1 class="display-4 fw-bolder"> Produtos importados </h1>
     <p class="lead fw-normal text-white-50 mb-0">Enviamos para todo o Brasil!
-      aceitado pagamento via cartão, depósito e transferêcia e pix <i class="bi bi-credit-card-2-back"></i><i class="bi bi-credit-card-2-back-fill"></i>
+      aceitado pagamento via cartão, depósito e transferêcia e pix <i class="bi bi-credit-card-2-back"></i><i
+        class="bi bi-credit-card-2-back-fill"></i>
       <i class="bi bi-credit-card-fill"></i><i class="bi bi-credit-card-2-back"></i>
     </p>
   </div>
@@ -17,7 +18,7 @@
 <div class="container px-4 px-lg-5 mt-5">
   <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
     <div class="row" style="margin-top: 10px">
-      {% for name in masculinos %}
+      {% for name in camisetas %}
       <div class="col mb-5">
         <div class="card h-100">
           <!-- Sale badge-->
@@ -45,7 +46,8 @@
           </div>
           <!-- Product actions-->
           <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'produtos:carrinho.adicionar' produto_id=name.id %}">Add no Carrinho</a></div>
+            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                href="{% url 'produtos:carrinho.adicionar' produto_id=name.id %}">Add no Carrinho</a></div>
           </div>
         </div>
       </div>
