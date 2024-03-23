@@ -1062,7 +1062,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='Produto')\n ]",
+        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto')\n ]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1071,7 +1071,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='Produto')\n ]",
+        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto')\n ]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1080,7 +1080,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def produto_alguma_coisa(request, nome_categoria):\n    categoria = Categoria.objects.filter(nome__iexact=nome_categoria).first()\n    if not categoria:\n        categorias_validas = [c.nome for c in Categoria.objects.all()]\n        raise Exception(f\"Categoria '{nome_categoria}' nao encontrada. Utilize uma das {categorias_validas}\")\n    produtos_da_categoria = Produto.objects.filter(categoria_id=categoria.id)\n    return render(request, 'produtos/masculino.html', context={'camisetas': produtos_da_categoria})\ndef meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:",
+        "peekOfCode": "def produto_alguma_coisa(request, nome_categoria):\n    breakpoint()\n    categoria = Categoria.objects.filter(nome__iexact=nome_categoria).first()\n    if not categoria:\n        categorias_validas = [c.nome for c in Categoria.objects.all()]\n        raise Exception(f\"Categoria '{nome_categoria}' nao encontrada. Utilize uma das {categorias_validas}\")\n    produtos_da_categoria = Produto.objects.filter(categoria_id=categoria.id)\n    return render(request, 'produtos/produtos.html', context={'camisetas': produtos_da_categoria})\ndef meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
