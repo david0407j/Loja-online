@@ -1,18 +1,16 @@
-# fly.toml app configuration file generated for loja-online-1-patient-waterfall-4667-hidden-hill-1854 on 2024-01-31T12:04:15-03:00
+# fly.toml app configuration file generated for loja-online-restless-frog-7912 on 2024-03-25T21:19:19-03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'loja-online-1-patient-waterfall-4667-hidden-hill-1854'
+app = 'loja-online-restless-frog-7912'
 primary_region = 'gru'
 console_command = '/code/manage.py shell'
 
 [build]
 
 [deploy]
-release_command = "./pos-release.sh"
-
-  
+ release_command = "./pos-release.sh"
 
 [env]
   PORT = '8000'

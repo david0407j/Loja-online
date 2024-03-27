@@ -3,8 +3,6 @@ from django.urls import reverse
 from django.contrib.auth import get_user_model
 
 
-
-
 class Categoria(models.Model):
     nome = models.CharField(max_length=32,unique=True)
 

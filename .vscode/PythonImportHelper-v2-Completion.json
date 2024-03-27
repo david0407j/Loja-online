@@ -176,6 +176,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -634,6 +666,14 @@
         "documentation": {}
     },
     {
+        "label": "remover_do_carrinho",
+        "importPath": "loja.produtos.views",
+        "description": "loja.produtos.views",
+        "isExtraImport": true,
+        "detail": "loja.produtos.views",
+        "documentation": {}
+    },
+    {
         "label": "get_asgi_application",
         "importPath": "django.core.asgi",
         "description": "django.core.asgi",
@@ -986,6 +1026,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0004_remove_produto_valor_produto_subtotal_produto_total",
+        "description": "loja.produtos.migrations.0004_remove_produto_valor_produto_subtotal_produto_total",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0003_rename_slug_produto_nome'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='produto',\n            name='valor',\n        ),\n        migrations.AddField(",
+        "detail": "loja.produtos.migrations.0004_remove_produto_valor_produto_subtotal_produto_total",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0005_remove_produto_subtotal_remove_produto_total_and_more",
+        "description": "loja.produtos.migrations.0005_remove_produto_subtotal_remove_produto_total_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0004_remove_produto_valor_produto_subtotal_produto_total'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='produto',\n            name='subtotal',\n        ),\n        migrations.RemoveField(",
+        "detail": "loja.produtos.migrations.0005_remove_produto_subtotal_remove_produto_total_and_more",
+        "documentation": {}
+    },
+    {
         "label": "resp",
         "kind": 2,
         "importPath": "loja.produtos.tests.tests_unissexo",
@@ -1062,7 +1120,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto')\n ]",
+        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='remover_do_carrinho'),\n ]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1071,7 +1129,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto')\n ]",
+        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='remover_do_carrinho'),\n ]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1080,7 +1138,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def produto_alguma_coisa(request, nome_categoria):\n    breakpoint()\n    categoria = Categoria.objects.filter(nome__iexact=nome_categoria).first()\n    if not categoria:\n        categorias_validas = [c.nome for c in Categoria.objects.all()]\n        raise Exception(f\"Categoria '{nome_categoria}' nao encontrada. Utilize uma das {categorias_validas}\")\n    produtos_da_categoria = Produto.objects.filter(categoria_id=categoria.id)\n    return render(request, 'produtos/produtos.html', context={'camisetas': produtos_da_categoria})\ndef meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()",
+        "peekOfCode": "def produto_alguma_coisa(request, nome_categoria):\n    categoria = Categoria.objects.filter(nome__iexact=nome_categoria).first()\n    if not categoria:\n        categorias_validas = [c.nome for c in Categoria.objects.all()]\n        raise Exception(f\"Categoria '{nome_categoria}' nao encontrada. Utilize uma das {categorias_validas}\")\n    produtos_da_categoria = Produto.objects.filter(categoria_id=categoria.id)\n    return render(request, 'produtos/produtos.html', context={'camisetas': produtos_da_categoria})\ndef meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1098,7 +1156,16 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def adicionar_no_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    novo_item = CarrinhoItem(produto=produto, quantidade=1, carrinho=meu_carrinho)\n    novo_item.save()\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})",
+        "peekOfCode": "def adicionar_no_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    novo_item = CarrinhoItem(produto=produto, quantidade=1, carrinho=meu_carrinho)\n    novo_item.save()\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})\ndef remover_do_carrinho(request, produto_id: int):",
+        "detail": "loja.produtos.views",
+        "documentation": {}
+    },
+    {
+        "label": "remover_do_carrinho",
+        "kind": 2,
+        "importPath": "loja.produtos.views",
+        "description": "loja.produtos.views",
+        "peekOfCode": "def remover_do_carrinho(request, produto_id: int):\n    carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not carrinho:\n        carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    try:\n        item = CarrinhoItem.objects.get(produto=produto)\n        item.quantidade -= 1\n        item.save()\n        if item.quantidade <= 0:",
         "detail": "loja.produtos.views",
         "documentation": {}
     },

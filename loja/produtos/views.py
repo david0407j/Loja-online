@@ -33,3 +33,19 @@ def adicionar_no_carrinho(request, produto_id: int):
 
     return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})
 
+def remover_do_carrinho(request, produto_id: int):
+    carrinho = Carrinho.objects.filter(user=request.user).first()
+    if not carrinho:
+        carrinho = Carrinho.objects.create(user=request.user)
+
+    produto = Produto.objects.get(id=produto_id)
+    try:
+        item = CarrinhoItem.objects.get(produto=produto)
+        item.quantidade -= 1
+        item.save()
+        if item.quantidade <= 0:
+            item.delete()
+    except:
+        return render(request, 'produtos/meu_carrinho.html', context={'carrinho': carrinho})
+
+
