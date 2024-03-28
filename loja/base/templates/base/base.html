@@ -21,12 +21,13 @@
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/styles.css" rel="stylesheet" />
 </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'base:home' %}">Reizinho-importe</a>
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container px-4 px-lg-5">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-    class="navbar-toggler-icon"></span></button>
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+        class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'produtos:produto' "Masculino" %}">Masculino</a></li>
@@ -34,14 +35,23 @@
         <li class="nav-item"><a class="nav-link" href="{% url 'produtos:produto' "Infantil" %}">Infantil</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'produtos:produto' "Variedades" %}">Produtos</a></li>
         <li class="nav-item dropdown">
+        </ul>
+        </li>
       </ul>
-      </li>
-      </ul>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <form class="d-flex bi-cart-fill">
+      </form>
+    </div>
+  </div>
+</nav>
 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'base:home' %}">Reizinho-importe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+     
     </nav>
     {% block body %}{% endblock body %}
     <footer class="main-footer mt-5 pt-4 text-light">

@@ -30,7 +30,7 @@
 </html>
 
 {% for item in meu_carrinho.produtos.all %}
-<p>{{ item.nome }}
+<p>{{ item.descricao  }}
 <a class="btn btn-warning" href="{% url 'produtos:remover_do_carrinho' produto_id=item.id %}">
     remover do carrinho
 </a></p>

@@ -9,7 +9,11 @@ def produto_alguma_coisa(request, nome_categoria):
         raise Exception(f"Categoria '{nome_categoria}' nao encontrada. Utilize uma das {categorias_validas}")
 
     produtos_da_categoria = Produto.objects.filter(categoria_id=categoria.id)
-    return render(request, 'produtos/produtos.html', context={'camisetas': produtos_da_categoria})
+    context={
+        'camisetas': produtos_da_categoria,
+        'categoria': categoria,
+    }
+    return render(request, 'produtos/produtos.html', context=context)
  
  
 def meu_carrinho(request):
@@ -47,5 +51,6 @@ def remover_do_carrinho(request, produto_id: int):
             item.delete()
     except:
         return render(request, 'produtos/meu_carrinho.html', context={'carrinho': carrinho})
+    return render(request, 'produtos/meu_carrinho.html', context={'carrinho': carrinho})
 
 

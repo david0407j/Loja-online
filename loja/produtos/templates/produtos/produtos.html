@@ -2,6 +2,8 @@
 {% load static %}
 <title>{% block title %} Reizinho-importe Aperitivo{% endblock title %}</title>
 {% block description %}Masculino{% endblock description%}
+
+<!-- background-image: url({% static 'img/silva.jpg'%}); -->
 {% block body %}
 </head>
 <style>
@@ -11,12 +13,13 @@
         box-sizing: 0;
     }
 
+    {% if categoria.imagem %}
     body {
         width: 100vw;
         height: 100vh;
-        background-image: url({% static 'img/silva.jpg'%});
-
+        background-image: url({{ categoria.imagem.url }})
     }
+    {% endif %}
 </style>
 <body>
 <!-- Section-->

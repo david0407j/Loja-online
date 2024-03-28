@@ -5,6 +5,7 @@ from django.contrib.auth import get_user_model
 
 class Categoria(models.Model):
     nome = models.CharField(max_length=32,unique=True)
+    imagem = models.ImageField(upload_to='img_categoria/', blank=True, null=True)
 
     def __str__(self):
         return f'{self.nome}'
