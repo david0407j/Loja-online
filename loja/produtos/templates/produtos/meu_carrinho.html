@@ -21,17 +21,31 @@
 </head>
 <body>
 
-<!-- Botão Carrinho -->
-<button class="cart-button"><i class="fas fa-shopping-cart"></i> Carrinho</button>
+    <div>
+        <table>
+            {% for item in produtos_do_carrinho %}
+                <tr>
+                    <td>
+                        <img height="84" src="{{ item.produto.imagem.url }}" alt="">
+                    </td>
+                    <td>{{ item.quantidade }}</td>
+                    <td>{{ item.produto.valor }}</td>
+                    <td><p>{{ item.produto.descricao  }}</p></td>
+                    <td>
+                        <a class="btn btn-warning" href="{% url 'produtos:remover_do_carrinho' item_id=item.id %}">
+                            remover do carrinho
+                        </a>
+                    </td>            
+            {%endfor%}
+            </tr>
+        </table>        
+    </div>
 
-<!-- Adicione o link para o Font Awesome (opcional) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <!-- Botão Carrinho -->
+    <button class="cart-button"><i class="fas fa-shopping-cart"></i> Carrinho</button>
+
+    <!-- Adicione o link para o Font Awesome (opcional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
 
-{% for item in meu_carrinho.produtos.all %}
-<p>{{ item.descricao  }}
-<a class="btn btn-warning" href="{% url 'produtos:remover_do_carrinho' produto_id=item.id %}">
-    remover do carrinho
-</a></p>
-{%endfor%}

@@ -34,23 +34,29 @@ def adicionar_no_carrinho(request, produto_id: int):
     novo_item = CarrinhoItem(produto=produto, quantidade=1, carrinho=meu_carrinho)
     novo_item.save()
     meu_carrinho = Carrinho.objects.filter(user=request.user).first()
+    context={
+        'meu_carrinho': meu_carrinho,
+        'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho),
+    }
 
-    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})
+    return render(request, 'produtos/meu_carrinho.html', context=context)
 
-def remover_do_carrinho(request, produto_id: int):
-    carrinho = Carrinho.objects.filter(user=request.user).first()
-    if not carrinho:
-        carrinho = Carrinho.objects.create(user=request.user)
+def remover_do_carrinho(request, item_id: int):
+    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
 
-    produto = Produto.objects.get(id=produto_id)
     try:
-        item = CarrinhoItem.objects.get(produto=produto)
-        item.quantidade -= 1
-        item.save()
-        if item.quantidade <= 0:
-            item.delete()
+        #produto = Produto.objects.get(id=produto_id)
+        CarrinhoItem.objects.get(id=item_id).delete()
+
+        # TODO: remover este DRY
+        context={
+            'meu_carrinho': meu_carrinho,
+            'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho),
+        }        
+        return render(request, 'produtos/meu_carrinho.html', context=context)
+
     except:
-        return render(request, 'produtos/meu_carrinho.html', context={'carrinho': carrinho})
-    return render(request, 'produtos/meu_carrinho.html', context={'carrinho': carrinho})
+        # TODO:
+        pass
 
 
