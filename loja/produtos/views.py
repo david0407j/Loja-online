@@ -57,6 +57,7 @@ def remover_do_carrinho(request, item_id: int):
 
     except:
         # TODO:
-        pass
+        return render(request, 'produtos/meu_carrinho.html', context=context)
+
 
 
