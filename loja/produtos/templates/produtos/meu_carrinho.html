@@ -1,3 +1,8 @@
+{% extends 'base/base.html' %}
+{% load static %}
+<title>{% block title %} Reizinho-importe Aperitivo{% endblock title %}</title>
+{% block description %}Carrinho{% endblock description%}
+{% block body %}
 <!DOCTYPE html>
 <html lang="br">
 <head>
@@ -62,14 +67,12 @@
                     <td>{{ item.quantidade }}</td>
                     <td>{{ item.produto.valor }}</td>
                     <td><p>{{ item.produto.descricao  }}</p></td>
-                    <td>
-
                     </td>
                     </td>
                     </td>
-                    <tb><div class="{{ item.produto.descricao  }}" data-id=""><tb>
-                     <td><input name="{{ item.produto.valor }}" value="1" /> </td> 
-                      <td> <button id="{{ item.quantidade }}">+</button>  <button id=>-</button></td></td> 
+                    <tb><div class="" data-id=""><tb>
+                     <td><input name="" value="1" /> </td> 
+                      <td> <button id="">+</button>  <button id=>-</button></td></td> 
                     <td>
                     <td>
                         <a class="btn btn-warning" href="{% url 'produtos:remover_do_carrinho' item_id=item.id %}">
@@ -82,4 +85,4 @@
     </div>
 </body>
 </html>
-
+{% endblock body %}

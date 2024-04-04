@@ -17,8 +17,6 @@ from decouple import config, Csv
 from sentry_sdk.integrations.django import DjangoIntegration
 import sentry_sdk
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -49,8 +47,6 @@ INSTALLED_APPS = [
     'collectfast',
     'loja.base',
     'loja.produtos',
-    
-    
 ]
 
 MIDDLEWARE = [
@@ -103,7 +99,6 @@ parse_database = partial(dj_database_url.parse, conn_max_age=600)
 DATABASES = {
     'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
 }
-
 
 
 # Password validation
