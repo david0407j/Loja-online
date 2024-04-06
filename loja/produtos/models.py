@@ -16,7 +16,7 @@ class Produto(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     descricao = models.CharField(max_length=128)
     nome = models.SlugField(max_length=512)
-    valor = models.CharField(max_length=32)
+    valor = models.DecimalField(decimal_places=2, max_digits=20, default=100.00)
     criado_em = models.DateTimeField(auto_now_add=True)
     imagem = models.ImageField(upload_to='img/')
     featured = models.BooleanField(default = False)
@@ -44,5 +44,6 @@ class CarrinhoItem(models.Model):
     carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)
     quantidade = models.IntegerField(default=1)
 
-
-
+    @property
+    def total_item(self):
+        return self.quantidade * self.produto.valor

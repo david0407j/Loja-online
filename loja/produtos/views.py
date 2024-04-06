@@ -31,17 +31,22 @@ def adicionar_no_carrinho(request, produto_id: int):
 
     produto = Produto.objects.get(id=produto_id)
 
-    novo_item = CarrinhoItem(produto=produto, quantidade=1, carrinho=meu_carrinho)
-    novo_item.save()
+    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()
+    if not item_existente:
+        item_existente = CarrinhoItem(produto=produto, quantidade=0, carrinho=meu_carrinho)
+
+    item_existente.quantidade += 1
+    item_existente.save()
+
     meu_carrinho = Carrinho.objects.filter(user=request.user).first()
     context={
         'meu_carrinho': meu_carrinho,
-        'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho),
+        'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id"),
     }
 
     return render(request, 'produtos/meu_carrinho.html', context=context)
 
-def remover_do_carrinho(request, item_id: int):
+def excluir_item(request, item_id: int):
     meu_carrinho = Carrinho.objects.filter(user=request.user).first()
 
     try:
@@ -61,3 +66,21 @@ def remover_do_carrinho(request, item_id: int):
 
 
 
+def remover_do_carrinho(request, produto_id: int):
+    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
+    produto = Produto.objects.get(id=produto_id)
+
+    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()
+    if item_existente:
+        item_existente.quantidade -= 1
+        item_existente.save()
+
+        if item_existente.quantidade == 0:
+            item_existente.delete()
+
+    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
+    context={
+        'meu_carrinho': meu_carrinho,
+        'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id"),
+    }
+    return render(request, 'produtos/meu_carrinho.html', context=context)

@@ -63,22 +63,32 @@
                 <tr>
                     <td>
                         <img height="200" src="{{ item.produto.imagem.url }}" alt="">
+                        <table>
+                            <tr>
+                                <td>{{ item.produto.nome }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ item.produto.descricao }}</td>
+                            </tr>
+                            <tr>
+                                <td>{{ item.produto.valor }} (Total: {{ item.total_item }})</td>
+                            </tr>
+                            <td>
+                            </table>
+                            <a href="{% url 'produtos:carrinho.adicionar' produto_id=item.produto.id %}">
+                                <button id="">+</button>
+                            </a>
+                            <input name="" value="{{ item.quantidade }}" readonly /> 
+                            <a href="{% url 'produtos:carrinho.remover' produto_id=item.produto.id %}">
+                                <button id="">-</button>
+                            </a>
+                        </tr>
+                        </table>
                     </td>
-                    <td>{{ item.quantidade }}</td>
-                    <td>{{ item.produto.valor }}</td>
-                    <td><p>{{ item.produto.descricao  }}</p></td>
-                    </td>
-                    </td>
-                    </td>
-                    <tb><div class="" data-id=""><tb>
-                     <td><input name="" value="1" /> </td> 
-                      <td> <button id="">+</button>  <button id=>-</button></td></td> 
-                    <td>
-                    <td>
-                        <a class="btn btn-warning" href="{% url 'produtos:remover_do_carrinho' item_id=item.id %}">
-                            EXCLUIR
-                        </a>
-                    </td>            
+                    <a class="btn btn-warning" href="{% url 'produtos:carrinho.excluir' item_id=item.id %}">
+                        FINALIZAR COMPRA
+                    </a>
+                </td>
             {%endfor%}
             </tr>
         </table>        
