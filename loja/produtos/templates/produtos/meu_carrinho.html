@@ -9,10 +9,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carrinho-importe</title>
-<!-- Inclua o link para os ícones do Font Awesome (opcional) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Botão Carrinho -->
   <button class="cart-button"><i class="fas fa-shopping-cart"></i> Carrinho</button>
+<!-- Inclua o link para os ícones do Font Awesome (opcional) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Adicione o link para o Font Awesome (opcional) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
@@ -64,17 +64,21 @@
                     <td>
                         <img height="200" src="{{ item.produto.imagem.url }}" alt="">
                         <table>
-                            <tr>
-                                <td>{{ item.produto.nome }}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ item.produto.descricao }}</td>
-                            </tr>
-                            <tr>
-                                <td>{{ item.produto.valor }} (Total: {{ item.total_item }})</td>
-                            </tr>
-                            <td>
-                            </table>
+                                <tr>
+                                    <td>{{ item.produto.nome }}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ item.produto.descricao }}</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ item.produto.valor }}</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    <tr>
+                                        <td>Produto #{{ forloop.counter }}</td>
+                                    </tr>
+                                
                             <a href="{% url 'produtos:carrinho.adicionar' produto_id=item.produto.id %}">
                                 <button id="">+</button>
                             </a>
@@ -85,10 +89,15 @@
                         </tr>
                         </table>
                     </td>
-                    <a class="btn btn-warning" href="{% url 'produtos:carrinho.excluir' item_id=item.id %}">
-                        FINALIZAR COMPRA
-                    </a>
-                </td>
+                </table>
+                <p>Total da compra: (R${{ item.total_item }})</p>
+                <a class="border-radius bootstrap-icons" href="{% url 'produtos:carrinho.excluir' item_id=item.id %}">
+                    Excluir Produto
+                </a>
+                <a class="bootstrap-icons bi-cart-fill" href="{% url 'produtos:carrinho_total' %}">
+                    FINALIZAR COMPRA
+                </a>
+                </a>
             {%endfor%}
             </tr>
         </table>        

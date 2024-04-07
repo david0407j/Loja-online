@@ -23,21 +23,23 @@
 </head>
 <body>
 <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-collapse bg-dark">
   <div class="container px-4 px-lg-5">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
         class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+          <a class="navbar-brand" href="{% url 'base:home' %}">Reizinho-importe</a>
         <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'produtos:produto' "Masculino" %}">Masculino</a></li>
         <li class="nav-item"><a class="nav-link active" aria-current="page"href="{% url 'produtos:produto' "Feminina" %}">Feminina</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'produtos:produto' "Infantil" %}">Infantil</a></li>
         <li class="nav-item"><a class="nav-link" href="{% url 'produtos:produto' "Produtos" %}">Produtos</a></li>
         <li class="nav-item dropdown">
           <form class="d-flex">
-            <button class="btn btn-outline-dark" type="submit">
-              <i class="bi-cart-fill me-1">Carrinho</i>
+            <button class="btn btn-collapse-dark" type="submit">
+              <span class="cart-icon"><i class="bi bi-cart-fill"></i><span class="cart-count"></span></span>
+              Carrinho
             </button>
           </form>
         </ul>
@@ -47,16 +49,6 @@
     </div>
   </div>
 </nav>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'base:home' %}">Reizinho-importe</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-     
-    </nav>
     {% block body %}{% endblock body %}
     <footer class="main-footer mt-5 pt-4 text-light">
       <div class="container">

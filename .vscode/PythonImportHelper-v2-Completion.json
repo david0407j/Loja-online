@@ -666,6 +666,14 @@
         "documentation": {}
     },
     {
+        "label": "calcular_total_carrinho",
+        "importPath": "loja.produtos.views",
+        "description": "loja.produtos.views",
+        "isExtraImport": true,
+        "detail": "loja.produtos.views",
+        "documentation": {}
+    },
+    {
         "label": "get_asgi_application",
         "importPath": "django.core.asgi",
         "description": "django.core.asgi",
@@ -1094,7 +1102,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n ]",
+        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n     path('meucarrinho/total/', calcular_total_carrinho, name='carrinho_total'),\n ]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1103,7 +1111,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n ]",
+        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n     path('meucarrinho/total/', calcular_total_carrinho, name='carrinho_total'),\n ]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1149,6 +1157,15 @@
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
         "peekOfCode": "def remover_do_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if item_existente:\n        item_existente.quantidade -= 1\n        item_existente.save()\n        if item_existente.quantidade == 0:\n            item_existente.delete()\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()",
+        "detail": "loja.produtos.views",
+        "documentation": {}
+    },
+    {
+        "label": "calcular_total_carrinho",
+        "kind": 2,
+        "importPath": "loja.produtos.views",
+        "description": "loja.produtos.views",
+        "peekOfCode": "def calcular_total_carrinho(request):\n    carrinho = CarrinhoItem.objects.all()\n    total_compra = sum(item.total_item for item in carrinho)\n    return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})",
         "detail": "loja.produtos.views",
         "documentation": {}
     },

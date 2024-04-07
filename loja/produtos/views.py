@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from loja.produtos.models import  Produto, Carrinho, Categoria, CarrinhoItem
+from loja.produtos.models import  Produto, Carrinho, Categoria, CarrinhoItem 
  
 
 def produto_alguma_coisa(request, nome_categoria):
@@ -84,3 +84,9 @@ def remover_do_carrinho(request, produto_id: int):
         'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id"),
     }
     return render(request, 'produtos/meu_carrinho.html', context=context)
+
+
+def calcular_total_carrinho(request):
+    carrinho = CarrinhoItem.objects.all()
+    total_compra = sum(item.total_item for item in carrinho)
+    return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})
