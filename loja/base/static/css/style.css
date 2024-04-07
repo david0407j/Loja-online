@@ -11,3 +11,13 @@
 @media screen ( max-width 600px){
 
 }
+
+@media (max-width: 768px) {
+    .rights,
+    .social-icons {
+      text-align: center;
+    }
+    .rights {
+      margin-top: 20px;
+    }
+  }

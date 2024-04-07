@@ -2,60 +2,82 @@
 {% load static %}
 <title>{% block title %}Reizinho-imports- home{% endblock title %}</title>
 {% block body %}
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card">
-                    <header class="bg-dark py-5">
-                        <div class="text-center text-white">
-                          <h1 class="display-4 fw-bolder"> Produtos importados </h1>
-                          <p class="lead fw-normal text-white-50 mb-0">Enviamos para todo o Brasil!
-                            aceitado pagamento via cartão, depósito e transferêcia e pix <i class="bi bi-credit-card-2-back"></i><i
-                              class="bi bi-credit-card-2-back-fill"></i>
-                            <i class="bi bi-credit-card-fill"></i><i class="bi bi-credit-card-2-back"></i>
+            <header class="bg-dark py-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder"> Produtos importados </h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Enviamos para todo o Brasil!
+                        aceitado pagamento via cartão, depósito e transferêcia e pix <i class="bi bi-credit-card-2-back"></i><i
+                            class="bi bi-credit-card-2-back-fill"></i>
+                        <i class="bi bi-credit-card-fill"></i><i class="bi bi-credit-card-2-back"></i>
+                    </p>
+                </div>
+            </header>
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static 'img/reizinho.ico' %}" class="d-block mx-auto img-fluid" style="max-width: 100px; max-height: 100px;" alt="Imagem">
+                  </div>
+                </div>
+              </div>
+                        <!-- Instagram da loja -->
+                        <p class="text-center mt-3">
+                            <span style="font-family: 'Arial', sans-serif; font-size: 18px; font-weight: bold; color: #333;">Instagram da loja:</span>
+                            <a href="https://www.instagram.com/reizinhoimportsofc?igsh=NTJvcWVqY2tlcGIz" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                              </a>
+                              <a href="https://www.instagram.com/reizinhoimportsofc?igsh=NTJvcWVqY2tlcGIz" target="_blank">Reizinho-importe</a>
                           </p>
-                        </div>
-                        </div>
-                      </header>
-                </h5>
-                <p class="card-text">
-                    <img src="{% static 'img/xereu.ico' %}" alt="Foto Reizinho" class="img-thumbnail float-left mr-3" />
-
-                    instagram da loja
-                    <a href="https://www.instagram.com/reizinhoimportsofc?igsh=NTJvcWVqY2tlcGIz"
-                        target="_blank">Reizinho-importe</a>
-                    <img src="{% static 'img/reizinho.ico' %}" class="img-fluid" alt="...">
-                    O empreendedorismo é o processo de identificar oportunidades, desenvolver ideias inovadoras e
-                    criar valor por meio da implementação dessas ideias. Os empreendedores são indivíduos
-                    visionários que estão dispostos a assumir riscos, enfrentar desafios e buscar soluções criativas
-                    para problemas.
-
-                    O empreendedorismo envolve a capacidade de liderança, a habilidade de tomar decisões
-                    estratégicas e a determinação de perseverar diante das adversidades. Os empreendedores são
-                    agentes de mudança que buscam impactar positivamente suas comunidades e o mundo ao seu redor.
-
-                    Além disso, o empreendedorismo promove a inovação, o crescimento econômico e a criação de
-                    empregos. Os empreendedores desempenham um papel crucial no desenvolvimento de novas
-                    tecnologias, produtos e serviços que melhoram a qualidade de vida das pessoas.
-
-                    Em resumo, o empreendedorismo é uma força dinâmica que impulsiona o progresso e a inovação em
-                    todas as áreas da sociedade, contribuindo para um futuro mais próspero e sustentável.
-                </p>
-                <h1 class="fw-light text-center text-lg-start mt-4 mb-0">Produtos da Loja</h1>
+                    <p class="lead fw-normal">
+                        <span class="fw-bold">O empreendedorismo</span> é o processo de identificar oportunidades, desenvolver ideias inovadoras e
+                        criar valor por meio da implementação dessas ideias. Os empreendedores são indivíduos visionários
+                        que estão dispostos a assumir riscos, enfrentar desafios e buscar soluções criativas para
+                        problemas.
+                    </p>
+                </div>
             </div>
-            <img src="{% static 'img/tenis.ico' %}" class="rounded float-start" alt="Tenis"><img
-                src="{% static 'img/bone.ico' %}" class="rounded float-start" alt="bone">
-            <img src="{% static 'img/calçao.ico' %}" class="rounded float-end" alt="calção"><img
-                src="{% static 'img/jaqueta.ico' %}" class="rounded float-end" alt="jaqueta">
-            <img src="{% static 'img/meia.ico' %}" class="rounded float-start" alt="meia"><img
-                src="{% static 'img/basquete.ico' %}" class="rounded float-start" alt="basquete">
-            <img src="{% static 'img/perfume.ico' %}" class="rounded float-end" alt="perfume"><img
-                src="{% static 'img/feminino.ico' %}" class="rounded float-end" alt="Feminina">
-            <img src="{% static 'img/tenis2.ico' %}" class="rounded float-start" alt="tenis2"><img
-                src="{% static 'img/mila.ico' %}" class="rounded float-start" alt="mila">
-            <img src="{% static 'img/flamengo.ico' %}" class="rounded float-start" alt="flamengo">
+                <!-- Outro conteúdo do texto aqui... -->
+                <h1 class="fw-light text-center mt-4 mb-0">Produtos da Loja</h1>
+                <div class="row mt-4">
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/tenis.ico' %}" class="img-fluid rounded" alt="Tênis">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/bone.ico' %}" class="img-fluid rounded" alt="Boné">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/calçao.ico' %}" class="img-fluid rounded" alt="Calção">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/jaqueta.ico' %}" class="img-fluid rounded" alt="Jaqueta">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/meia.ico' %}" class="img-fluid rounded" alt="Meia">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/basquete.ico' %}" class="img-fluid rounded" alt="Basquete">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/perfume.ico' %}" class="img-fluid rounded" alt="Perfume">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/feminino.ico' %}" class="img-fluid rounded" alt="Feminina">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/tenis2.ico' %}" class="img-fluid rounded" alt="Tênis 2">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/mila.ico' %}" class="img-fluid rounded" alt="Mila">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/flamengo.ico' %}" class="img-fluid rounded" alt="Flamengo">
+                    </div>
+                    <div class="col-sm-6 col-md-3 mb-3">
+                        <img src="{% static 'img/morro.ico' %}" class="img-fluid rounded" alt="Flamengo">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-</div>
+
 {% endblock body %}
