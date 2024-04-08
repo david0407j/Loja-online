@@ -58,50 +58,56 @@
 }
     </style>
     <div>
-        <table>
-            {% for item in produtos_do_carrinho %}
-                <tr>
-                    <td>
-                        <img height="200" src="{{ item.produto.imagem.url }}" alt="">
+        <div>
+            <div>
+                <table>
+                    {% for item in produtos_do_carrinho %}
+                    <div style="border: 1px solid #ccc; margin-bottom: 20px; padding: 10px;">
                         <table>
-                                <tr>
-                                    <td>{{ item.produto.nome }}</td>
-                                </tr>
-                                <tr>
-                                    <td>{{ item.produto.descricao }}</td>
-                                </tr>
-                                <tr>
-                                    <td>{{ item.produto.valor }}</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                    <tr>
-                                        <td>Produto #{{ forloop.counter }}</td>
-                                    </tr>
-                                
-                            <a href="{% url 'produtos:carrinho.adicionar' produto_id=item.produto.id %}">
-                                <button id="">+</button>
-                            </a>
-                            <input name="" value="{{ item.quantidade }}" readonly /> 
-                            <a href="{% url 'produtos:carrinho.remover' produto_id=item.produto.id %}">
-                                <button id="">-</button>
-                            </a>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <img height="200" src="{{ item.produto.imagem.url }}" alt="">
+                                    <table>
+                                        <tr>
+                                            <td>{{ item.produto.nome }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{ item.produto.descricao }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>{{ item.produto.valor }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Produto {{ forloop.counter }}</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
                         </table>
-                    </td>
-                </table>
+                        <a href="{% url 'produtos:carrinho.adicionar' produto_id=item.produto.id %}">
+                            <button>+</button>
+                        </a>
+                        <input name="" value="{{ item.quantidade }}" readonly /> 
+                        <a href="{% url 'produtos:carrinho.remover' produto_id=item.produto.id %}">
+                            <button>-</button>
+                        </a>
+                    </div>
                 <p>Total da compra: (R${{ item.total_item }})</p>
-                <a class="border-radius bootstrap-icons" href="{% url 'produtos:carrinho.excluir' item_id=item.id %}">
+                <a class="background-color cart-button" href="{% url 'produtos:carrinho.excluir' item_id=item.id %}">
                     Excluir Produto
                 </a>
-                <a class="bootstrap-icons bi-cart-fill" href="{% url 'produtos:carrinho_total' %}">
+                <a class="bootstrap-icons cart-button" href="{% url 'produtos:carrinho_total' %}">
                     FINALIZAR COMPRA
                 </a>
                 </a>
             {%endfor%}
-            </tr>
-        </table>        
-    </div>
+        </div>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
 </body>
 </html>
 {% endblock body %}
