@@ -104,6 +104,14 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "loja.base.models",
+        "description": "loja.base.models",
+        "isExtraImport": true,
+        "detail": "loja.base.models",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -650,6 +658,14 @@
         "documentation": {}
     },
     {
+        "label": "calcular_total_carrinho",
+        "importPath": "loja.produtos.views",
+        "description": "loja.produtos.views",
+        "isExtraImport": true,
+        "detail": "loja.produtos.views",
+        "documentation": {}
+    },
+    {
         "label": "produto_alguma_coisa",
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
@@ -659,14 +675,6 @@
     },
     {
         "label": "remover_do_carrinho",
-        "importPath": "loja.produtos.views",
-        "description": "loja.produtos.views",
-        "isExtraImport": true,
-        "detail": "loja.produtos.views",
-        "documentation": {}
-    },
-    {
-        "label": "calcular_total_carrinho",
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
         "isExtraImport": true,
@@ -1102,7 +1110,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n     path('meucarrinho/total/', calcular_total_carrinho, name='carrinho_total'),\n ]",
+        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n    #path('meucarrinho/finalizar/<item_id>/', calcular_total_carrinho, name='carrinho.finalizar'),#\n]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1111,7 +1119,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n     path('meucarrinho/total/', calcular_total_carrinho, name='carrinho_total'),\n ]",
+        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n    #path('meucarrinho/finalizar/<item_id>/', calcular_total_carrinho, name='carrinho.finalizar'),#\n]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1129,7 +1137,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})\ndef adicionar_no_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)",
+        "peekOfCode": "def meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})\ndef adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1138,7 +1146,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def adicionar_no_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if not item_existente:\n        item_existente = CarrinhoItem(produto=produto, quantidade=0, carrinho=meu_carrinho)\n    item_existente.quantidade += 1\n    item_existente.save()",
+        "peekOfCode": "def adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if not item_existente:\n        item_existente = CarrinhoItem(produto=produto, quantidade=0, carrinho=meu_carrinho)",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1147,7 +1155,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def excluir_item(request, item_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    try:\n        #produto = Produto.objects.get(id=produto_id)\n        CarrinhoItem.objects.get(id=item_id).delete()\n        # TODO: remover este DRY\n        context={\n            'meu_carrinho': meu_carrinho,\n            'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho),\n        }        ",
+        "peekOfCode": "def excluir_item(request, item_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    try:\n        #produto = Produto.objects.get(id=produto_id)\n        CarrinhoItem.objects.get(id=item_id).delete()\n        # TODO: remover este DRY\n        context={\n            'meu_carrinho': meu_carrinho,",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1156,7 +1164,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def remover_do_carrinho(request, produto_id: int):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if item_existente:\n        item_existente.quantidade -= 1\n        item_existente.save()\n        if item_existente.quantidade == 0:\n            item_existente.delete()\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()",
+        "peekOfCode": "def remover_do_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if item_existente:\n        item_existente.quantidade -= 1\n        item_existente.save()\n        if item_existente.quantidade == 0:",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1165,7 +1173,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def calcular_total_carrinho(request):\n    carrinho = CarrinhoItem.objects.all()\n    total_compra = sum(item.total_item for item in carrinho)\n    return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})",
+        "peekOfCode": "def calcular_total_carrinho(request):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})",
         "detail": "loja.produtos.views",
         "documentation": {}
     },

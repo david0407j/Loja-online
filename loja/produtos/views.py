@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from loja.produtos.models import  Produto, Carrinho, Categoria, CarrinhoItem 
+from loja.base.models import User
  
 
 def produto_alguma_coisa(request, nome_categoria):
@@ -25,6 +26,9 @@ def meu_carrinho(request):
 
 
 def adicionar_no_carrinho(request, produto_id: int):
+    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
+    total_compra = sum(item.total_item for item in carrinho)
+
     meu_carrinho = Carrinho.objects.filter(user=request.user).first()
     if not meu_carrinho:
         meu_carrinho = Carrinho.objects.create(user=request.user)
@@ -41,12 +45,15 @@ def adicionar_no_carrinho(request, produto_id: int):
     meu_carrinho = Carrinho.objects.filter(user=request.user).first()
     context={
         'meu_carrinho': meu_carrinho,
+        'total_compra':total_compra,
         'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id"),
     }
 
     return render(request, 'produtos/meu_carrinho.html', context=context)
 
 def excluir_item(request, item_id: int):
+    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
+    total_compra = sum(item.total_item for item in carrinho)
     meu_carrinho = Carrinho.objects.filter(user=request.user).first()
 
     try:
@@ -56,6 +63,7 @@ def excluir_item(request, item_id: int):
         # TODO: remover este DRY
         context={
             'meu_carrinho': meu_carrinho,
+            'total_compra': total_compra,
             'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho),
         }        
         return render(request, 'produtos/meu_carrinho.html', context=context)
@@ -67,6 +75,8 @@ def excluir_item(request, item_id: int):
 
 
 def remover_do_carrinho(request, produto_id: int):
+    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
+    total_compra = sum(item.total_item for item in carrinho)
     meu_carrinho = Carrinho.objects.filter(user=request.user).first()
     produto = Produto.objects.get(id=produto_id)
 
@@ -81,12 +91,13 @@ def remover_do_carrinho(request, produto_id: int):
     meu_carrinho = Carrinho.objects.filter(user=request.user).first()
     context={
         'meu_carrinho': meu_carrinho,
+        'total_compra':total_compra,
         'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id"),
     }
     return render(request, 'produtos/meu_carrinho.html', context=context)
 
 
 def calcular_total_carrinho(request):
-    carrinho = CarrinhoItem.objects.all()
+    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
     total_compra = sum(item.total_item for item in carrinho)
     return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})
