@@ -200,6 +200,30 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -1031,6 +1055,24 @@
         "description": "loja.produtos.migrations.0003_alter_produto_valor",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0002_alter_produto_valor'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='produto',\n            name='valor',\n            field=models.DecimalField(decimal_places=2, default=100.0, max_digits=20),\n        ),",
         "detail": "loja.produtos.migrations.0003_alter_produto_valor",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0004_carrinho_imagem",
+        "description": "loja.produtos.migrations.0004_carrinho_imagem",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0003_alter_produto_valor'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='carrinho',\n            name='imagem',\n            field=models.ImageField(blank=True, null=True, upload_to='img_categoria/'),\n        ),",
+        "detail": "loja.produtos.migrations.0004_carrinho_imagem",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0005_remove_carrinho_imagem",
+        "description": "loja.produtos.migrations.0005_remove_carrinho_imagem",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0004_carrinho_imagem'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='carrinho',\n            name='imagem',\n        ),\n    ]",
+        "detail": "loja.produtos.migrations.0005_remove_carrinho_imagem",
         "documentation": {}
     },
     {

@@ -2,6 +2,10 @@
 {% load static %}
 <title>{% block title %}Reizinho-imports- home{% endblock title %}</title>
 {% block body %}
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
             <header class="bg-dark py-5">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder"> Produtos importados </h1>
@@ -9,6 +13,18 @@
                         aceitado pagamento via cartão, depósito e transferêcia e pix <i class="bi bi-credit-card-2-back"></i><i
                             class="bi bi-credit-card-2-back-fill"></i>
                         <i class="bi bi-credit-card-fill"></i><i class="bi bi-credit-card-2-back"></i>
+                        <head>
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-***" crossorigin="anonymous">
+                          </head>
+                          <i class="fab fa-cc-visa"></i> <!-- Ícone Visa -->
+                          <i class="fab fa-cc-mastercard"></i> <!-- Ícone Mastercard -->
+                         <i class="fab fa-cc-amex"></i> <!-- Ícone American Express -->
+                        <i class="fab fa-cc-discover"></i> <!-- Ícone Discover -->
+                       <i class="fab fa-cc-diners-club"></i> <!-- Ícone Diners Club -->
+                       <i class="fab fa-cc-jcb"></i> <!-- Ícone JCB -->
+                       <i class="fab fa-cc-maestro"></i> <!-- Ícone Maestro -->
+                       <i class="fab fa-cc-elo"></i> <!-- Ícone Elo -->
+  
                     </p>
                 </div>
             </header>
@@ -35,9 +51,18 @@
                     </p>
                 </div>
             </div>
-                <!-- Outro conteúdo do texto aqui... -->
-                <h1 class="fw-light text-center mt-4 mb-0">Produtos da Loja</h1>
-                <div class="row mt-4">
+                <!-- Outro conteúdo do texto aqui... --><div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="fw-light text-center mt-4 mb-0">Produtos da Loja</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mt-4">
+
+               
                     <div class="col-sm-6 col-md-3 mb-3">
                         <img src="{% static 'img/tenis.ico' %}" class="img-fluid rounded" alt="Tênis">
                     </div>

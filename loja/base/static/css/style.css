@@ -21,3 +21,28 @@
       margin-top: 20px;
     }
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.top-right {
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    color: #000; /* Cor do preço */
+}
+
+.card {
+    border: 1px solid #ddd; /* Adicione uma borda para destacar o cartão */
+    border-radius: 10px; /* Deixe o cartão com bordas arredondadas */
+    transition: box-shadow 0.3s; /* Adicione uma transição suave ao cartão */
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Adicione uma sombra suave quando o mouse passar sobre o cartão */
+}

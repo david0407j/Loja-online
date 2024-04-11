@@ -9,13 +9,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Carrinho-importe</title>
-  <!-- Botão Carrinho -->
-  <button class="cart-button"><i class="fas fa-shopping-cart"></i> Carrinho</button>
 <!-- Inclua o link para os ícones do Font Awesome (opcional) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- Adicione o link para o Font Awesome (opcional) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+<!-- Adicione o link para o Font Awesome (opcional) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 <style>
     /* Estilos adicionais para o botão */
     .cart-button {
@@ -27,46 +25,60 @@
         cursor: pointer;
         border-radius: 5px;
     }
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 </style>
-</head>
-<body>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Minha Página</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <button onclick="goBack()">VOLTAR</button>
-    
-        <!-- Seu conteúdo aqui -->
-    
-        <script>
-            function goBack() {
-                window.history.back();
-            }
-        </script>
-    </body>
-    <style>
-       button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-    </style>
-    <div>
         {% for item in produtos_do_carrinho %}
         <div style="border: 1px solid hsla(230, 36%, 90%, 0.993); margin-bottom: 20px; padding: 10px;">
             <img height="200" src="{{ item.produto.imagem.url }}" alt="">
             <div class="product-info">
+            </head>
+            <body>
+                <div>
+                    <label for="tamanho">Escolha o tamanho:</label>
+                    <select name="tamanho da camiseta" id="tamanho">
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                        <option value="XG">XG</option>
+                        <option value="acessórios">acessório</option>
+                        ['<option value="38">37 - 38</option>', '<option value="39">40 - 39</option>', ...]
+                        ['<option value="40">41 - 40</option>', '<option value="43">44 - 41</option>', ...]
+                        ['<option value="42">43 - 42</option>', '<option value="35">35 - 36</option>', ...]
+                        ['<option value="44">45 - 44</option>', '<option value="45">45 - 46</option>', ...]
+                    </select>
+                </div>
+                
+                <div>
                 <h3>{{ item.produto.nome }}</h3>
                 <p>{{ item.produto.descricao }}</p>
                 <p>Preço: R$ {{ item.produto.valor }}</p>
                 <p>Produto {{ forloop.counter }}</p>
-            </div>            
+            </div>
+        </head>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: 0;
+            }
+        
+            {% if categoria.imagem %}
+            body {
+                width: 100vw;
+                height: 100vh;
+                background-image: url({{categoria.imagem.url}})
+            }
+            {% endif %}
+        </style>
+        <body>
             <div>
                 <a href="{% url 'produtos:carrinho.adicionar' produto_id=item.produto.id %}">
                     <button>+</button>
@@ -91,12 +103,13 @@
     <button onclick="goBack()">Voltar</button>
 </footer>
 
-    <script>
-        function goBack() {
-            window.history.back();
-        }
-    </script>
-    
-    </body>
-    </html>
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</body>
+</html>
+
 {% endblock body %}
