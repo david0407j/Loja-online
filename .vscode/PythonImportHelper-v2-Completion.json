@@ -104,14 +104,6 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "loja.base.models",
-        "description": "loja.base.models",
-        "isExtraImport": true,
-        "detail": "loja.base.models",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -192,6 +184,30 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -217,6 +233,14 @@
     },
     {
         "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -593,6 +617,14 @@
         "documentation": {}
     },
     {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "django.db.models.deletion",
         "kind": 6,
         "isExtraImport": true,
@@ -626,23 +658,7 @@
         "documentation": {}
     },
     {
-        "label": "Produto",
-        "importPath": "loja.produtos.models",
-        "description": "loja.produtos.models",
-        "isExtraImport": true,
-        "detail": "loja.produtos.models",
-        "documentation": {}
-    },
-    {
         "label": "Carrinho",
-        "importPath": "loja.produtos.models",
-        "description": "loja.produtos.models",
-        "isExtraImport": true,
-        "detail": "loja.produtos.models",
-        "documentation": {}
-    },
-    {
-        "label": "Categoria",
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
         "isExtraImport": true,
@@ -658,51 +674,27 @@
         "documentation": {}
     },
     {
-        "label": "adicionar_no_carrinho",
-        "importPath": "loja.produtos.views",
-        "description": "loja.produtos.views",
+        "label": "Categoria",
+        "importPath": "loja.produtos.models",
+        "description": "loja.produtos.models",
         "isExtraImport": true,
-        "detail": "loja.produtos.views",
+        "detail": "loja.produtos.models",
         "documentation": {}
     },
     {
-        "label": "excluir_item",
-        "importPath": "loja.produtos.views",
-        "description": "loja.produtos.views",
+        "label": "Produto",
+        "importPath": "loja.produtos.models",
+        "description": "loja.produtos.models",
         "isExtraImport": true,
-        "detail": "loja.produtos.views",
+        "detail": "loja.produtos.models",
         "documentation": {}
     },
     {
-        "label": "meu_carrinho",
-        "importPath": "loja.produtos.views",
-        "description": "loja.produtos.views",
+        "label": "views",
+        "importPath": "loja.produtos",
+        "description": "loja.produtos",
         "isExtraImport": true,
-        "detail": "loja.produtos.views",
-        "documentation": {}
-    },
-    {
-        "label": "calcular_total_carrinho",
-        "importPath": "loja.produtos.views",
-        "description": "loja.produtos.views",
-        "isExtraImport": true,
-        "detail": "loja.produtos.views",
-        "documentation": {}
-    },
-    {
-        "label": "produto_alguma_coisa",
-        "importPath": "loja.produtos.views",
-        "description": "loja.produtos.views",
-        "isExtraImport": true,
-        "detail": "loja.produtos.views",
-        "documentation": {}
-    },
-    {
-        "label": "remover_do_carrinho",
-        "importPath": "loja.produtos.views",
-        "description": "loja.produtos.views",
-        "isExtraImport": true,
-        "detail": "loja.produtos.views",
+        "detail": "loja.produtos",
         "documentation": {}
     },
     {
@@ -1042,37 +1034,55 @@
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loja.produtos.migrations.0002_alter_produto_valor",
-        "description": "loja.produtos.migrations.0002_alter_produto_valor",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='produto',\n            name='valor',\n            field=models.DecimalField(blank=True, decimal_places=10, max_digits=20, null=True),\n        ),",
-        "detail": "loja.produtos.migrations.0002_alter_produto_valor",
+        "importPath": "loja.produtos.migrations.0002_tamanho",
+        "description": "loja.produtos.migrations.0002_tamanho",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Tamanho',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=20, unique=True)),",
+        "detail": "loja.produtos.migrations.0002_tamanho",
         "documentation": {}
     },
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loja.produtos.migrations.0003_alter_produto_valor",
-        "description": "loja.produtos.migrations.0003_alter_produto_valor",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0002_alter_produto_valor'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='produto',\n            name='valor',\n            field=models.DecimalField(decimal_places=2, default=100.0, max_digits=20),\n        ),",
-        "detail": "loja.produtos.migrations.0003_alter_produto_valor",
+        "importPath": "loja.produtos.migrations.0003_remove_produto_tamanho",
+        "description": "loja.produtos.migrations.0003_remove_produto_tamanho",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0002_tamanho'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='produto',\n            name='tamanho',\n        ),\n    ]",
+        "detail": "loja.produtos.migrations.0003_remove_produto_tamanho",
         "documentation": {}
     },
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loja.produtos.migrations.0004_carrinho_imagem",
-        "description": "loja.produtos.migrations.0004_carrinho_imagem",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0003_alter_produto_valor'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='carrinho',\n            name='imagem',\n            field=models.ImageField(blank=True, null=True, upload_to='img_categoria/'),\n        ),",
-        "detail": "loja.produtos.migrations.0004_carrinho_imagem",
+        "importPath": "loja.produtos.migrations.0004_remove_tamanho_nome_tamanho_tamanho",
+        "description": "loja.produtos.migrations.0004_remove_tamanho_nome_tamanho_tamanho",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0003_remove_produto_tamanho'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='tamanho',\n            name='nome',\n        ),\n        migrations.AddField(",
+        "detail": "loja.produtos.migrations.0004_remove_tamanho_nome_tamanho_tamanho",
         "documentation": {}
     },
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loja.produtos.migrations.0005_remove_carrinho_imagem",
-        "description": "loja.produtos.migrations.0005_remove_carrinho_imagem",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0004_carrinho_imagem'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='carrinho',\n            name='imagem',\n        ),\n    ]",
-        "detail": "loja.produtos.migrations.0005_remove_carrinho_imagem",
+        "importPath": "loja.produtos.migrations.0005_remove_tamanho_tamanho_carrinhoitem_tamanho_and_more",
+        "description": "loja.produtos.migrations.0005_remove_tamanho_tamanho_carrinhoitem_tamanho_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0004_remove_tamanho_nome_tamanho_tamanho'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='tamanho',\n            name='Tamanho',\n        ),\n        migrations.AddField(",
+        "detail": "loja.produtos.migrations.0005_remove_tamanho_tamanho_carrinhoitem_tamanho_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0006_remove_carrinhoitem_tamanho_produto_tamanho_and_more",
+        "description": "loja.produtos.migrations.0006_remove_carrinhoitem_tamanho_produto_tamanho_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0005_remove_tamanho_tamanho_carrinhoitem_tamanho_and_more'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='carrinhoitem',\n            name='tamanho',\n        ),\n        migrations.AddField(",
+        "detail": "loja.produtos.migrations.0006_remove_carrinhoitem_tamanho_produto_tamanho_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0007_alter_produto_tamanho",
+        "description": "loja.produtos.migrations.0007_alter_produto_tamanho",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0006_remove_carrinhoitem_tamanho_produto_tamanho_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='produto',\n            name='tamanho',\n            field=models.CharField(choices=[('P', 'Pequeno'), ('M', 'Médio'), ('G', 'Grande'), ('GG', 'Extra Grande'), ('ACS', 'Acessório'), ('35', '35'), ('36', '36'), ('37', '37'), ('38', '38'), ('39', '39'), ('40', '40'), ('41', '41'), ('42', '42'), ('43', '43'), ('44', '44')], max_length=20),\n        ),",
+        "detail": "loja.produtos.migrations.0007_alter_produto_tamanho",
         "documentation": {}
     },
     {
@@ -1116,7 +1126,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32,unique=True)\n    imagem = models.ImageField(upload_to='img_categoria/', blank=True, null=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    nome = models.SlugField(max_length=512)\n    valor = models.DecimalField(decimal_places=2, max_digits=20, default=100.00)",
+        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32, unique=True)\n    imagem = models.ImageField(upload_to='img_categoria/', blank=True, null=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    TAMANHO_CHOICES = [\n        ('P', 'Pequeno'),\n        ('M', 'Médio'),\n        ('G', 'Grande'),",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1125,7 +1135,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    nome = models.SlugField(max_length=512)\n    valor = models.DecimalField(decimal_places=2, max_digits=20, default=100.00)\n    criado_em = models.DateTimeField(auto_now_add=True)\n    imagem = models.ImageField(upload_to='img/')\n    featured = models.BooleanField(default = False)\n    active  = models.BooleanField(default = True)\n    def __str__(self):",
+        "peekOfCode": "class Produto(models.Model):\n    TAMANHO_CHOICES = [\n        ('P', 'Pequeno'),\n        ('M', 'Médio'),\n        ('G', 'Grande'),\n        ('GG', 'Extra Grande'),\n        ('ACS', 'Acessório'),\n        ('35', '35'),\n        ('36', '36'),\n        ('37', '37'),",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1152,7 +1162,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n    #path('meucarrinho/finalizar/<item_id>/', calcular_total_carrinho, name='carrinho.finalizar'),#\n]",
+        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', views.meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', views.adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', views.produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', views.remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', views.excluir_item, name='carrinho.excluir'),\n    path('meucarrinho/compra/finalizar', views.finalizar_compra_whatsapp, name=\"carrinho.finalizar.compra\"),\n    path('adicionar/<int:produto_id>/', views.adicionar_no_carrinho, name='adicionar_no_carrinho'),\n]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1161,7 +1171,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', excluir_item, name='carrinho.excluir'),\n    #path('meucarrinho/finalizar/<item_id>/', calcular_total_carrinho, name='carrinho.finalizar'),#\n]",
+        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', views.meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', views.adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', views.produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', views.remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', views.excluir_item, name='carrinho.excluir'),\n    path('meucarrinho/compra/finalizar', views.finalizar_compra_whatsapp, name=\"carrinho.finalizar.compra\"),\n    path('adicionar/<int:produto_id>/', views.adicionar_no_carrinho, name='adicionar_no_carrinho'),\n]",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1179,7 +1189,16 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})\ndef adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:",
+        "peekOfCode": "def meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})\ndef obter_total_carrinho(items_do_carrinho):\n    return sum([item.total_item for item in items_do_carrinho])\ndef adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    tamanho = request.POST.get('tamanho')",
+        "detail": "loja.produtos.views",
+        "documentation": {}
+    },
+    {
+        "label": "obter_total_carrinho",
+        "kind": 2,
+        "importPath": "loja.produtos.views",
+        "description": "loja.produtos.views",
+        "peekOfCode": "def obter_total_carrinho(items_do_carrinho):\n    return sum([item.total_item for item in items_do_carrinho])\ndef adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    tamanho = request.POST.get('tamanho')\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1188,7 +1207,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if not item_existente:\n        item_existente = CarrinhoItem(produto=produto, quantidade=0, carrinho=meu_carrinho)",
+        "peekOfCode": "def adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    tamanho = request.POST.get('tamanho')\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if not item_existente:\n        item_existente = CarrinhoItem(produto=produto, quantidade=0, carrinho=meu_carrinho)",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1206,7 +1225,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def remover_do_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if item_existente:\n        item_existente.quantidade -= 1\n        item_existente.save()\n        if item_existente.quantidade == 0:",
+        "peekOfCode": "def remover_do_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum([item.total_item for item in carrinho])\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if item_existente:\n        item_existente.quantidade -= 1\n        item_existente.save()\n        if item_existente.quantidade == 0:",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1215,7 +1234,16 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def calcular_total_carrinho(request):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})",
+        "peekOfCode": "def calcular_total_carrinho(request):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})\ndef finalizar_compra_whatsapp(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    items_carrinho = CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by(\"-id\")\n    total_compra = obter_total_carrinho(items_carrinho)\n    produtos_texto = \"\\n\".join([f\"  {item.quantidade} x {item.produto.nome}* ({item.produto.descricao}) - Tamanho: {item.produto.tamanho}, Preço R${item.produto.valor},\" for item in items_carrinho])\n    texto_final = \"Olá!\\nGostaria de finalizar a compra. Aqui está a lista de produtos que quero adquirir:\\n\"",
+        "detail": "loja.produtos.views",
+        "documentation": {}
+    },
+    {
+        "label": "finalizar_compra_whatsapp",
+        "kind": 2,
+        "importPath": "loja.produtos.views",
+        "description": "loja.produtos.views",
+        "peekOfCode": "def finalizar_compra_whatsapp(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    items_carrinho = CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by(\"-id\")\n    total_compra = obter_total_carrinho(items_carrinho)\n    produtos_texto = \"\\n\".join([f\"  {item.quantidade} x {item.produto.nome}* ({item.produto.descricao}) - Tamanho: {item.produto.tamanho}, Preço R${item.produto.valor},\" for item in items_carrinho])\n    texto_final = \"Olá!\\nGostaria de finalizar a compra. Aqui está a lista de produtos que quero adquirir:\\n\"\n    texto_final += produtos_texto\n    texto_final += f\"\\nTotal da compra: R${total_compra}\\n\" \n    tamanho_da_camiseta = request.POST.get('Rezinho_Imports')\n    texto_final += f\"\\n REZINHO IMPORTS!{tamanho_da_camiseta}\"",
         "detail": "loja.produtos.views",
         "documentation": {}
     },

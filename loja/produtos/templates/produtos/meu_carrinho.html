@@ -34,73 +34,41 @@
         cursor: pointer;
     }
 </style>
-        {% for item in produtos_do_carrinho %}
-        <div style="border: 1px solid hsla(230, 36%, 90%, 0.993); margin-bottom: 20px; padding: 10px;">
-            <img height="200" src="{{ item.produto.imagem.url }}" alt="">
-            <div class="product-info">
-            </head>
-            <body>
-                <div>
-                    <label for="tamanho">Escolha o tamanho:</label>
-                    <select name="tamanho da camiseta" id="tamanho">
-                        <option value="P">P</option>
-                        <option value="M">M</option>
-                        <option value="G">G</option>
-                        <option value="GG">GG</option>
-                        <option value="XG">XG</option>
-                        <option value="acessórios">acessório</option>
-                        ['<option value="38">37 - 38</option>', '<option value="39">40 - 39</option>', ...]
-                        ['<option value="40">41 - 40</option>', '<option value="43">44 - 41</option>', ...]
-                        ['<option value="42">43 - 42</option>', '<option value="35">35 - 36</option>', ...]
-                        ['<option value="44">45 - 44</option>', '<option value="45">45 - 46</option>', ...]
-                    </select>
-                </div>
-                
-                <div>
-                <h3>{{ item.produto.nome }}</h3>
-                <p>{{ item.produto.descricao }}</p>
-                <p>Preço: R$ {{ item.produto.valor }}</p>
-                <p>Produto {{ forloop.counter }}</p>
-            </div>
-        </head>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: 0;
-            }
-        
-            {% if categoria.imagem %}
-            body {
-                width: 100vw;
-                height: 100vh;
-                background-image: url({{categoria.imagem.url}})
-            }
-            {% endif %}
-        </style>
-        <body>
-            <div>
-                <a href="{% url 'produtos:carrinho.adicionar' produto_id=item.produto.id %}">
-                    <button>+</button>
-                </a>
-                <input name="" value="{{ item.quantidade }}" readonly /> 
-                <a href="{% url 'produtos:carrinho.remover' produto_id=item.produto.id %}">
-                    <button>-</button>
-                </a>
-            </div>
-            <p>Total do Item: (R${{ item.total_item }})</p>
-            <a class="background-color cart-button" href="{% url 'produtos:carrinho.excluir' item_id=item.id %}">
-                EXCLUIR PRODUTO
-            </a>
-        </div>
-        {% endfor %}
+{% for item in produtos_do_carrinho %}
+<div style="border: 1px solid hsla(230, 36%, 90%, 0.993); margin-bottom: 20px; padding: 10px;">
+    <img height="200" src="{{ item.produto.imagem.url }}" alt="">
+    <div class="product-info">
+        <select name="tamanho_da_camiseta" id="tamanho_da_camiseta">
+            {% for tamanho, descricao in item.produto.TAMANHO_CHOICES %}
+                <option value="{{ tamanho }}">{{ descricao }}</option>
+            {% endfor %}
+        </select>
+        <h3>{{ item.produto.nome }}</h3>
+        <p>{{ item.produto.descricao }}</p>
+        <p>Preço: R$ {{ item.produto.valor }}</p>
+        <p>Produto {{ forloop.counter }}</p>
     </div>
-    <footer>
-    <p>Total da compra: (R${{ total_compra }})</p>
-    <a class="bootstrap-icons cart-button"href="https://wa.me/3191235709?text=Olá! Gostaria de finalizar a compra. Aqui está a lista de produtos que quero adquirir:Por favor, entre em contato comigo para prosseguirmos com o pagamento.">
-        FINALIZAR COMPRA PELO WhatsApp
+    <div>            
+        <a href="{% url 'produtos:carrinho.adicionar' produto_id=item.produto.id %}">
+            <button>+</button>
+        </a>
+        <input name="" value="{{ item.quantidade }}" readonly /> 
+        <a href="{% url 'produtos:carrinho.remover' produto_id=item.produto.id %}">
+            <button>-</button>
+        </a>
+    </div>
+    <p>Total do Item: (R${{ item.total_item }})</p>
+    <a class="btn btn-outline-dark" href="{% url 'produtos:carrinho.excluir' item_id=item.id %}">
+        EXCLUIR PRODUTO
     </a>
-    <button onclick="goBack()">Voltar</button>
+</div>
+{% endfor %}
+
+<p>Total da compra: (R${{ total_compra }})</p>
+
+<footer>
+    <a class="btn btn-success" href="{% url 'produtos:carrinho.finalizar.compra' %}">Finalizar compra</a>
+    <button onclick="goBack()">VOLTAR</button>
 </footer>
 
 <script>
