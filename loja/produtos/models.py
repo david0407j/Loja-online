@@ -32,7 +32,7 @@ class Produto(models.Model):
     descricao = models.CharField(max_length=128)
     nome = models.SlugField(max_length=512)
     valor = models.DecimalField(decimal_places=2, max_digits=20, default=100.00)
-    tamanho = models.CharField(max_length=20, choices=TAMANHO_CHOICES)
+    tamanho = models.CharField(max_length=50, choices=TAMANHO_CHOICES)
     criado_em = models.DateTimeField(auto_now_add=True)
     imagem = models.ImageField(upload_to='img/')
     featured = models.BooleanField(default=False)
