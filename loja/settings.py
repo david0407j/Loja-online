@@ -34,6 +34,14 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 AUTH_USER_MODEL = 'base.User'
 
+AUTH_USER_MODEL = 'base.User'
+LOGIN_URL = '/contas/login/'
+
+LOGOUT_REDIRECT_URL = 'base'
+
+LOGIN_REDIRECT_URL = '/'
+
+
 
 # Application definition
 
@@ -77,8 +85,10 @@ TEMPLATES = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
 
-WSGI_APPLICATION = 'loja.wsgi.application'
 
 # configuração Debug Tollbar
 

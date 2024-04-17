@@ -19,6 +19,7 @@ django-ordered-model = "*"
 ipython = "*"
 django-extensions = "*"
 pillow = "*"
+model-mommy = "*"
 
 [dev-packages]
 flake8 = "*"

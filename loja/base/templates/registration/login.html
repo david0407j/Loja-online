@@ -1,0 +1,50 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %} Reizinho-importe - Login {% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Login
+                </div>
+                <div class="card-body">
+                    {% if form.errors %}
+                    <div class="alert alert-danger" role="alert">
+                        Seu nome de usuário e senha não coincidem. Por favor, tente novamente.
+                    </div>
+                    {% endif %}
+
+                    {% if next %}
+                    {% if not user.is_authenticated %}
+                    <div class="alert alert-info" role="alert">
+                        Sua conta não tem acesso a esta página. Para prosseguir, faça login com uma conta que tenha acesso.
+                    </div>
+                    {% endif %}
+                    {% endif %}
+
+                    <form method="post" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="id_username" class="form-label">Nome de usuário</label>
+                            {{ form.username }}
+                        </div>
+                        <div class="mb-3">
+                            <label for="id_password" class="form-label">Senha</label>
+                            {{ form.password }}
+                        </div>
+                        <input type="hidden" name="next" value="{{ next }}">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'password_reset' %}" class="text-muted">Esqueceu sua senha?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

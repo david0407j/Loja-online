@@ -185,6 +185,14 @@
         "documentation": {}
     },
     {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -246,6 +254,38 @@
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "mommy",
+        "importPath": "model_mommy",
+        "description": "model_mommy",
+        "isExtraImport": true,
+        "detail": "model_mommy",
+        "documentation": {}
+    },
+    {
+        "label": "mommy",
+        "importPath": "model_mommy",
+        "description": "model_mommy",
+        "isExtraImport": true,
+        "detail": "model_mommy",
+        "documentation": {}
+    },
+    {
+        "label": "assert_contains",
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "isExtraImport": true,
+        "detail": "loja.django_assertions",
+        "documentation": {}
+    },
+    {
+        "label": "assert_not_contains",
+        "importPath": "loja.django_assertions",
+        "description": "loja.django_assertions",
+        "isExtraImport": true,
+        "detail": "loja.django_assertions",
         "documentation": {}
     },
     {
@@ -338,6 +378,22 @@
     },
     {
         "label": "update_session_auth_hash",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
         "importPath": "django.contrib.auth",
         "description": "django.contrib.auth",
         "isExtraImport": true,
@@ -510,6 +566,14 @@
         "description": "loja.base.views",
         "isExtraImport": true,
         "detail": "loja.base.views",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -793,6 +857,132 @@
     {
         "label": "resp",
         "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def resp(client, db):\n    return client.get(reverse('login'))\ndef test_login_form_page(resp):\n    assert resp.status_code == 200\n@pytest.fixture\ndef usuario(db, django_user_model):\n    usuario_modelo = mommy.make(django_user_model)\n    senha = 'senha'\n    usuario_modelo.set_password(senha)\n    usuario_modelo.save()",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "test_login_form_page",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def test_login_form_page(resp):\n    assert resp.status_code == 200\n@pytest.fixture\ndef usuario(db, django_user_model):\n    usuario_modelo = mommy.make(django_user_model)\n    senha = 'senha'\n    usuario_modelo.set_password(senha)\n    usuario_modelo.save()\n    usuario_modelo.senha_plana = senha\n    return usuario_modelo",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "usuario",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def usuario(db, django_user_model):\n    usuario_modelo = mommy.make(django_user_model)\n    senha = 'senha'\n    usuario_modelo.set_password(senha)\n    usuario_modelo.save()\n    usuario_modelo.senha_plana = senha\n    return usuario_modelo\n@pytest.fixture\ndef resp_post(client, usuario):\n    return client.post(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "resp_post",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def resp_post(client, usuario):\n    return client.post(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})\ndef test_login_redirect(resp_post):\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('produtos:produtos')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "test_login_redirect",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def test_login_redirect(resp_post):\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('produtos:produtos')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')\ndef test_link_login_disponivel(resp_home):\n    assert_contains(resp_home, reverse('login'))",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "resp_home",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')\ndef test_link_login_disponivel(resp_home):\n    assert_contains(resp_home, reverse('login'))\n@pytest.fixture\ndef resp_home_com_usuario_logado(client_com_usuario_logado, db):\n    return client_com_usuario_logado.get(reverse('base:home'))\ndef test_botao_entrar_indisponivel(resp_home_com_usuario_logado):",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "test_botao_entrar_disponivel",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')\ndef test_link_login_disponivel(resp_home):\n    assert_contains(resp_home, reverse('login'))\n@pytest.fixture\ndef resp_home_com_usuario_logado(client_com_usuario_logado, db):\n    return client_com_usuario_logado.get(reverse('base:home'))\ndef test_botao_entrar_indisponivel(resp_home_com_usuario_logado):\n    assert_not_contains(resp_home_com_usuario_logado, 'Entrar')\ndef test_link_login_indisponivel(resp_home_com_usuario_logado):",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "test_link_login_disponivel",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def test_link_login_disponivel(resp_home):\n    assert_contains(resp_home, reverse('login'))\n@pytest.fixture\ndef resp_home_com_usuario_logado(client_com_usuario_logado, db):\n    return client_com_usuario_logado.get(reverse('base:home'))\ndef test_botao_entrar_indisponivel(resp_home_com_usuario_logado):\n    assert_not_contains(resp_home_com_usuario_logado, 'Entrar')\ndef test_link_login_indisponivel(resp_home_com_usuario_logado):\n    assert_not_contains(resp_home_com_usuario_logado, reverse('login'))\ndef test_botao_sair_disponivel(resp_home_com_usuario_logado):",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "resp_home_com_usuario_logado",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def resp_home_com_usuario_logado(client_com_usuario_logado, db):\n    return client_com_usuario_logado.get(reverse('base:home'))\ndef test_botao_entrar_indisponivel(resp_home_com_usuario_logado):\n    assert_not_contains(resp_home_com_usuario_logado, 'Entrar')\ndef test_link_login_indisponivel(resp_home_com_usuario_logado):\n    assert_not_contains(resp_home_com_usuario_logado, reverse('login'))\ndef test_botao_sair_disponivel(resp_home_com_usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, 'Sair')\ndef test_nome_usuario_logado_disponivel(resp_home_com_usuario_logado, usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, usuario_logado.first_name)",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "test_botao_entrar_indisponivel",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def test_botao_entrar_indisponivel(resp_home_com_usuario_logado):\n    assert_not_contains(resp_home_com_usuario_logado, 'Entrar')\ndef test_link_login_indisponivel(resp_home_com_usuario_logado):\n    assert_not_contains(resp_home_com_usuario_logado, reverse('login'))\ndef test_botao_sair_disponivel(resp_home_com_usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, 'Sair')\ndef test_nome_usuario_logado_disponivel(resp_home_com_usuario_logado, usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, usuario_logado.first_name)\ndef test_link_logout_disponivel(resp_home_com_usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, reverse('logout'))",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "test_link_login_indisponivel",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def test_link_login_indisponivel(resp_home_com_usuario_logado):\n    assert_not_contains(resp_home_com_usuario_logado, reverse('login'))\ndef test_botao_sair_disponivel(resp_home_com_usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, 'Sair')\ndef test_nome_usuario_logado_disponivel(resp_home_com_usuario_logado, usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, usuario_logado.first_name)\ndef test_link_logout_disponivel(resp_home_com_usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, reverse('logout'))",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "test_botao_sair_disponivel",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def test_botao_sair_disponivel(resp_home_com_usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, 'Sair')\ndef test_nome_usuario_logado_disponivel(resp_home_com_usuario_logado, usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, usuario_logado.first_name)\ndef test_link_logout_disponivel(resp_home_com_usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, reverse('logout'))",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "test_nome_usuario_logado_disponivel",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def test_nome_usuario_logado_disponivel(resp_home_com_usuario_logado, usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, usuario_logado.first_name)\ndef test_link_logout_disponivel(resp_home_com_usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, reverse('logout'))",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "test_link_logout_disponivel",
+        "kind": 2,
+        "importPath": "loja.base.tests.test_login",
+        "description": "loja.base.tests.test_login",
+        "peekOfCode": "def test_link_logout_disponivel(resp_home_com_usuario_logado):\n    assert_contains(resp_home_com_usuario_logado, reverse('logout'))",
+        "detail": "loja.base.tests.test_login",
+        "documentation": {}
+    },
+    {
+        "label": "resp",
+        "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
         "peekOfCode": "def resp(client):\n   resp = client.get(reverse('base:home'))\n   return resp\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_conteudo_link(resp):",
@@ -912,7 +1102,7 @@
         "kind": 5,
         "importPath": "loja.base.urls",
         "description": "loja.base.urls",
-        "peekOfCode": "app_name = 'base'\nurlpatterns = [\n    path('', home, name='home'),\n]",
+        "peekOfCode": "app_name = 'base'\nurlpatterns = [\n    path('', home, name='home'),\n   path('logout/', auth_views.LogoutView.as_view(), name='logout'),\n]",
         "detail": "loja.base.urls",
         "documentation": {}
     },
@@ -921,7 +1111,7 @@
         "kind": 5,
         "importPath": "loja.base.urls",
         "description": "loja.base.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', home, name='home'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', home, name='home'),\n   path('logout/', auth_views.LogoutView.as_view(), name='logout'),\n]",
         "detail": "loja.base.urls",
         "documentation": {}
     },
@@ -930,7 +1120,16 @@
         "kind": 2,
         "importPath": "loja.base.views",
         "description": "loja.base.views",
-        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')",
+        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')\ndef logout(request):\n    auth_logout(request)\n    return redirect('base/home.html')",
+        "detail": "loja.base.views",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "loja.base.views",
+        "description": "loja.base.views",
+        "peekOfCode": "def logout(request):\n    auth_logout(request)\n    return redirect('base/home.html')",
         "detail": "loja.base.views",
         "documentation": {}
     },
@@ -1115,6 +1314,24 @@
         "documentation": {}
     },
     {
+        "label": "usuario_logado",
+        "kind": 2,
+        "importPath": "loja.conftest",
+        "description": "loja.conftest",
+        "peekOfCode": "def usuario_logado(db, django_user_model):\n    usuario_modelo = mommy.make(django_user_model, first_name='Teste Nome')\n    return usuario_modelo\n@pytest.fixture\ndef client_com_usuario_logado(usuario_logado, client):\n    client.force_login(usuario_logado)\n    return client",
+        "detail": "loja.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "client_com_usuario_logado",
+        "kind": 2,
+        "importPath": "loja.conftest",
+        "description": "loja.conftest",
+        "peekOfCode": "def client_com_usuario_logado(usuario_logado, client):\n    client.force_login(usuario_logado)\n    return client",
+        "detail": "loja.conftest",
+        "documentation": {}
+    },
+    {
         "label": "_test_case",
         "kind": 5,
         "importPath": "loja.django_assertions",
@@ -1146,7 +1363,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\n# Application definition",
+        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1155,7 +1372,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1164,7 +1381,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1173,7 +1390,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1182,7 +1399,43 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',",
+        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "detail": "loja.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "loja.settings",
+        "description": "loja.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "loja.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_URL",
+        "kind": 5,
+        "importPath": "loja.settings",
+        "description": "loja.settings",
+        "peekOfCode": "LOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "detail": "loja.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGOUT_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "loja.settings",
+        "description": "loja.settings",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "loja.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "loja.settings",
+        "description": "loja.settings",
+        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1223,11 +1476,11 @@
         "documentation": {}
     },
     {
-        "label": "WSGI_APPLICATION",
+        "label": "AUTHENTICATION_BACKENDS",
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'loja.wsgi.application'\n# configuração Debug Tollbar\nINTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')\nif DEBUG:\n    INSTALLED_APPS.append('debug_toolbar')\n    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\ndefault_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')\nparse_database = partial(dj_database_url.parse, conn_max_age=600)",
+        "peekOfCode": "AUTHENTICATION_BACKENDS = [\n    'django.contrib.auth.backends.ModelBackend',\n]\n# configuração Debug Tollbar\nINTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')\nif DEBUG:\n    INSTALLED_APPS.append('debug_toolbar')\n    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1407,7 +1660,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(\n        path('__debug__/', include(debug_toolbar.urls))\n    )",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(\n        path('__debug__/', include(debug_toolbar.urls))",
         "detail": "loja.urls",
         "documentation": {}
     },
