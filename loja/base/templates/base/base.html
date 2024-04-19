@@ -48,15 +48,6 @@
         Carrinho
       </a>
     </div>
-    
-    <style>
-      .login-button {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 9999; 
-      }
-    </style>
      {% if user.is_authenticated %}
     <ul class="navbar-nav me-5 mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
@@ -65,15 +56,14 @@
                         {{ user.first_name }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdown">
-                            <a class="btn btn-danger" href="{% url 'login' %}">Sair</a>
+                            <a class="btn btn-danger" href="{% url 'base:home' %}">Sair</a>
                         </div>
                     </ul>
                 </li>
             </ul>
         </div>
     </ul>
-     {% else %}
-    <button type="button" class="btn-light my-2 login-button" onclick="window.location.href='{% url 'login' %}'">Entrar</button>
+    <a href="{% url 'login' %}" class="btn-light my-2 login-button">Entrar</a>
     {% endif %}
       </form>
     </div>
