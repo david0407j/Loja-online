@@ -385,23 +385,7 @@
         "documentation": {}
     },
     {
-        "label": "logout",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
         "label": "get_user_model",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "views",
         "importPath": "django.contrib.auth",
         "description": "django.contrib.auth",
         "isExtraImport": true,
@@ -566,14 +550,6 @@
         "description": "loja.base.views",
         "isExtraImport": true,
         "detail": "loja.base.views",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -1120,16 +1096,7 @@
         "kind": 2,
         "importPath": "loja.base.views",
         "description": "loja.base.views",
-        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')\ndef logout(request):\n    auth_logout(request)\n    return redirect('base/home.html')",
-        "detail": "loja.base.views",
-        "documentation": {}
-    },
-    {
-        "label": "logout",
-        "kind": 2,
-        "importPath": "loja.base.views",
-        "description": "loja.base.views",
-        "peekOfCode": "def logout(request):\n    auth_logout(request)\n    return redirect('base/home.html')",
+        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')",
         "detail": "loja.base.views",
         "documentation": {}
     },
@@ -1363,7 +1330,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'",
+        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1372,7 +1339,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1381,7 +1348,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
+        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1390,7 +1357,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1399,16 +1366,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
-        "detail": "loja.settings",
-        "documentation": {}
-    },
-    {
-        "label": "AUTH_USER_MODEL",
-        "kind": 5,
-        "importPath": "loja.settings",
-        "description": "loja.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1417,16 +1375,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGIN_URL = '/contas/login/'\nLOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
-        "detail": "loja.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LOGOUT_REDIRECT_URL",
-        "kind": 5,
-        "importPath": "loja.settings",
-        "description": "loja.settings",
-        "peekOfCode": "LOGOUT_REDIRECT_URL = 'base'\nLOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "LOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1435,7 +1384,16 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',",
+        "peekOfCode": "LOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "loja.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGOUT_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "loja.settings",
+        "description": "loja.settings",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1453,7 +1411,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'loja.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'loja.urls'",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1660,7 +1618,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n    path('login/', auth_views.LoginView.as_view(), name='login'),\n   path('logout/', auth_views.LogoutView.as_view(), name='logout'),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar",
+        "peekOfCode": "urlpatterns = [\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n    path('admin/', admin.site.urls),  \n    path('contas/', include('django.contrib.auth.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(",
         "detail": "loja.urls",
         "documentation": {}
     },

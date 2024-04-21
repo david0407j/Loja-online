@@ -34,12 +34,11 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 AUTH_USER_MODEL = 'base.User'
 
-AUTH_USER_MODEL = 'base.User'
 LOGIN_URL = '/contas/login/'
 
-LOGOUT_REDIRECT_URL = 'base'
+LOGIN_REDIRECT_URL = '/base/'
 
-LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 
 
@@ -57,13 +56,16 @@ INSTALLED_APPS = [
     'loja.produtos',
 ]
 
+
+
+
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 

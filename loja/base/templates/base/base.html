@@ -56,13 +56,14 @@
                         {{ user.first_name }}
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdown">
-                            <a class="btn btn-danger" href="{% url 'base:home' %}">Sair</a>
+                            <a class="btn btn-danger" href="{% url 'logout' %}">Sair</a>
                         </div>
                     </ul>
                 </li>
             </ul>
         </div>
     </ul>
+    {% else%}
     <a href="{% url 'login' %}" class="btn-light my-2 login-button">Entrar</a>
     {% endif %}
       </form>
