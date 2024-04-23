@@ -160,6 +160,54 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -650,6 +698,14 @@
         "documentation": {}
     },
     {
+        "label": "views",
+        "importPath": "loja.produtos",
+        "description": "loja.produtos",
+        "isExtraImport": true,
+        "detail": "loja.produtos",
+        "documentation": {}
+    },
+    {
         "label": "get_asgi_application",
         "importPath": "django.core.asgi",
         "description": "django.core.asgi",
@@ -713,6 +769,14 @@
         "importPath": "sentry_sdk",
         "description": "sentry_sdk",
         "detail": "sentry_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "importPath": "codecs",
+        "description": "codecs",
+        "isExtraImport": true,
+        "detail": "codecs",
         "documentation": {}
     },
     {
@@ -1107,6 +1171,42 @@
         "description": "loja.produtos.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Categoria',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
         "detail": "loja.produtos.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0002_pessoa",
+        "description": "loja.produtos.migrations.0002_pessoa",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Pessoa',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=100)),",
+        "detail": "loja.produtos.migrations.0002_pessoa",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0003_delete_pessoa",
+        "description": "loja.produtos.migrations.0003_delete_pessoa",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0002_pessoa'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='Pessoa',\n        ),\n    ]",
+        "detail": "loja.produtos.migrations.0003_delete_pessoa",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0004_cliente",
+        "description": "loja.produtos.migrations.0004_cliente",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0003_delete_pessoa'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Cliente',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=100)),",
+        "detail": "loja.produtos.migrations.0004_cliente",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.produtos.migrations.0005_delete_cliente",
+        "description": "loja.produtos.migrations.0005_delete_cliente",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0004_cliente'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='Cliente',\n        ),\n    ]",
+        "detail": "loja.produtos.migrations.0005_delete_cliente",
         "documentation": {}
     },
     {
@@ -1618,7 +1718,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n    path('admin/', admin.site.urls),  \n    path('contas/', include('django.contrib.auth.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(",
+        "peekOfCode": "urlpatterns = [\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n    path('admin/', admin.site.urls),  \n    path('contas/', include('django.contrib.auth.urls')),\n    path('base/', include('loja.base.urls')),\n    path('register/', register, name='register'),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:",
         "detail": "loja.urls",
         "documentation": {}
     },

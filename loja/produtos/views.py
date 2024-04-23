@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from loja.produtos.models import Carrinho, CarrinhoItem, Categoria, Produto
- 
+
 
 def produto_alguma_coisa(request, nome_categoria):
     categoria = Categoria.objects.filter(nome__iexact=nome_categoria).first()
@@ -76,8 +76,7 @@ def excluir_item(request, item_id: int):
     except:
         # TODO:
         return render(request, 'produtos/meu_carrinho.html', context=context)
-
-
+    
 
 def remover_do_carrinho(request, produto_id: int):
     carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
@@ -107,6 +106,7 @@ def calcular_total_carrinho(request):
     carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
     total_compra = sum(item.total_item for item in carrinho)
     return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})
+
 
 
 def finalizar_compra_whatsapp(request):

@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 
+
 class Categoria(models.Model):
     nome = models.CharField(max_length=32, unique=True)
     imagem = models.ImageField(upload_to='img_categoria/', blank=True, null=True)
@@ -64,3 +65,4 @@ class CarrinhoItem(models.Model):
     @property
     def total_item(self):
         return self.quantidade * self.produto.valor
+
