@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'collectfast',
     'loja.base',
     'loja.produtos',
+    'loja.modelos',
 ]
 
 
@@ -85,6 +86,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',

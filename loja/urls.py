@@ -18,7 +18,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
-from loja.produtos import views
+
 
 
 
@@ -31,6 +31,8 @@ urlpatterns = [
     path('contas/', include('django.contrib.auth.urls')),
     path('base/', include('loja.base.urls')),
     path('register/', register, name='register'),
+     path('modelos/', include('loja.modelos.urls')),
+   
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

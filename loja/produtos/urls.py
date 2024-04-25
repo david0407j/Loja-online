@@ -11,4 +11,5 @@ urlpatterns = [
     path('meucarrinho/excluir/<item_id>/', views.excluir_item, name='carrinho.excluir'),
     path('meucarrinho/compra/finalizar', views.finalizar_compra_whatsapp, name="carrinho.finalizar.compra"),
     path('adicionar/<int:produto_id>/', views.adicionar_no_carrinho, name='adicionar_no_carrinho'),
+    
 ]
