@@ -136,6 +136,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "importPath": "django.db",
         "description": "django.db",
@@ -625,6 +657,14 @@
         "documentation": {}
     },
     {
+        "label": "register",
+        "importPath": "loja.base.views",
+        "description": "loja.base.views",
+        "isExtraImport": true,
+        "detail": "loja.base.views",
+        "documentation": {}
+    },
+    {
         "label": "views",
         "importPath": "loja.base",
         "description": "loja.base",
@@ -804,14 +844,6 @@
         "documentation": {}
     },
     {
-        "label": "register",
-        "importPath": "codecs",
-        "description": "codecs",
-        "isExtraImport": true,
-        "detail": "codecs",
-        "documentation": {}
-    },
-    {
         "label": "static",
         "importPath": "django.conf.urls.static",
         "description": "django.conf.urls.static",
@@ -933,6 +965,33 @@
         "description": "loja.base.migrations.0002_customuser",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='CustomUser',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('password', models.CharField(max_length=128, verbose_name='password')),",
         "detail": "loja.base.migrations.0002_customuser",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.base.migrations.0003_delete_customuser",
+        "description": "loja.base.migrations.0003_delete_customuser",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0002_customuser'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='CustomUser',\n        ),\n    ]",
+        "detail": "loja.base.migrations.0003_delete_customuser",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.base.migrations.0004_user_celular",
+        "description": "loja.base.migrations.0004_user_celular",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0003_delete_customuser'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='celular',\n            field=models.CharField(blank=True, max_length=15, null=True),\n        ),",
+        "detail": "loja.base.migrations.0004_user_celular",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.base.migrations.0005_remove_user_celular",
+        "description": "loja.base.migrations.0005_remove_user_celular",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0004_user_celular'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='user',\n            name='celular',\n        ),\n    ]",
+        "detail": "loja.base.migrations.0005_remove_user_celular",
         "documentation": {}
     },
     {
@@ -1193,15 +1252,6 @@
         "importPath": "loja.base.models",
         "description": "loja.base.models",
         "peekOfCode": "class CustomUserManager(BaseUserManager):\n    def create_user(self, email, password=None, **extra_fields):\n        if not email:\n            raise ValueError('The Email field must be set')\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)\n        user.set_password(password)\n        user.save(using=self._db)\n        return user\n    def create_superuser(self, email, password=None, **extra_fields):",
-        "detail": "loja.base.models",
-        "documentation": {}
-    },
-    {
-        "label": "CustomUser",
-        "kind": 6,
-        "importPath": "loja.base.models",
-        "description": "loja.base.models",
-        "peekOfCode": "class CustomUser(AbstractBaseUser):\n    email = models.EmailField(unique=True)\n    # Adicione outros campos conforme necessário\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    objects = CustomUserManager()\n    USERNAME_FIELD = 'email'\n    # Adicione outras opções de campo conforme necessário",
         "detail": "loja.base.models",
         "documentation": {}
     },
