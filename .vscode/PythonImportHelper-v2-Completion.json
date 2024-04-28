@@ -120,6 +120,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "importPath": "django.db",
         "description": "django.db",
@@ -176,118 +192,6 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -330,14 +234,6 @@
     },
     {
         "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -497,14 +393,6 @@
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
         "label": "IS_POPUP_VAR",
         "importPath": "django.contrib.admin.options",
         "description": "django.contrib.admin.options",
@@ -546,6 +434,14 @@
     },
     {
         "label": "UserChangeForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
         "importPath": "django.contrib.auth.forms",
         "description": "django.contrib.auth.forms",
         "isExtraImport": true,
@@ -649,6 +545,46 @@
         "documentation": {}
     },
     {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionsMixin",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractBaseUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
         "label": "AbstractBaseUser",
         "importPath": "django.contrib.auth.base_user",
         "description": "django.contrib.auth.base_user",
@@ -662,14 +598,6 @@
         "description": "django.contrib.auth.base_user",
         "isExtraImport": true,
         "detail": "django.contrib.auth.base_user",
-        "documentation": {}
-    },
-    {
-        "label": "PermissionsMixin",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
@@ -697,75 +625,43 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "forms",
-        "importPath": "django",
-        "description": "django",
-        "isExtraImport": true,
-        "detail": "django",
-        "documentation": {}
-    },
-    {
         "label": "views",
-        "importPath": "loja.modelos",
-        "description": "loja.modelos",
+        "importPath": "loja.base",
+        "description": "loja.base",
         "isExtraImport": true,
-        "detail": "loja.modelos",
+        "detail": "loja.base",
         "documentation": {}
     },
     {
-        "label": "PessoaForm",
-        "importPath": "loja.modelos.forms",
-        "description": "loja.modelos.forms",
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
         "isExtraImport": true,
-        "detail": "loja.modelos.forms",
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
-        "label": "Pessoa",
-        "importPath": "loja.modelos.models",
-        "description": "loja.modelos.models",
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
         "isExtraImport": true,
-        "detail": "loja.modelos.models",
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -1031,6 +927,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.base.migrations.0002_customuser",
+        "description": "loja.base.migrations.0002_customuser",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='CustomUser',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('password', models.CharField(max_length=128, verbose_name='password')),",
+        "detail": "loja.base.migrations.0002_customuser",
+        "documentation": {}
+    },
+    {
         "label": "resp",
         "kind": 2,
         "importPath": "loja.base.tests.test_login",
@@ -1256,6 +1161,15 @@
         "documentation": {}
     },
     {
+        "label": "UserRegistrationForm",
+        "kind": 6,
+        "importPath": "loja.base.forms",
+        "description": "loja.base.forms",
+        "peekOfCode": "class UserRegistrationForm(UserCreationForm):\n    password_confirm = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Confirm Password'}))\n    celular = forms.CharField(max_length=15, required=False, widget=forms.TextInput(attrs={'placeholder': 'Celular'}))\n    class Meta:\n        model = User\n        fields = ['email', 'password1', 'password2', 'first_name', 'celular']\n        labels = {\n            'email': 'Email',\n            'first_name': 'First Name',\n            'celular': 'Celular'",
+        "detail": "loja.base.forms",
+        "documentation": {}
+    },
+    {
         "label": "UserManager",
         "kind": 6,
         "importPath": "loja.base.models",
@@ -1274,11 +1188,29 @@
         "documentation": {}
     },
     {
+        "label": "CustomUserManager",
+        "kind": 6,
+        "importPath": "loja.base.models",
+        "description": "loja.base.models",
+        "peekOfCode": "class CustomUserManager(BaseUserManager):\n    def create_user(self, email, password=None, **extra_fields):\n        if not email:\n            raise ValueError('The Email field must be set')\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)\n        user.set_password(password)\n        user.save(using=self._db)\n        return user\n    def create_superuser(self, email, password=None, **extra_fields):",
+        "detail": "loja.base.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUser",
+        "kind": 6,
+        "importPath": "loja.base.models",
+        "description": "loja.base.models",
+        "peekOfCode": "class CustomUser(AbstractBaseUser):\n    email = models.EmailField(unique=True)\n    # Adicione outros campos conforme necessário\n    is_active = models.BooleanField(default=True)\n    is_staff = models.BooleanField(default=False)\n    objects = CustomUserManager()\n    USERNAME_FIELD = 'email'\n    # Adicione outras opções de campo conforme necessário",
+        "detail": "loja.base.models",
+        "documentation": {}
+    },
+    {
         "label": "app_name",
         "kind": 5,
         "importPath": "loja.base.urls",
         "description": "loja.base.urls",
-        "peekOfCode": "app_name = 'base'\nurlpatterns = [\n    path('', home, name='home'),\n]",
+        "peekOfCode": "app_name = 'base'\nurlpatterns = [\n    path('', home, name='home'),\n    path('register/', views.register, name='register'),\n    path('register/success/', views.registration_success, name='success'),\n]",
         "detail": "loja.base.urls",
         "documentation": {}
     },
@@ -1287,7 +1219,7 @@
         "kind": 5,
         "importPath": "loja.base.urls",
         "description": "loja.base.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', home, name='home'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', home, name='home'),\n    path('register/', views.register, name='register'),\n    path('register/success/', views.registration_success, name='success'),\n]",
         "detail": "loja.base.urls",
         "documentation": {}
     },
@@ -1296,98 +1228,26 @@
         "kind": 2,
         "importPath": "loja.base.views",
         "description": "loja.base.views",
-        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')",
+        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')\ndef register(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('success')\n    else:\n        form = UserRegistrationForm()",
         "detail": "loja.base.views",
         "documentation": {}
     },
     {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.modelos.migrations.0001_initial",
-        "description": "loja.modelos.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Pessoa',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=30, unique=True)),",
-        "detail": "loja.modelos.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.modelos.migrations.0002_pessoa_senha",
-        "description": "loja.modelos.migrations.0002_pessoa_senha",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('modelos', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='pessoa',\n            name='senha',\n            field=models.CharField(default=1, max_length=128),\n            preserve_default=False,",
-        "detail": "loja.modelos.migrations.0002_pessoa_senha",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.modelos.migrations.0003_pessoa_confirmar_senha",
-        "description": "loja.modelos.migrations.0003_pessoa_confirmar_senha",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('modelos', '0002_pessoa_senha'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='pessoa',\n            name='confirmar_senha',\n            field=models.CharField(default=1, max_length=128),\n            preserve_default=False,",
-        "detail": "loja.modelos.migrations.0003_pessoa_confirmar_senha",
-        "documentation": {}
-    },
-    {
-        "label": "PessoaAdmin",
-        "kind": 6,
-        "importPath": "loja.modelos.admin",
-        "description": "loja.modelos.admin",
-        "peekOfCode": "class PessoaAdmin(admin.ModelAdmin):\n    list_display = ('nome', 'data_nascimento', 'email', 'telefone', 'celular', 'cor_favorita', 'comida_favorita')\n    search_fields = ('nome', 'email')\n    list_filter = ('cor_favorita', 'comida_favorita')\n    ordering = ('nome',)\n    fieldsets = (\n        (None, {\n            'fields': ('nome', 'data_nascimento', 'email', 'senha')\n        }),\n        ('Contato', {",
-        "detail": "loja.modelos.admin",
-        "documentation": {}
-    },
-    {
-        "label": "PessoaForm",
-        "kind": 6,
-        "importPath": "loja.modelos.forms",
-        "description": "loja.modelos.forms",
-        "peekOfCode": "class PessoaForm(forms.ModelForm): \n    class Meta:\n        model = Pessoa\n        fields = '__all__'",
-        "detail": "loja.modelos.forms",
-        "documentation": {}
-    },
-    {
-        "label": "Pessoa",
-        "kind": 6,
-        "importPath": "loja.modelos.models",
-        "description": "loja.modelos.models",
-        "peekOfCode": "class Pessoa(models.Model):\n    nome = models.CharField(max_length=30, unique=True)\n    data_nascimento = models.DateField(blank=True, null=True)\n    email = models.EmailField(blank=True, null=True)\n    senha = models.CharField(max_length=128)\n    confirmar_senha = models.CharField(max_length=128)\n    telefone = models.CharField(max_length=11, blank=True, null=True)\n    celular = models.CharField(max_length=11, blank=True, null=True)\n    cor_favorita = models.CharField(max_length=30, blank=True, null=True)\n    comida_favorita = models.CharField(max_length=30, blank=True, null=True)",
-        "detail": "loja.modelos.models",
-        "documentation": {}
-    },
-    {
-        "label": "app_name",
-        "kind": 5,
-        "importPath": "loja.modelos.urls",
-        "description": "loja.modelos.urls",
-        "peekOfCode": "app_name = 'modelos'\nurlpatterns = [\n    path('', views.index),\n    path('update/<int:pessoa_id>/', views.update, name='update_pessoa')\n]",
-        "detail": "loja.modelos.urls",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "loja.modelos.urls",
-        "description": "loja.modelos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index),\n    path('update/<int:pessoa_id>/', views.update, name='update_pessoa')\n]",
-        "detail": "loja.modelos.urls",
-        "documentation": {}
-    },
-    {
-        "label": "index",
+        "label": "register",
         "kind": 2,
-        "importPath": "loja.modelos.views",
-        "description": "loja.modelos.views",
-        "peekOfCode": "def index(request):\n    if request.method == 'GET':\n        pessoas = Pessoa.objects.all()\n        form = PessoaForm()\n        context = {\n            'pessoas': pessoas,\n            'form': form,\n        }\n        return render(request, 'modelos/index.html', context)\n    elif request.method == 'POST':",
-        "detail": "loja.modelos.views",
+        "importPath": "loja.base.views",
+        "description": "loja.base.views",
+        "peekOfCode": "def register(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('success')\n    else:\n        form = UserRegistrationForm()\n    return render(request, 'registration/register.html', {'form': form})\ndef registration_success(request):",
+        "detail": "loja.base.views",
         "documentation": {}
     },
     {
-        "label": "update",
+        "label": "registration_success",
         "kind": 2,
-        "importPath": "loja.modelos.views",
-        "description": "loja.modelos.views",
-        "peekOfCode": "def update(request, pessoa_id):\n    if request.method == 'GET':\n        pessoas = Pessoa.objects.all()\n        pessoa = Pessoa.objects.filter(id=pessoa_id).first()\n        form = PessoaForm(instance=pessoa)\n        context = {\n            'pessoas': pessoas,\n            'form': form,\n        }\n        return render(request, 'modelos/index.html', context)",
-        "detail": "loja.modelos.views",
+        "importPath": "loja.base.views",
+        "description": "loja.base.views",
+        "peekOfCode": "def registration_success(request):\n    return render(request, 'registration/success.html')",
+        "detail": "loja.base.views",
         "documentation": {}
     },
     {
@@ -1402,55 +1262,10 @@
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "loja.produtos.migrations.0002_pessoa",
-        "description": "loja.produtos.migrations.0002_pessoa",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Pessoa',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=100)),",
-        "detail": "loja.produtos.migrations.0002_pessoa",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.produtos.migrations.0003_delete_pessoa",
-        "description": "loja.produtos.migrations.0003_delete_pessoa",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0002_pessoa'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='Pessoa',\n        ),\n    ]",
-        "detail": "loja.produtos.migrations.0003_delete_pessoa",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.produtos.migrations.0004_cliente",
-        "description": "loja.produtos.migrations.0004_cliente",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0003_delete_pessoa'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Cliente',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=100)),",
-        "detail": "loja.produtos.migrations.0004_cliente",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.produtos.migrations.0005_delete_cliente",
-        "description": "loja.produtos.migrations.0005_delete_cliente",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0004_cliente'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='Cliente',\n        ),\n    ]",
-        "detail": "loja.produtos.migrations.0005_delete_cliente",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.produtos.migrations.0006_pessoa",
-        "description": "loja.produtos.migrations.0006_pessoa",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0005_delete_cliente'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Pessoa',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('nome', models.CharField(max_length=30, unique=True)),",
-        "detail": "loja.produtos.migrations.0006_pessoa",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.produtos.migrations.0007_delete_pessoa",
-        "description": "loja.produtos.migrations.0007_delete_pessoa",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0006_pessoa'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='Pessoa',\n        ),\n    ]",
-        "detail": "loja.produtos.migrations.0007_delete_pessoa",
+        "importPath": "loja.produtos.migrations.0002_produto_tamanho",
+        "description": "loja.produtos.migrations.0002_produto_tamanho",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='produto',\n            name='tamanho',\n            field=models.CharField(default=1, max_length=10),\n            preserve_default=False,",
+        "detail": "loja.produtos.migrations.0002_produto_tamanho",
         "documentation": {}
     },
     {
@@ -1494,7 +1309,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32, unique=True)\n    imagem = models.ImageField(upload_to='img_categoria/', blank=True, null=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    TAMANHO_CHOICES = [\n        ('P', 'Pequeno'),\n        ('M', 'Médio'),\n        ('G', 'Grande'),",
+        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32, unique=True)\n    imagem = models.ImageField(upload_to='img_categoria/', blank=True, null=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    tamanho = models.CharField(max_length=10)\n    nome = models.SlugField(max_length=512)",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1503,7 +1318,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Produto(models.Model):\n    TAMANHO_CHOICES = [\n        ('P', 'Pequeno'),\n        ('M', 'Médio'),\n        ('G', 'Grande'),\n        ('GG', 'Extra Grande'),\n        ('ACS', 'Acessório'),\n        ('35', '35'),\n        ('36', '36'),\n        ('37', '37'),",
+        "peekOfCode": "class Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    tamanho = models.CharField(max_length=10)\n    nome = models.SlugField(max_length=512)\n    valor = models.DecimalField(decimal_places=2, max_digits=20, default=100.00)\n    criado_em = models.DateTimeField(auto_now_add=True)\n    imagem = models.ImageField(upload_to='img/')\n    featured = models.BooleanField(default=False)\n    active = models.BooleanField(default=True)",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1683,7 +1498,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1962,7 +1777,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n    path('admin/', admin.site.urls),  \n    path('contas/', include('django.contrib.auth.urls')),\n    path('base/', include('loja.base.urls')),\n    path('register/', register, name='register'),\n     path('modelos/', include('loja.modelos.urls')),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n    path('admin/', admin.site.urls),  \n    path('contas/', include('django.contrib.auth.urls')),\n    path('base/', include('loja.base.urls')),\n    path('register/', register, name='register'),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:",
         "detail": "loja.urls",
         "documentation": {}
     },

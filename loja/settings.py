@@ -42,6 +42,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -54,7 +55,7 @@ INSTALLED_APPS = [
     'collectfast',
     'loja.base',
     'loja.produtos',
-    'loja.modelos',
+
 ]
 
 

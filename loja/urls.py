@@ -22,7 +22,6 @@ from django.conf.urls.static import static
 
 
 
-
 urlpatterns = [
     path('', include('loja.base.urls')),
     path('produtos/', include('loja.produtos.urls')),
@@ -31,7 +30,6 @@ urlpatterns = [
     path('contas/', include('django.contrib.auth.urls')),
     path('base/', include('loja.base.urls')),
     path('register/', register, name='register'),
-     path('modelos/', include('loja.modelos.urls')),
    
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
