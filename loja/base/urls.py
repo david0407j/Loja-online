@@ -7,7 +7,5 @@ app_name = 'base'
 urlpatterns = [
     path('', home, name='home'),
     path('register/', views.register, name='register'),
-    path('register/success/', views.registration_success, name='success'),
-   
 ]
 
