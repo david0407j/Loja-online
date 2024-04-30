@@ -176,6 +176,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "importPath": "django.db",
         "description": "django.db",
@@ -237,6 +253,47 @@
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -374,30 +431,6 @@
         "description": "loja.django_assertions",
         "isExtraImport": true,
         "detail": "loja.django_assertions",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -657,14 +690,6 @@
         "documentation": {}
     },
     {
-        "label": "register",
-        "importPath": "loja.base.views",
-        "description": "loja.base.views",
-        "isExtraImport": true,
-        "detail": "loja.base.views",
-        "documentation": {}
-    },
-    {
         "label": "views",
         "importPath": "loja.base",
         "description": "loja.base",
@@ -702,15 +727,6 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "django.db.models.deletion",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.db.models.deletion",
-        "description": "django.db.models.deletion",
-        "detail": "django.db.models.deletion",
         "documentation": {}
     },
     {
@@ -995,6 +1011,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "loja.base.migrations.0006_userprofile",
+        "description": "loja.base.migrations.0006_userprofile",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0005_remove_user_celular'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='UserProfile',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),",
+        "detail": "loja.base.migrations.0006_userprofile",
+        "documentation": {}
+    },
+    {
         "label": "resp",
         "kind": 2,
         "importPath": "loja.base.tests.test_login",
@@ -1224,7 +1249,7 @@
         "kind": 6,
         "importPath": "loja.base.forms",
         "description": "loja.base.forms",
-        "peekOfCode": "class UserRegistrationForm(UserCreationForm):\n    password_confirm = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Confirm Password'}))\n    celular = forms.CharField(max_length=15, required=False, widget=forms.TextInput(attrs={'placeholder': 'Celular'}))\n    class Meta:\n        model = User\n        fields = ['email', 'password1', 'password2', 'first_name', 'celular']\n        labels = {\n            'email': 'Email',\n            'first_name': 'First Name',\n            'celular': 'Celular'",
+        "peekOfCode": "class UserRegistrationForm(UserCreationForm):\n    #password_confirm = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Confirm Password'}))\n    class Meta:\n        model = User\n        fields = ['email', 'password1', 'password2', 'first_name']\n        labels = {\n            'email': 'Email',\n            'first_name': 'First Name',\n        }\n        widgets = {",
         "detail": "loja.base.forms",
         "documentation": {}
     },
@@ -1260,7 +1285,7 @@
         "kind": 5,
         "importPath": "loja.base.urls",
         "description": "loja.base.urls",
-        "peekOfCode": "app_name = 'base'\nurlpatterns = [\n    path('', home, name='home'),\n    path('register/', views.register, name='register'),\n]",
+        "peekOfCode": "app_name = 'base'\nurlpatterns = [\n    path('', home, name='home'),\n    path('register/', views.register, name='register'),\n    path('success/', views.success, name='success'),\n]",
         "detail": "loja.base.urls",
         "documentation": {}
     },
@@ -1269,7 +1294,7 @@
         "kind": 5,
         "importPath": "loja.base.urls",
         "description": "loja.base.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', home, name='home'),\n    path('register/', views.register, name='register'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', home, name='home'),\n    path('register/', views.register, name='register'),\n    path('success/', views.success, name='success'),\n]",
         "detail": "loja.base.urls",
         "documentation": {}
     },
@@ -1278,7 +1303,7 @@
         "kind": 2,
         "importPath": "loja.base.views",
         "description": "loja.base.views",
-        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')\ndef register(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('success')\n    else:\n        form = UserRegistrationForm()",
+        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')\ndef register(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('base:success')\n    else:\n        form = UserRegistrationForm()",
         "detail": "loja.base.views",
         "documentation": {}
     },
@@ -1287,7 +1312,16 @@
         "kind": 2,
         "importPath": "loja.base.views",
         "description": "loja.base.views",
-        "peekOfCode": "def register(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('success')\n    else:\n        form = UserRegistrationForm()\n    return render(request, 'registration/register.html', {'form': form})",
+        "peekOfCode": "def register(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('base:success')\n    else:\n        form = UserRegistrationForm()\n    return render(request, 'registration/register.html', {'form': form})\ndef success(request):",
+        "detail": "loja.base.views",
+        "documentation": {}
+    },
+    {
+        "label": "success",
+        "kind": 2,
+        "importPath": "loja.base.views",
+        "description": "loja.base.views",
+        "peekOfCode": "def success(request):\n    return render(request, 'registration/success.html')",
         "detail": "loja.base.views",
         "documentation": {}
     },
@@ -1539,7 +1573,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1548,7 +1582,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1557,7 +1591,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1566,7 +1600,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1575,7 +1609,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "LOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1584,7 +1618,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = '/base/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1818,7 +1852,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n    path('admin/', admin.site.urls),  \n    path('contas/', include('django.contrib.auth.urls')),\n    path('base/', include('loja.base.urls')),\n    path('register/', register, name='register'),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:",
+        "peekOfCode": "urlpatterns = [\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n    path('admin/', admin.site.urls),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(\n        path('__debug__/', include(debug_toolbar.urls))",
         "detail": "loja.urls",
         "documentation": {}
     },

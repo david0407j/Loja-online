@@ -40,13 +40,6 @@
             border-radius: 5px;
             box-sizing: border-box;
         }
-        .form-group input[type="tel"] {
-            width: calc(100% - 120px); /* Calcula a largura do campo de entrada */
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
         button[type="submit"] {
             background-color: #007bff;
             color: #fff;
@@ -82,10 +75,6 @@
             {{ form.first_name }}
         </div>
         <div class="form-group">
-            <label for="id_telefone">Telefone:</label>
-            <input type="tel" name="telefone" id="id_telefone" placeholder="Telefone">
-        </div>
-        <div class="form-group">
             <label for="id_password1">Password:</label>
             {{ form.password1 }}
         </div>
@@ -93,9 +82,11 @@
             <label for="id_password2">Confirm Password:</label>
             {{ form.password2 }}
         </div>
+        {{ form.errors }}
         <button type="submit">Register</button>
     </form>
 </body>
 </html>
+
 
 
