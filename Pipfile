@@ -20,6 +20,7 @@ ipython = "*"
 django-extensions = "*"
 pillow = "*"
 model-mommy = "*"
+flake8 = "*"
 
 [dev-packages]
 flake8 = "*"

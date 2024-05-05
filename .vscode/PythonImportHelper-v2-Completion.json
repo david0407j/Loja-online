@@ -128,70 +128,6 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "router",
         "importPath": "django.db",
         "description": "django.db",
@@ -232,68 +168,11 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "django.db.models.deletion",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.db.models.deletion",
-        "description": "django.db.models.deletion",
-        "detail": "django.db.models.deletion",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -339,14 +218,6 @@
     },
     {
         "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -426,11 +297,27 @@
         "documentation": {}
     },
     {
-        "label": "assert_contains",
-        "importPath": "loja.django_assertions",
-        "description": "loja.django_assertions",
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
         "isExtraImport": true,
-        "detail": "loja.django_assertions",
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -730,6 +617,15 @@
         "documentation": {}
     },
     {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
         "label": "Carrinho",
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
@@ -972,51 +868,6 @@
         "description": "loja.base.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
         "detail": "loja.base.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.base.migrations.0002_customuser",
-        "description": "loja.base.migrations.0002_customuser",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='CustomUser',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('password', models.CharField(max_length=128, verbose_name='password')),",
-        "detail": "loja.base.migrations.0002_customuser",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.base.migrations.0003_delete_customuser",
-        "description": "loja.base.migrations.0003_delete_customuser",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0002_customuser'),\n    ]\n    operations = [\n        migrations.DeleteModel(\n            name='CustomUser',\n        ),\n    ]",
-        "detail": "loja.base.migrations.0003_delete_customuser",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.base.migrations.0004_user_celular",
-        "description": "loja.base.migrations.0004_user_celular",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0003_delete_customuser'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='user',\n            name='celular',\n            field=models.CharField(blank=True, max_length=15, null=True),\n        ),",
-        "detail": "loja.base.migrations.0004_user_celular",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.base.migrations.0005_remove_user_celular",
-        "description": "loja.base.migrations.0005_remove_user_celular",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0004_user_celular'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='user',\n            name='celular',\n        ),\n    ]",
-        "detail": "loja.base.migrations.0005_remove_user_celular",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.base.migrations.0006_userprofile",
-        "description": "loja.base.migrations.0006_userprofile",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('base', '0005_remove_user_celular'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='UserProfile',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),",
-        "detail": "loja.base.migrations.0006_userprofile",
         "documentation": {}
     },
     {
@@ -1335,51 +1186,6 @@
         "documentation": {}
     },
     {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "loja.produtos.migrations.0002_produto_tamanho",
-        "description": "loja.produtos.migrations.0002_produto_tamanho",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('produtos', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='produto',\n            name='tamanho',\n            field=models.CharField(default=1, max_length=10),\n            preserve_default=False,",
-        "detail": "loja.produtos.migrations.0002_produto_tamanho",
-        "documentation": {}
-    },
-    {
-        "label": "resp",
-        "kind": 2,
-        "importPath": "loja.produtos.tests.tests_unissexo",
-        "description": "loja.produtos.tests.tests_unissexo",
-        "peekOfCode": "def resp(client, db):\n    return client.get(reverse('prudotos:masculino', args=('masculino',)))\ndef test_titulo_masculino(resp):\n   assert_contains(resp, 'masculino' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.produtos.tests.tests_unissexo",
-        "documentation": {}
-    },
-    {
-        "label": "test_titulo_masculino",
-        "kind": 2,
-        "importPath": "loja.produtos.tests.tests_unissexo",
-        "description": "loja.produtos.tests.tests_unissexo",
-        "peekOfCode": "def test_titulo_masculino(resp):\n   assert_contains(resp, 'masculino' )\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.produtos.tests.tests_unissexo",
-        "documentation": {}
-    },
-    {
-        "label": "test_status_code",
-        "kind": 2,
-        "importPath": "loja.produtos.tests.tests_unissexo",
-        "description": "loja.produtos.tests.tests_unissexo",
-        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.produtos.tests.tests_unissexo",
-        "documentation": {}
-    },
-    {
-        "label": "test_Produtos_Carrinho",
-        "kind": 2,
-        "importPath": "loja.produtos.tests.tests_unissexo",
-        "description": "loja.produtos.tests.tests_unissexo",
-        "peekOfCode": "def test_Produtos_Carrinho(resp):\n   assert_contains(resp, 'Produtos importados' )",
-        "detail": "loja.produtos.tests.tests_unissexo",
-        "documentation": {}
-    },
-    {
         "label": "Categoria",
         "kind": 6,
         "importPath": "loja.produtos.models",
@@ -1573,7 +1379,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1582,7 +1388,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1591,7 +1397,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1600,7 +1406,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1609,7 +1415,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "LOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1618,7 +1424,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1627,7 +1433,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGOUT_REDIRECT_URL = '/'\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',\n    'loja.base',",
         "detail": "loja.settings",
         "documentation": {}
     },
