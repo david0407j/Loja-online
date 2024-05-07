@@ -15,6 +15,7 @@ gunicorn = "*"
 # django-s3-folder-storage = "*"
 # django-storages = "*"
 # sentry-sdk = "*"
+pygraphviz = "*"
 
 [dev-packages]
 flake8 = "*"
@@ -27,6 +28,8 @@ model-bakery = "*"
 django-debug-toolbar = "*"
 django-extensions = "*"
 mock = "*"
+# sudo apt install graphviz libgraphviz-dev pkg-config
+pygraphviz = "*"
 
 [requires]
 python_version = "3.11"
