@@ -21,6 +21,7 @@ django-extensions = "*"
 pillow = "*"
 model-mommy = "*"
 flake8 = "*"
+model-bakery = "*"
 
 [dev-packages]
 flake8 = "*"

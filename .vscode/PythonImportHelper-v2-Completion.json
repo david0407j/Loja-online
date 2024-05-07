@@ -902,7 +902,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.test_login",
         "description": "loja.base.tests.test_login",
-        "peekOfCode": "def resp_post(client, usuario):\n    return client.post(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})\ndef test_login_redirect(resp_post):\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('produtos:produtos')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')",
+        "peekOfCode": "def resp_post(client, usuario):\n    return client.post(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})\ndef test_login_redirect(resp_post):\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('base:login')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')",
         "detail": "loja.base.tests.test_login",
         "documentation": {}
     },
@@ -911,7 +911,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.test_login",
         "description": "loja.base.tests.test_login",
-        "peekOfCode": "def test_login_redirect(resp_post):\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('produtos:produtos')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')\ndef test_link_login_disponivel(resp_home):\n    assert_contains(resp_home, reverse('login'))",
+        "peekOfCode": "def test_login_redirect(resp_post):\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('base:login')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')\ndef test_link_login_disponivel(resp_home):\n    assert_contains(resp_home, reverse('login'))",
         "detail": "loja.base.tests.test_login",
         "documentation": {}
     },
@@ -1001,7 +1001,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def resp(client):\n   resp = client.get(reverse('base:home'))\n   return resp\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_conteudo_link(resp):",
+        "peekOfCode": "def resp(client,):\n   resp = client.get(reverse('base:home'))\n   return resp\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1010,7 +1010,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Masculino'}))\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1019,7 +1019,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')",
+        "peekOfCode": "def test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Masculino'}))\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1028,16 +1028,16 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "peekOfCode": "def test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Masculino'}))\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
     {
-        "label": "test_conteudo_link",
+        "label": "test_pagina_deve_conter_o_link_produtos_masculinos",
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/aperitivos/masculino\"')\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "peekOfCode": "def test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Masculino'}))\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1046,25 +1046,43 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "peekOfCode": "def test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
     {
-        "label": "test_conteudo_link_infatil",
+        "label": "test_pagina_o_link_infantil",
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_conteudo_link_infatil(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/modelos/femenina\"')\ndef test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "peekOfCode": "def test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
     {
-        "label": "test_conteudo_link",
+        "label": "test_pagina_deve_conter_o_link_produtos",
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_conteudo_link(resp):\n    assert_contains(resp, 'href=\"http://127.0.0.1:8000/produtos/outros\"')",
+        "peekOfCode": "def test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_pagina_deve_conter_o_link_feminina",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
+        "detail": "loja.base.tests.tests_home",
+        "documentation": {}
+    },
+    {
+        "label": "test_pagina_deve_conter_o_link_cosmetico",
+        "kind": 2,
+        "importPath": "loja.base.tests.tests_home",
+        "description": "loja.base.tests.tests_home",
+        "peekOfCode": "def test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
