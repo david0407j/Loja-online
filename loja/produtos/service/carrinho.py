@@ -1,6 +1,19 @@
 from loja.produtos.models import Produto, Carrinho, CarrinhoItem
 
 
+def obter_carrinho(user):
+    meu_carrinho = Carrinho.objects.filter(user=user).first()
+    if not meu_carrinho:
+        meu_carrinho = Carrinho.objects.create(user=user)
+
+    items_do_carrinho = CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id")
+    return {
+        "meu_carrinho": meu_carrinho,
+        "produtos_do_carrinho": items_do_carrinho,
+        "total_compra": sum([item.total_item for item in items_do_carrinho])
+    }
+
+
 def adicionar_item(user, produto_id, quantidade, tamanho):
     meu_carrinho = Carrinho.objects.filter(user=user).first()
     if not meu_carrinho:
@@ -18,14 +31,26 @@ def adicionar_item(user, produto_id, quantidade, tamanho):
     return novo_item
 
 
-def obter_carrinho(user):
-    meu_carrinho = Carrinho.objects.filter(user=user).first()
-    if not meu_carrinho:
-        meu_carrinho = Carrinho.objects.create(user=user)
+def excluir_item(user, item_id):
+    try:
+        CarrinhoItem.objects.get(id=item_id).delete()
+    except:
+        pass
 
-    items_do_carrinho = CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id")
-    return {
-        "carrinho": meu_carrinho,
-        "items": items_do_carrinho,
-        "total": sum([item.total_item for item in items_do_carrinho])
-    }
+    return obter_carrinho(user)
+
+
+def remover_item(user, produto_id, quantidade, tamanho):
+    meu_carrinho = Carrinho.objects.filter(user=user).first()
+    produto = Produto.objects.get(id=produto_id)
+
+    item = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()
+    if item:
+        item.quantidade -= quantidade
+        item.save()
+
+    if item.quantidade == 0:
+        carrinho = excluir_item(user, item.id)
+        return None, carrinho
+
+    return item, obter_carrinho(user)

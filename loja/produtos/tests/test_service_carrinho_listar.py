@@ -27,4 +27,4 @@ def test_deve_listar_total_do_carrinho(user_joao):
 
     # Então
     assert len(carrinho_joao["items"]) == 1
-    assert carrinho_joao["total"] == 2 * 102
+    assert carrinho_joao["total_compra"] == 2 * 102
