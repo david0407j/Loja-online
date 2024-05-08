@@ -14,8 +14,8 @@ import os
 from functools import partial
 import dj_database_url
 from decouple import config, Csv
-from sentry_sdk.integrations.django import DjangoIntegration
-import sentry_sdk
+#from sentry_sdk.integrations.django import DjangoIntegration
+#import sentry_sdk
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'collectfast',
     'loja.base',
     'loja.produtos',
@@ -102,14 +103,14 @@ if DEBUG:
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-
-parse_database = partial(dj_database_url.parse, conn_max_age=600)
-
+DATABASE_URL = config("DATABASE_URL")
 DATABASES = {
-    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)
+    "default": dj_database_url.parse(
+        DATABASE_URL,
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -197,6 +198,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
-SENTRY_DSN = config('SENTRY_DSN', default=None)
-if SENTRY_DSN:
-    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])
+# SENTRY_DSN = config('SENTRY_DSN', default=None)
+# if SENTRY_DSN:
+#     sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])

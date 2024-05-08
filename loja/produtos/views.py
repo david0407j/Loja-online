@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
+
 from loja.produtos.models import Carrinho, CarrinhoItem, Categoria, Produto
+from loja.produtos.service import carrinho
 
 
 def produto_alguma_coisa(request, nome_categoria):
@@ -17,102 +19,36 @@ def produto_alguma_coisa(request, nome_categoria):
  
  
 def meu_carrinho(request):
-    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
-    if not meu_carrinho:
-        meu_carrinho = Carrinho.objects.create(user=request.user)
-
-    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})
-
-
-def obter_total_carrinho(items_do_carrinho):
-    return sum([item.total_item for item in items_do_carrinho])
+    meu_carrinho = carrinho.obter_carrinho(request.user)
+    return render(request, 'produtos/meu_carrinho.html', context=meu_carrinho)
 
 
 def adicionar_no_carrinho(request, produto_id: int):
-    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
+    quantidade = 1
     tamanho = request.POST.get('tamanho')
-    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
-    if not meu_carrinho:
-        meu_carrinho = Carrinho.objects.create(user=request.user)
+    carrinho.adicionar_item(request.user, produto_id, quantidade, tamanho)
 
-    produto = Produto.objects.get(id=produto_id)
+    meu_carrinho = carrinho.obter_carrinho(request.user)
+    meu_carrinho['tamanho_selecionado'] = tamanho
+    return render(request, 'produtos/meu_carrinho.html', context=meu_carrinho)
 
-    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()
-    if not item_existente:
-        item_existente = CarrinhoItem(produto=produto, quantidade=0, carrinho=meu_carrinho)
-
-    item_existente.quantidade += 1
-    item_existente.save()
-    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
-    items_do_carrinho = CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id")
-    total_compra = obter_total_carrinho(items_do_carrinho)
-
-    context={
-        'meu_carrinho': meu_carrinho,
-        'produtos_do_carrinho': items_do_carrinho,
-        'total_compra':total_compra,
-        'tamanho_selecionado': tamanho,
-    }
-
-    return render(request, 'produtos/meu_carrinho.html', context=context)
 
 def excluir_item(request, item_id: int):
-    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
-    total_compra = sum(item.total_item for item in carrinho)
-    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
+    meu_carrinho = carrinho.excluir_item(request.user, item_id)
+    return render(request, 'produtos/meu_carrinho.html', context=meu_carrinho)
 
-    try:
-        #produto = Produto.objects.get(id=produto_id)
-        CarrinhoItem.objects.get(id=item_id).delete()
-
-        # TODO: remover este DRY
-        context={
-            'meu_carrinho': meu_carrinho,
-            'total_compra': total_compra,
-            'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho),
-        }        
-        return render(request, 'produtos/meu_carrinho.html', context=context)
-
-    except:
-        # TODO:
-        return render(request, 'produtos/meu_carrinho.html', context=context)
-    
 
 def remover_do_carrinho(request, produto_id: int):
-    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
-    total_compra = sum([item.total_item for item in carrinho])
-    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
-    produto = Produto.objects.get(id=produto_id)
-
-    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()
-    if item_existente:
-        item_existente.quantidade -= 1
-        item_existente.save()
-
-        if item_existente.quantidade == 0:
-            item_existente.delete()
-
-    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
-    context={
-        'meu_carrinho': meu_carrinho,
-        'total_compra':total_compra,
-        'produtos_do_carrinho': CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id"),
-    }
-    return render(request, 'produtos/meu_carrinho.html', context=context)
-
-
-
-def calcular_total_carrinho(request):
-    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)
-    total_compra = sum(item.total_item for item in carrinho)
-    return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})
-
+    quantidade = 1
+    tamanho = None
+    item, meu_carrinho = carrinho.remover_item(request.user, produto_id, quantidade, tamanho)
+    return render(request, 'produtos/meu_carrinho.html', context=meu_carrinho)
 
 
 def finalizar_compra_whatsapp(request):
-    meu_carrinho = Carrinho.objects.filter(user=request.user).first()
-    items_carrinho = CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by("-id")
-    total_compra = obter_total_carrinho(items_carrinho)
+    meu_carrinho = carrinho.obter_carrinho(request.user)
+    items_carrinho = meu_carrinho['produtos_do_carrinho']
+    total_compra = meu_carrinho['total_compra']
 
     produtos_texto = "\n".join([f"  {item.quantidade} x {item.produto.nome}* ({item.produto.descricao}) - Tamanho: {item.produto.tamanho}, Preço R${item.produto.valor}," for item in items_carrinho])
 
@@ -124,11 +60,3 @@ def finalizar_compra_whatsapp(request):
     texto_final += f"\n REZINHO IMPORTS!{tamanho_da_camiseta}"
 
     return redirect(f"https://wa.me/3191235709?text={texto_final}")
-
-
-
-
-
-
-
-
