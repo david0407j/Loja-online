@@ -537,22 +537,6 @@
         "documentation": {}
     },
     {
-        "label": "AbstractBaseUser",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "BaseUserManager",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
         "label": "send_mail",
         "importPath": "django.core.mail",
         "description": "django.core.mail",
@@ -902,7 +886,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.test_login",
         "description": "loja.base.tests.test_login",
-        "peekOfCode": "def resp_post(client, usuario):\n    return client.post(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})\ndef test_login_redirect(resp_post):\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('base:login')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')",
+        "peekOfCode": "def resp_post(client, usuario):\n    return client.post(reverse('login'), {'username': usuario.email, 'password': usuario.senha_plana})\ndef test_login_redirect(resp_post):\n    breakpoint()\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('base:login')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):",
         "detail": "loja.base.tests.test_login",
         "documentation": {}
     },
@@ -911,7 +895,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.test_login",
         "description": "loja.base.tests.test_login",
-        "peekOfCode": "def test_login_redirect(resp_post):\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('base:login')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')\ndef test_link_login_disponivel(resp_home):\n    assert_contains(resp_home, reverse('login'))",
+        "peekOfCode": "def test_login_redirect(resp_post):\n    breakpoint()\n    assert resp_post.status_code == 302\n    assert resp_post.url == reverse('base:login')\n@pytest.fixture\ndef resp_home(client, db):\n    return client.get(reverse('base:home'))\ndef test_botao_entrar_disponivel(resp_home):\n    assert_contains(resp_home, 'Entrar')\ndef test_link_login_disponivel(resp_home):",
         "detail": "loja.base.tests.test_login",
         "documentation": {}
     },
@@ -1001,7 +985,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def resp(client,):\n   resp = client.get(reverse('base:home'))\n   return resp\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):",
+        "peekOfCode": "def resp(\n    client,\n):\n    resp = client.get(reverse(\"base:home\"))\n    return resp\ndef test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n    assert_contains(resp, \"<title>Reizinho-imports- home</title>\")\ndef test_home_link(resp):",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1010,7 +994,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Masculino'}))\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')",
+        "peekOfCode": "def test_status_code(resp):\n    assert resp.status_code == 200\ndef test_title(resp):\n    assert_contains(resp, \"<title>Reizinho-imports- home</title>\")\ndef test_home_link(resp):\n    assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Masculino\"})\n    )",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1019,7 +1003,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_title(resp):\n   assert_contains(resp, '<title>Reizinho-imports- home</title>')\ndef test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Masculino'}))\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))",
+        "peekOfCode": "def test_title(resp):\n    assert_contains(resp, \"<title>Reizinho-imports- home</title>\")\ndef test_home_link(resp):\n    assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Masculino\"})\n    )\ndef test_email(resp):\n    assert_contains(resp, \"reizinhomp@gmail.com\")",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1028,7 +1012,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_home_link(resp):\n   assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Masculino'}))\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))",
+        "peekOfCode": "def test_home_link(resp):\n    assert_contains(resp, f'href=\"{reverse(\"base:home\")}\">Reizinho-importe</a>')\ndef test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Masculino\"})\n    )\ndef test_email(resp):\n    assert_contains(resp, \"reizinhomp@gmail.com\")\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1037,7 +1021,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Masculino'}))\ndef test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))",
+        "peekOfCode": "def test_pagina_deve_conter_o_link_produtos_masculinos(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Masculino\"})\n    )\ndef test_email(resp):\n    assert_contains(resp, \"reizinhomp@gmail.com\")\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Infantil\"})\n    )",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1046,7 +1030,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_email(resp):\n   assert_contains(resp, 'reizinhomp@gmail.com')\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
+        "peekOfCode": "def test_email(resp):\n    assert_contains(resp, \"reizinhomp@gmail.com\")\ndef test_pagina_o_link_infantil(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Infantil\"})\n    )\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Produtos\"})\n    )",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1055,7 +1039,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_pagina_o_link_infantil(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Infantil'}))\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
+        "peekOfCode": "def test_pagina_o_link_infantil(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Infantil\"})\n    )\ndef test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Produtos\"})\n    )\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1064,7 +1048,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Produtos'}))\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
+        "peekOfCode": "def test_pagina_deve_conter_o_link_produtos(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Produtos\"})\n    )\ndef test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Feminina\"})\n    )\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1073,7 +1057,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Feminina'}))\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
+        "peekOfCode": "def test_pagina_deve_conter_o_link_feminina(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Feminina\"})\n    )\ndef test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Cosmético\"})\n    )",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1082,7 +1066,7 @@
         "kind": 2,
         "importPath": "loja.base.tests.tests_home",
         "description": "loja.base.tests.tests_home",
-        "peekOfCode": "def test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(resp, reverse('produtos:produto', kwargs={'nome_categoria':'Cosmético'}))",
+        "peekOfCode": "def test_pagina_deve_conter_o_link_cosmetico(resp):\n    assert_contains(\n        resp, reverse(\"produtos:produto\", kwargs={\"nome_categoria\": \"Cosmético\"})\n    )",
         "detail": "loja.base.tests.tests_home",
         "documentation": {}
     },
@@ -1118,7 +1102,7 @@
         "kind": 6,
         "importPath": "loja.base.forms",
         "description": "loja.base.forms",
-        "peekOfCode": "class UserRegistrationForm(UserCreationForm):\n    #password_confirm = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Confirm Password'}))\n    class Meta:\n        model = User\n        fields = ['email', 'password1', 'password2', 'first_name']\n        labels = {\n            'email': 'Email',\n            'first_name': 'First Name',\n        }\n        widgets = {",
+        "peekOfCode": "class UserRegistrationForm(UserCreationForm):\n    # password_confirm = forms.CharField(widget=forms.PasswordInput(attrs={'placeholder': 'Confirm Password'}))\n    class Meta:\n        model = User\n        fields = [\"email\", \"password1\", \"password2\", \"first_name\"]\n        labels = {\n            \"email\": \"Email\",\n            \"first_name\": \"First Name\",\n        }\n        widgets = {",
         "detail": "loja.base.forms",
         "documentation": {}
     },
@@ -1127,7 +1111,7 @@
         "kind": 6,
         "importPath": "loja.base.models",
         "description": "loja.base.models",
-        "peekOfCode": "class UserManager(BaseUserManager):\n    use_in_migrations = True\n    def _create_user(self, email, password, **extra_fields):\n        \"\"\"\n        Create and save a user with the given email, and password.\n        \"\"\"\n        if not email:\n            raise ValueError('The given email must be set')\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)",
+        "peekOfCode": "class UserManager(BaseUserManager):\n    use_in_migrations = True\n    def _create_user(self, email, password, **extra_fields):\n        \"\"\"\n        Create and save a user with the given email, and password.\n        \"\"\"\n        if not email:\n            raise ValueError(\"The given email must be set\")\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)",
         "detail": "loja.base.models",
         "documentation": {}
     },
@@ -1145,7 +1129,7 @@
         "kind": 6,
         "importPath": "loja.base.models",
         "description": "loja.base.models",
-        "peekOfCode": "class CustomUserManager(BaseUserManager):\n    def create_user(self, email, password=None, **extra_fields):\n        if not email:\n            raise ValueError('The Email field must be set')\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)\n        user.set_password(password)\n        user.save(using=self._db)\n        return user\n    def create_superuser(self, email, password=None, **extra_fields):",
+        "peekOfCode": "class CustomUserManager(BaseUserManager):\n    def create_user(self, email, password=None, **extra_fields):\n        if not email:\n            raise ValueError(\"The Email field must be set\")\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)\n        user.set_password(password)\n        user.save(using=self._db)\n        return user\n    def create_superuser(self, email, password=None, **extra_fields):",
         "detail": "loja.base.models",
         "documentation": {}
     },
@@ -1154,7 +1138,7 @@
         "kind": 5,
         "importPath": "loja.base.urls",
         "description": "loja.base.urls",
-        "peekOfCode": "app_name = 'base'\nurlpatterns = [\n    path('', home, name='home'),\n    path('register/', views.register, name='register'),\n    path('success/', views.success, name='success'),\n]",
+        "peekOfCode": "app_name = \"base\"\nurlpatterns = [\n    path(\"\", home, name=\"home\"),\n    path(\"register/\", views.register, name=\"register\"),\n    path(\"success/\", views.success, name=\"success\"),\n]",
         "detail": "loja.base.urls",
         "documentation": {}
     },
@@ -1163,7 +1147,7 @@
         "kind": 5,
         "importPath": "loja.base.urls",
         "description": "loja.base.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', home, name='home'),\n    path('register/', views.register, name='register'),\n    path('success/', views.success, name='success'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", home, name=\"home\"),\n    path(\"register/\", views.register, name=\"register\"),\n    path(\"success/\", views.success, name=\"success\"),\n]",
         "detail": "loja.base.urls",
         "documentation": {}
     },
@@ -1172,7 +1156,7 @@
         "kind": 2,
         "importPath": "loja.base.views",
         "description": "loja.base.views",
-        "peekOfCode": "def home(request):\n    return render(request, 'base/home.html')\ndef register(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('base:success')\n    else:\n        form = UserRegistrationForm()",
+        "peekOfCode": "def home(request):\n    return render(request, \"base/home.html\")\ndef register(request):\n    if request.method == \"POST\":\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect(\"base:success\")\n    else:\n        form = UserRegistrationForm()",
         "detail": "loja.base.views",
         "documentation": {}
     },
@@ -1181,7 +1165,7 @@
         "kind": 2,
         "importPath": "loja.base.views",
         "description": "loja.base.views",
-        "peekOfCode": "def register(request):\n    if request.method == 'POST':\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('base:success')\n    else:\n        form = UserRegistrationForm()\n    return render(request, 'registration/register.html', {'form': form})\ndef success(request):",
+        "peekOfCode": "def register(request):\n    if request.method == \"POST\":\n        form = UserRegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect(\"base:success\")\n    else:\n        form = UserRegistrationForm()\n    return render(request, \"registration/register.html\", {\"form\": form})\ndef success(request):",
         "detail": "loja.base.views",
         "documentation": {}
     },
@@ -1190,7 +1174,7 @@
         "kind": 2,
         "importPath": "loja.base.views",
         "description": "loja.base.views",
-        "peekOfCode": "def success(request):\n    return render(request, 'registration/success.html')",
+        "peekOfCode": "def success(request):\n    return render(request, \"registration/success.html\")",
         "detail": "loja.base.views",
         "documentation": {}
     },
@@ -1208,7 +1192,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32, unique=True)\n    imagem = models.ImageField(upload_to='img_categoria/', blank=True, null=True)\n    def __str__(self):\n        return f'{self.nome}'\nclass Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    tamanho = models.CharField(max_length=10)\n    nome = models.SlugField(max_length=512)",
+        "peekOfCode": "class Categoria(models.Model):\n    nome = models.CharField(max_length=32, unique=True)\n    imagem = models.ImageField(upload_to=\"img_categoria/\", blank=True, null=True)\n    def __str__(self):\n        return f\"{self.nome}\"\nclass Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    tamanho = models.CharField(max_length=10)\n    nome = models.SlugField(max_length=512)",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1217,7 +1201,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    tamanho = models.CharField(max_length=10)\n    nome = models.SlugField(max_length=512)\n    valor = models.DecimalField(decimal_places=2, max_digits=20, default=100.00)\n    criado_em = models.DateTimeField(auto_now_add=True)\n    imagem = models.ImageField(upload_to='img/')\n    featured = models.BooleanField(default=False)\n    active = models.BooleanField(default=True)",
+        "peekOfCode": "class Produto(models.Model):\n    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)\n    descricao = models.CharField(max_length=128)\n    tamanho = models.CharField(max_length=10)\n    nome = models.SlugField(max_length=512)\n    valor = models.DecimalField(decimal_places=2, max_digits=20, default=100.00)\n    criado_em = models.DateTimeField(auto_now_add=True)\n    imagem = models.ImageField(upload_to=\"img/\")\n    featured = models.BooleanField(default=False)\n    active = models.BooleanField(default=True)",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1226,7 +1210,7 @@
         "kind": 6,
         "importPath": "loja.produtos.models",
         "description": "loja.produtos.models",
-        "peekOfCode": "class Carrinho(models.Model):\n    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)\n    produtos = models.ManyToManyField(Produto, through='CarrinhoItem')\n    def __str__(self):\n        produtos = [item.descricao for item in self.produtos.all()]\n        return f'{self.user.id}: ({produtos})'\nclass CarrinhoItem(models.Model):\n    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)\n    carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)\n    quantidade = models.IntegerField(default=1)",
+        "peekOfCode": "class Carrinho(models.Model):\n    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)\n    produtos = models.ManyToManyField(Produto, through=\"CarrinhoItem\")\n    def __str__(self):\n        produtos = [item.descricao for item in self.produtos.all()]\n        return f\"{self.user.id}: ({produtos})\"\nclass CarrinhoItem(models.Model):\n    produto = models.ForeignKey(Produto, on_delete=models.CASCADE)\n    carrinho = models.ForeignKey(Carrinho, on_delete=models.CASCADE)\n    quantidade = models.IntegerField(default=1)",
         "detail": "loja.produtos.models",
         "documentation": {}
     },
@@ -1244,7 +1228,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "app_name = 'produtos'\nurlpatterns = [\n    path('meucarrinho', views.meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', views.adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', views.produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', views.remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', views.excluir_item, name='carrinho.excluir'),\n    path('meucarrinho/compra/finalizar', views.finalizar_compra_whatsapp, name=\"carrinho.finalizar.compra\"),\n    path('adicionar/<int:produto_id>/', views.adicionar_no_carrinho, name='adicionar_no_carrinho'),\n]",
+        "peekOfCode": "app_name = \"produtos\"\nurlpatterns = [\n    path(\"meucarrinho\", views.meu_carrinho),\n    path(\n        \"meucarrinho/adicionar/<int:produto_id>\",\n        views.adicionar_no_carrinho,\n        name=\"carrinho.adicionar\",\n    ),\n    path(\"<str:nome_categoria>\", views.produto_alguma_coisa, name=\"produto\"),\n    path(",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1253,7 +1237,7 @@
         "kind": 5,
         "importPath": "loja.produtos.urls",
         "description": "loja.produtos.urls",
-        "peekOfCode": "urlpatterns = [\n    path('meucarrinho', views.meu_carrinho),\n    path('meucarrinho/adicionar/<int:produto_id>', views.adicionar_no_carrinho, name='carrinho.adicionar'),\n    path('<str:nome_categoria>', views.produto_alguma_coisa, name='produto'),\n    path('carrinho/remover/<int:produto_id>/', views.remover_do_carrinho, name='carrinho.remover'),\n    path('meucarrinho/excluir/<item_id>/', views.excluir_item, name='carrinho.excluir'),\n    path('meucarrinho/compra/finalizar', views.finalizar_compra_whatsapp, name=\"carrinho.finalizar.compra\"),\n    path('adicionar/<int:produto_id>/', views.adicionar_no_carrinho, name='adicionar_no_carrinho'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"meucarrinho\", views.meu_carrinho),\n    path(\n        \"meucarrinho/adicionar/<int:produto_id>\",\n        views.adicionar_no_carrinho,\n        name=\"carrinho.adicionar\",\n    ),\n    path(\"<str:nome_categoria>\", views.produto_alguma_coisa, name=\"produto\"),\n    path(\n        \"carrinho/remover/<int:produto_id>/\",",
         "detail": "loja.produtos.urls",
         "documentation": {}
     },
@@ -1262,7 +1246,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def produto_alguma_coisa(request, nome_categoria):\n    categoria = Categoria.objects.filter(nome__iexact=nome_categoria).first()\n    if not categoria:\n        categorias_validas = [c.nome for c in Categoria.objects.all()]\n        raise Exception(f\"Categoria '{nome_categoria}' nao encontrada. Utilize uma das {categorias_validas}\")\n    produtos_da_categoria = Produto.objects.filter(categoria_id=categoria.id)\n    context={\n        'camisetas': produtos_da_categoria,\n        'categoria': categoria,\n    }",
+        "peekOfCode": "def produto_alguma_coisa(request, nome_categoria):\n    categoria = Categoria.objects.filter(nome__iexact=nome_categoria).first()\n    if not categoria:\n        categorias_validas = [c.nome for c in Categoria.objects.all()]\n        raise Exception(\n            f\"Categoria '{nome_categoria}' nao encontrada. Utilize uma das {categorias_validas}\"\n        )\n    produtos_da_categoria = Produto.objects.filter(categoria_id=categoria.id)\n    context = {\n        \"camisetas\": produtos_da_categoria,",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1271,7 +1255,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    return render(request, 'produtos/meu_carrinho.html', context={'meu_carrinho': meu_carrinho})\ndef obter_total_carrinho(items_do_carrinho):\n    return sum([item.total_item for item in items_do_carrinho])\ndef adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    tamanho = request.POST.get('tamanho')",
+        "peekOfCode": "def meu_carrinho(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    return render(\n        request, \"produtos/meu_carrinho.html\", context={\"meu_carrinho\": meu_carrinho}\n    )\ndef obter_total_carrinho(items_do_carrinho):\n    return sum([item.total_item for item in items_do_carrinho])\ndef adicionar_no_carrinho(request, produto_id: int):",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1280,7 +1264,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def obter_total_carrinho(items_do_carrinho):\n    return sum([item.total_item for item in items_do_carrinho])\ndef adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    tamanho = request.POST.get('tamanho')\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()",
+        "peekOfCode": "def obter_total_carrinho(items_do_carrinho):\n    return sum([item.total_item for item in items_do_carrinho])\ndef adicionar_no_carrinho(request, produto_id: int):\n    tamanho = request.POST.get(\"tamanho\")\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(\n        carrinho=meu_carrinho, produto=produto",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1289,7 +1273,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def adicionar_no_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    tamanho = request.POST.get('tamanho')\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if not item_existente:\n        item_existente = CarrinhoItem(produto=produto, quantidade=0, carrinho=meu_carrinho)",
+        "peekOfCode": "def adicionar_no_carrinho(request, produto_id: int):\n    tamanho = request.POST.get(\"tamanho\")\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    if not meu_carrinho:\n        meu_carrinho = Carrinho.objects.create(user=request.user)\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(\n        carrinho=meu_carrinho, produto=produto\n    ).first()\n    if not item_existente:",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1298,7 +1282,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def excluir_item(request, item_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    try:\n        #produto = Produto.objects.get(id=produto_id)\n        CarrinhoItem.objects.get(id=item_id).delete()\n        # TODO: remover este DRY\n        context={\n            'meu_carrinho': meu_carrinho,",
+        "peekOfCode": "def excluir_item(request, item_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    try:\n        # produto = Produto.objects.get(id=produto_id)\n        CarrinhoItem.objects.get(id=item_id).delete()\n        # TODO: remover este DRY\n        context = {\n            \"meu_carrinho\": meu_carrinho,",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1307,7 +1291,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def remover_do_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum([item.total_item for item in carrinho])\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(carrinho=meu_carrinho, produto=produto).first()\n    if item_existente:\n        item_existente.quantidade -= 1\n        item_existente.save()\n        if item_existente.quantidade == 0:",
+        "peekOfCode": "def remover_do_carrinho(request, produto_id: int):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum([item.total_item for item in carrinho])\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    produto = Produto.objects.get(id=produto_id)\n    item_existente = CarrinhoItem.objects.filter(\n        carrinho=meu_carrinho, produto=produto\n    ).first()\n    if item_existente:\n        item_existente.quantidade -= 1",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1316,7 +1300,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def calcular_total_carrinho(request):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    return render(request, 'produtos/meu_carrinho.html', {'carrinho': carrinho, 'total_compra': total_compra})\ndef finalizar_compra_whatsapp(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    items_carrinho = CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by(\"-id\")\n    total_compra = obter_total_carrinho(items_carrinho)\n    produtos_texto = \"\\n\".join([f\"  {item.quantidade} x {item.produto.nome}* ({item.produto.descricao}) - Tamanho: {item.produto.tamanho}, Preço R${item.produto.valor},\" for item in items_carrinho])\n    texto_final = \"Olá!\\nGostaria de finalizar a compra. Aqui está a lista de produtos que quero adquirir:\\n\"",
+        "peekOfCode": "def calcular_total_carrinho(request):\n    carrinho = CarrinhoItem.objects.filter(carrinho__user=request.user)\n    total_compra = sum(item.total_item for item in carrinho)\n    return render(\n        request,\n        \"produtos/meu_carrinho.html\",\n        {\"carrinho\": carrinho, \"total_compra\": total_compra},\n    )\ndef finalizar_compra_whatsapp(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1325,7 +1309,7 @@
         "kind": 2,
         "importPath": "loja.produtos.views",
         "description": "loja.produtos.views",
-        "peekOfCode": "def finalizar_compra_whatsapp(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    items_carrinho = CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by(\"-id\")\n    total_compra = obter_total_carrinho(items_carrinho)\n    produtos_texto = \"\\n\".join([f\"  {item.quantidade} x {item.produto.nome}* ({item.produto.descricao}) - Tamanho: {item.produto.tamanho}, Preço R${item.produto.valor},\" for item in items_carrinho])\n    texto_final = \"Olá!\\nGostaria de finalizar a compra. Aqui está a lista de produtos que quero adquirir:\\n\"\n    texto_final += produtos_texto\n    texto_final += f\"\\nTotal da compra: R${total_compra}\\n\" \n    tamanho_da_camiseta = request.POST.get('Rezinho_Imports')\n    texto_final += f\"\\n REZINHO IMPORTS!{tamanho_da_camiseta}\"",
+        "peekOfCode": "def finalizar_compra_whatsapp(request):\n    meu_carrinho = Carrinho.objects.filter(user=request.user).first()\n    items_carrinho = CarrinhoItem.objects.filter(carrinho=meu_carrinho).order_by(\"-id\")\n    total_compra = obter_total_carrinho(items_carrinho)\n    produtos_texto = \"\\n\".join(\n        [\n            f\"  {item.quantidade} x {item.produto.nome}* ({item.produto.descricao}) \"\n            f\"- Tamanho: {item.produto.tamanho}, Preço R${item.produto.valor},\"\n            for item in items_carrinho\n        ]",
         "detail": "loja.produtos.views",
         "documentation": {}
     },
@@ -1388,7 +1372,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'",
+        "peekOfCode": "BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = config(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config(\"DEBUG\", cast=bool)\nALLOWED_HOSTS = config(\"ALLOWED_HOSTS\", cast=Csv())\nAUTH_USER_MODEL = \"base.User\"\nLOGIN_URL = \"/contas/login/\"",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1397,7 +1381,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',",
+        "peekOfCode": "SECRET_KEY = config(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = config(\"DEBUG\", cast=bool)\nALLOWED_HOSTS = config(\"ALLOWED_HOSTS\", cast=Csv())\nAUTH_USER_MODEL = \"base.User\"\nLOGIN_URL = \"/contas/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nLOGOUT_REDIRECT_URL = \"/\"\nINSTALLED_APPS = [\n    \"django.contrib.admin\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1406,7 +1390,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "DEBUG = config('DEBUG', cast=bool)\nALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "DEBUG = config(\"DEBUG\", cast=bool)\nALLOWED_HOSTS = config(\"ALLOWED_HOSTS\", cast=Csv())\nAUTH_USER_MODEL = \"base.User\"\nLOGIN_URL = \"/contas/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nLOGOUT_REDIRECT_URL = \"/\"\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1415,7 +1399,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())\nAUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "ALLOWED_HOSTS = config(\"ALLOWED_HOSTS\", cast=Csv())\nAUTH_USER_MODEL = \"base.User\"\nLOGIN_URL = \"/contas/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nLOGOUT_REDIRECT_URL = \"/\"\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1424,7 +1408,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'base.User'\nLOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "AUTH_USER_MODEL = \"base.User\"\nLOGIN_URL = \"/contas/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nLOGOUT_REDIRECT_URL = \"/\"\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1433,7 +1417,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGIN_URL = '/contas/login/'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "LOGIN_URL = \"/contas/login/\"\nLOGIN_REDIRECT_URL = \"/\"\nLOGOUT_REDIRECT_URL = \"/\"\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1442,7 +1426,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',",
+        "peekOfCode": "LOGIN_REDIRECT_URL = \"/\"\nLOGOUT_REDIRECT_URL = \"/\"\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"collectfast\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1451,7 +1435,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LOGOUT_REDIRECT_URL = '/'\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',\n    'loja.base',",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = \"/\"\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"collectfast\",\n    \"loja.base\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1460,7 +1444,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'collectfast',\n    'loja.base',\n    'loja.produtos',",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"collectfast\",\n    \"loja.base\",\n    \"loja.produtos\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1469,7 +1453,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'loja.urls'",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]\nROOT_URLCONF = \"loja.urls\"",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1478,7 +1462,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "ROOT_URLCONF = 'loja.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "peekOfCode": "ROOT_URLCONF = \"loja.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1487,7 +1471,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1496,7 +1480,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "AUTHENTICATION_BACKENDS = [\n    'django.contrib.auth.backends.ModelBackend',\n]\n# configuração Debug Tollbar\nINTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')\nif DEBUG:\n    INSTALLED_APPS.append('debug_toolbar')\n    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases",
+        "peekOfCode": "AUTHENTICATION_BACKENDS = [\n    \"django.contrib.auth.backends.ModelBackend\",\n]\n# configuração Debug Tollbar\nINTERNAL_IPS = config(\"INTERNAL_IPS\", cast=Csv(), default=\"127.0.0.1\")\nif DEBUG:\n    INSTALLED_APPS.append(\"debug_toolbar\")\n    MIDDLEWARE.insert(0, \"debug_toolbar.middleware.DebugToolbarMiddleware\")\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1505,7 +1489,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default='127.0.0.1')\nif DEBUG:\n    INSTALLED_APPS.append('debug_toolbar')\n    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\ndefault_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')\nparse_database = partial(dj_database_url.parse, conn_max_age=600)\nDATABASES = {\n    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)",
+        "peekOfCode": "INTERNAL_IPS = config(\"INTERNAL_IPS\", cast=Csv(), default=\"127.0.0.1\")\nif DEBUG:\n    INSTALLED_APPS.append(\"debug_toolbar\")\n    MIDDLEWARE.insert(0, \"debug_toolbar.middleware.DebugToolbarMiddleware\")\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\ndefault_db_url = \"sqlite:///\" + os.path.join(BASE_DIR, \"db.sqlite3\")\nparse_database = partial(dj_database_url.parse, conn_max_age=600)\nDATABASES = {\n    \"default\": config(\"DATABASE_URL\", default=default_db_url, cast=parse_database)",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1514,7 +1498,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "default_db_url = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')\nparse_database = partial(dj_database_url.parse, conn_max_age=600)\nDATABASES = {\n    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',",
+        "peekOfCode": "default_db_url = \"sqlite:///\" + os.path.join(BASE_DIR, \"db.sqlite3\")\nparse_database = partial(dj_database_url.parse, conn_max_age=600)\nDATABASES = {\n    \"default\": config(\"DATABASE_URL\", default=default_db_url, cast=parse_database)\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1523,7 +1507,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "parse_database = partial(dj_database_url.parse, conn_max_age=600)\nDATABASES = {\n    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },",
+        "peekOfCode": "parse_database = partial(dj_database_url.parse, conn_max_age=600)\nDATABASES = {\n    \"default\": config(\"DATABASE_URL\", default=default_db_url, cast=parse_database)\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1532,7 +1516,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "DATABASES = {\n    'default': config('DATABASE_URL', default=default_db_url, cast=parse_database)\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {",
+        "peekOfCode": "DATABASES = {\n    \"default\": config(\"DATABASE_URL\", default=default_db_url, cast=parse_database)\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1541,7 +1525,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1550,7 +1534,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'pt-br'\nTIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
+        "peekOfCode": "LANGUAGE_CODE = \"pt-br\"\nTIME_ZONE = \"America/Sao_Paulo\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1559,7 +1543,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'",
+        "peekOfCode": "TIME_ZONE = \"America/Sao_Paulo\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nMEDIA_URL = \"/media/\"",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1568,7 +1552,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"mediafiles\")",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1577,7 +1561,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"mediafiles\")\nAWS_ACCESS_KEY_ID = config(\"AWS_ACCESS_KEY_ID\", default=None)",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1586,7 +1570,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\n# configuração de ambiente de desenvolvimento\nSTATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"mediafiles\")\nAWS_ACCESS_KEY_ID = config(\"AWS_ACCESS_KEY_ID\", default=None)\nCOLLECTFAST_ENABLED = False",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1595,7 +1579,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"mediafiles\")\nAWS_ACCESS_KEY_ID = config(\"AWS_ACCESS_KEY_ID\", default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config(\"AWS_SECRET_ACCESS_KEY\")",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1604,7 +1588,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, \"staticfiles\")\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"mediafiles\")\nAWS_ACCESS_KEY_ID = config(\"AWS_ACCESS_KEY_ID\", default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config(\"AWS_SECRET_ACCESS_KEY\")\n    AWS_STORAGE_BUCKET_NAME = config(\"AWS_STORAGE_BUCKET_NAME\")",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1613,7 +1597,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"mediafiles\")\nAWS_ACCESS_KEY_ID = config(\"AWS_ACCESS_KEY_ID\", default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config(\"AWS_SECRET_ACCESS_KEY\")\n    AWS_STORAGE_BUCKET_NAME = config(\"AWS_STORAGE_BUCKET_NAME\")\n    AWS_S3_OBJECT_PARAMETERS = {",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1622,7 +1606,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')\nAWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }\n    AWS_PRELOAD_METADATA = True",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"mediafiles\")\nAWS_ACCESS_KEY_ID = config(\"AWS_ACCESS_KEY_ID\", default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config(\"AWS_SECRET_ACCESS_KEY\")\n    AWS_STORAGE_BUCKET_NAME = config(\"AWS_STORAGE_BUCKET_NAME\")\n    AWS_S3_OBJECT_PARAMETERS = {\n        \"CacheControl\": \"max-age=86400\",",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1631,7 +1615,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID', default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }\n    AWS_PRELOAD_METADATA = True\n    AWS_AUTO_CREATE_BUCKET = False",
+        "peekOfCode": "AWS_ACCESS_KEY_ID = config(\"AWS_ACCESS_KEY_ID\", default=None)\nCOLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config(\"AWS_SECRET_ACCESS_KEY\")\n    AWS_STORAGE_BUCKET_NAME = config(\"AWS_STORAGE_BUCKET_NAME\")\n    AWS_S3_OBJECT_PARAMETERS = {\n        \"CacheControl\": \"max-age=86400\",\n    }",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1640,7 +1624,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "COLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')\n    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')\n    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }\n    AWS_PRELOAD_METADATA = True\n    AWS_AUTO_CREATE_BUCKET = False\n    AWS_QUERYSTRING_AUTH = True",
+        "peekOfCode": "COLLECTFAST_ENABLED = False\n# STORAGE CONFIGURATION IN S3 AWS\n# ------------------------------------------------------------------------------\nif AWS_ACCESS_KEY_ID:\n    AWS_SECRET_ACCESS_KEY = config(\"AWS_SECRET_ACCESS_KEY\")\n    AWS_STORAGE_BUCKET_NAME = config(\"AWS_STORAGE_BUCKET_NAME\")\n    AWS_S3_OBJECT_PARAMETERS = {\n        \"CacheControl\": \"max-age=86400\",\n    }\n    AWS_PRELOAD_METADATA = True",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1649,7 +1633,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')\nSENTRY_DSN = config('SENTRY_DSN', default=None)\nif SENTRY_DSN:\n    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\nSECURE_PROXY_SSL_HEADER = (\"HTTP_X_FORWARDED_PROTO\", \"https\")\nSENTRY_DSN = config(\"SENTRY_DSN\", default=None)\nif SENTRY_DSN:\n    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1658,7 +1642,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')\nSENTRY_DSN = config('SENTRY_DSN', default=None)\nif SENTRY_DSN:\n    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])",
+        "peekOfCode": "SECURE_PROXY_SSL_HEADER = (\"HTTP_X_FORWARDED_PROTO\", \"https\")\nSENTRY_DSN = config(\"SENTRY_DSN\", default=None)\nif SENTRY_DSN:\n    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1667,7 +1651,7 @@
         "kind": 5,
         "importPath": "loja.settings",
         "description": "loja.settings",
-        "peekOfCode": "SENTRY_DSN = config('SENTRY_DSN', default=None)\nif SENTRY_DSN:\n    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])",
+        "peekOfCode": "SENTRY_DSN = config(\"SENTRY_DSN\", default=None)\nif SENTRY_DSN:\n    sentry_sdk.init(dsn=SENTRY_DSN, integrations=[DjangoIntegration()])",
         "detail": "loja.settings",
         "documentation": {}
     },
@@ -1676,7 +1660,7 @@
         "kind": 5,
         "importPath": "loja.urls",
         "description": "loja.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', include('loja.base.urls')),\n    path('produtos/', include('loja.produtos.urls')),\n    path('contas/', include('django.contrib.auth.urls')),\n    path('admin/', admin.site.urls),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(\n        path('__debug__/', include(debug_toolbar.urls))",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", include(\"loja.base.urls\")),\n    path(\"produtos/\", include(\"loja.produtos.urls\")),\n    path(\"contas/\", include(\"django.contrib.auth.urls\")),\n    path(\"admin/\", admin.site.urls),\n] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nif settings.DEBUG:\n    import debug_toolbar\n    urlpatterns.append(path(\"__debug__/\", include(debug_toolbar.urls)))",
         "detail": "loja.urls",
         "documentation": {}
     },

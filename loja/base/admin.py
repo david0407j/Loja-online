@@ -33,7 +33,6 @@ class UserAdmin(admin.ModelAdmin):
     change_user_password_template = None
     fieldsets = (
         (None, {"fields": ("first_name", "email", "password")}),
-
         (
             _("Permissions"),
             {
@@ -215,6 +214,3 @@ class UserAdmin(admin.ModelAdmin):
             request.POST = request.POST.copy()
             request.POST["_continue"] = 1
         return super().response_add(request, obj, post_url_continue)
-
-    
-

@@ -20,20 +20,14 @@ from django.urls import include, path
 from django.conf.urls.static import static
 
 
-
-
 urlpatterns = [
-    path('', include('loja.base.urls')),
-    path('produtos/', include('loja.produtos.urls')),
-    path('contas/', include('django.contrib.auth.urls')),
-    path('admin/', admin.site.urls),
-   
-
+    path("", include("loja.base.urls")),
+    path("produtos/", include("loja.produtos.urls")),
+    path("contas/", include("django.contrib.auth.urls")),
+    path("admin/", admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
 
-    urlpatterns.append(
-        path('__debug__/', include(debug_toolbar.urls))
-    )
+    urlpatterns.append(path("__debug__/", include(debug_toolbar.urls)))
