@@ -1,38 +1,128 @@
 <footer class="main-footer mt-5 pt-4 text-light">
   <div class="container">
     <div class="row">
+      <!-- Seção de Contato -->
       <div class="col-lg-6">
-        <div class="d-flex flex-column flex-lg-row justify-content-lg-start align-items-lg-start">
-          <div class="rights mb-3 mb-lg-0">
-            <h3>Entre em Contato</h3>
-            <address>
-              +55 31 971726994
-              <br />
-              <a href="mailto:reizinhomp@gmail.com" class="text-light">reizinhomp@gmail.com</a>
-            </address>
+        <h3>Entre em Contato</h3>
+        <p>Tem alguma dúvida? Envie uma mensagem!</p>
+        <form id="whatsappForm">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Seu Nome" required>
           </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="d-flex flex-column flex-lg-row justify-content-lg-end align-items-lg-end">
-          <div class="rights mb-3 mb-lg-0">
-            {% now 'Y' %} Reizinho-importes. Todos direitos reservados.
+          <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="Seu E-mail" required>
           </div>
-          <div class="social-icons ms-lg-3">
-            <a href="https://wa.me/3191235709" target="_blank">
-              <svg enable-background="new 0 0 512 512" width="40" height="40" version="1.1" viewBox="0 0 512 512"
-                xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M256.064,0h-0.128l0,0C114.784,0,0,114.816,0,256c0,56,18.048,107.904,48.736,150.048l-31.904,95.104  l98.4-31.456C155.712,496.512,204,512,256.064,512C397.216,512,512,397.152,512,256S397.216,0,256.064,0z"
-                  fill="#4CAF50" />
-                <path
-                  d="m405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z"
-                  fill="#FAFAFA" />
-              </svg>
-            </a>
+          <div class="mb-3">
+            <textarea class="form-control" id="message" rows="3" placeholder="Sua Mensagem" required></textarea>
           </div>
+          <button type="submit" class="btn btn-success">Enviar via WhatsApp</button>
+          </form>
+          </div>
+          
+
+      <!-- Seção de Direitos e Redes Sociais -->
+      <div class="col-lg-6 d-flex flex-column align-items-lg-end">
+        <p>&copy; {% now 'Y' %} Reizinho Importes. Todos os direitos reservados.</p>
+        <div class="social-icons">
+          <a href="https://wa.me/3191235709" target="_blank">
+            <svg width="40" height="40" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="M256 0C114.784 0 0 114.816 0 256c0 56 18.048 107.904 48.736 150.048L16.832 501.152 115.232 469.696C155.712 496.512 204 512 256 512c141.152 0 256-114.848 256-256S397.152 0 256 0z" fill="#4CAF50"/>
+              <path d="M405.02 361.5c-6.176 17.44-30.688 31.904-50.24 36.128-13.376 2.848-30.848 5.12-89.664-19.264-75.232-31.168-123.68-107.62-127.46-112.58-3.616-4.96-30.4-40.48-30.4-77.216s18.656-54.624 26.176-62.304c6.176-6.304 16.384-9.184 26.176-9.184 3.168 0 6.016 0.16 8.576 0.288 7.52 0.32 11.296 0.768 16.256 12.64 6.176 14.88 21.216 51.616 23.008 55.392 1.824 3.776 3.648 8.896 1.088 13.856-2.4 5.12-4.512 7.392-8.288 11.744s-7.36 7.68-11.136 12.352c-3.456 4.064-7.36 8.416-3.008 15.936 4.352 7.36 19.392 31.904 41.536 51.616 28.576 25.44 51.744 33.568 60.032 37.024 6.176 2.56 13.536 1.952 18.048-2.848 5.728-6.176 12.8-16.416 20-26.496 5.12-7.232 11.584-8.128 18.368-5.568 6.912 2.4 43.488 20.48 51.008 24.224 7.52 3.776 12.48 5.568 14.304 8.736 1.792 3.168 1.792 18.048-4.384 35.52z" fill="#FAFAFA"/>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita o envio tradicional do formulário
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappNumber = "3191235709"; // Número do WhatsApp sem o "+55"
+    
+    let whatsappMessage = `Olá! Meu nome é ${name}, meu e-mail é ${email} e gostaria de falar sobre: ${message}`;
+    
+    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, "_blank"); // Abre o link no WhatsApp
+  });
+</script>
+
+<style>
+  .main-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+  }
+
+  .main-footer h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .main-footer form {
+    max-width: 400px;
+  }
+
+  .form-control {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+  }
+
+  .form-control::placeholder {
+    color: #bbb;
+  }
+
+  .btn-success {
+    background-color: #4CAF50;
+    border: none;
+  }
+
+  .btn-success:hover {
+    background-color: #3e8e41;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.1);
+  }
+
+  .social-icons svg {
+    fill: #4CAF50;
+    transition: fill 0.3s ease;
+  }
+
+  .social-icons a:hover svg {
+    fill: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .main-footer .row {
+      text-align: center;
+    }
+
+    .main-footer .d-flex {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+  }
+</style>

@@ -1,66 +1,214 @@
 {% extends 'base/base.html' %}
 {% load static %}
-<title>{% block title %} Reizinho-importe{% endblock title %}</title>
-{% block description %}Masculino{% endblock description%}
+<title>{% block title %}Reizinho Imports{% endblock title %}</title>
+{% block description %}Masculino{% endblock description %}
 
-<!-- background-image: url({% static 'img/silva.jpg'%}); -->
 {% block body %}
-</head>
+<!-- Adicionando animações com Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- Custom CSS -->
 <style>
     * {
         margin: 0;
         padding: 0;
-        box-sizing: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        padding-top: 20px;
     }
 
     {% if categoria.imagem %}
     body {
-        width: 100vw;
-        height: 100vh;
-        background-image: url({{categoria.imagem.url}})
+        background-image: url({{ categoria.imagem.url }});
+        background-size: cover;
+        background-position: center;
     }
     {% endif %}
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .product-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .card-body {
+        padding: 20px;
+        background-color: #fff;
+    }
+
+    .fw-bolder {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .badge {
+        font-size: 14px;
+        padding: 5px 10px;
+        background-color: #28a745;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    .d-flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-warning {
+        color: #ffc107;
+    }
+
+    .btn-outline-dark {
+        color: #000;
+        border-color: #000;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-outline-dark:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .price {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .card-footer {
+        background-color: transparent;
+        border-top: none;
+        text-align: center;
+    }
+
+    .row-cols-2, .row-cols-md-3, .row-cols-xl-4 {
+        margin-bottom: 15px;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .row-cols-2 {
+            row-gap: 20px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .row-cols-md-3, .row-cols-xl-4 {
+            display: block;
+        }
+
+        .card-body {
+            padding: 10px;
+        }
+    }
+
+    /* Estilos para o nome da camiseta sobre a imagem */
+    .card-img-container {
+        position: relative;
+    }
+
+    .card-img-top {
+        position: relative;
+        z-index: 1;
+    }
+
+    .product-name {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 5px;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+    .card:hover .product-name {
+        transform: translateY(-5px);
+    }
+
+    .card:hover .product-image {
+        transform: scale(1.05);
+    }
 </style>
-<body>
+
 <!-- Section-->
-<div class="container px-4 px-lg-5 mt-5">
-  <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-    <div class="row" style="margin-top: 10px">
-      {% for name in camisetas %}
-      <div class="col mb-5">
-        <div class="card h-100">
-          <!-- Sale badge-->
-          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">{{ name.nome }}
-          </div>
-          <!-- Product image-->
-          <img class="card-img-top product-image" src="{{ name.imagem.url }}" alt="{{ name.nome }}" />
-          <!-- Product details-->
-          <div class="card-body p-4">
-            <div class="text-center">
-              <!-- Product name-->
-              <h5 class="fw-bolder">{{ name.descricao }}</h5>
-              <!-- Product price-->
-              <!-- Product reviews-->
-              <div class="d-flex justify-content-center small text-warning mb-2">
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
-                <div class="bi-star-fill"></div>
+<div class="container">
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+        {% for name in camisetas %}
+        <div class="col mb-5">
+            <div class="card h-100 animate__animated animate__fadeInUp">
+                <!-- Sale badge-->
+                <div class="badge position-absolute animate__animated animate__zoomIn" style="top: 0.5rem; right: 0.5rem">{{ name.nome }}</div>
+
+                <!-- Product image container -->
+                <div class="card-img-container">
+                    <!-- Product image-->
+                    <img class="card-img-top product-image animate__animated animate__zoomIn" src="{{ name.imagem.url }}" alt="{{ name.nome }}" />
+                    
+                    <!-- Product name on image -->
+                    <div class="product-name animate__animated animate__fadeInDown">{{ name.nome }}</div>
+                </div>
+
+                <!-- Product details-->
+                <div class="card-body animate__animated animate__fadeInUp">
+                    <div class="text-center">
+                        <h5 class="fw-bolder">{{ name.descricao }}</h5>
+                        <div class="d-flex justify-content-center small text-warning mb-2">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <span class="price">R$ {{ name.valor }}</span>
+                    </div>
+                </div>
+
+                <!-- Product actions-->
+                <div class="card-footer animate__animated animate__fadeInUp">
+                    <div class="text-center">
+                        <a class="btn btn-outline-dark" href="{% url 'produtos:carrinho.adicionar' produto_id=name.id %}">
+                            Adicionar ao carrinho
+                        </a>
+                    </div>
+                </div>
             </div>
-              <span class="text-muted  text-decoration-line-through"></span>
-              <R1>R$ {{ name.valor}}</R1>
-            </div>
-          </div>
-          <!-- Product actions-->
-          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
-              href="{% url 'produtos:carrinho.adicionar' produto_id=name.id %}">Adicionar ao carrinho</a></div>
-          </div>
         </div>
-      </div>
-      {% endfor %}
+        {% endfor %}
     </div>
-  </div>
 </div>
+
 {% endblock body %}

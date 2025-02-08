@@ -1,108 +1,121 @@
 {% extends 'base/base.html' %}
 {% load static %}
-<title>{% block title %}Reizinho-imports- home{% endblock title %}</title>
+
+<title>{% block title %}Reizinho Imports - Home{% endblock title %}</title>
+
 {% block body %}
 <div class="jumbotron">
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-            <header class="bg-dark py-5">
-                <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder"> Produtos importados </h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Enviamos para todo o Brasil!
-                        aceitado pagamento via cartão, depósito e transferêcia e pix <i class="bi bi-credit-card-2-back"></i><i
-                            class="bi bi-credit-card-2-back-fill"></i>
-                        <i class="bi bi-credit-card-fill"></i><i class="bi bi-credit-card-2-back"></i>
-                        <head>
-                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-***" crossorigin="anonymous">
-                          </head>
-                          <i class="fab fa-cc-visa"></i> <!-- Ícone Visa -->
-                          <i class="fab fa-cc-mastercard"></i> <!-- Ícone Mastercard -->
-                         <i class="fab fa-cc-amex"></i> <!-- Ícone American Express -->
-                        <i class="fab fa-cc-discover"></i> <!-- Ícone Discover -->
-                       <i class="fab fa-cc-diners-club"></i> <!-- Ícone Diners Club -->
-                       <i class="fab fa-cc-jcb"></i> <!-- Ícone JCB -->
-                       <i class="fab fa-cc-maestro"></i> <!-- Ícone Maestro -->
-                       <i class="fab fa-cc-elo"></i> <!-- Ícone Elo -->
-  
+                <header class="bg-dark py-5 text-center text-white animate__animated animate__fadeInDown">
+                    <h1 class="display-4 fw-bolder">Produtos Importados</h1>
+                    <p class="lead fw-normal text-white-50 mb-3">
+                        Enviamos para todo o Brasil! Aceitamos pagamento via cartão, depósito, transferência e PIX.
+                    </p>
+                    <div class="payment-icons mt-2">
+                        <i class="fab fa-cc-visa fa-2x mx-2"></i>
+                        <i class="fab fa-cc-mastercard fa-2x mx-2"></i>
+                        <i class="fab fa-cc-amex fa-2x mx-2"></i>
+                        <i class="fab fa-cc-discover fa-2x mx-2"></i>
+                        <i class="fab fa-cc-diners-club fa-2x mx-2"></i>
+                        <i class="fab fa-cc-jcb fa-2x mx-2"></i>
+                        <i class="fab fa-cc-maestro fa-2x mx-2"></i>
+                        <i class="fab fa-cc-elo fa-2x mx-2"></i>
+                    </div>
+                </header>
+
+                <!-- Carrossel de Imagens -->
+                <div id="carouselExampleSlidesOnly" class="carousel slide mt-4 animate__animated animate__zoomIn" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'img/reizinho.ico' %}" class="d-block mx-auto img-fluid rounded-circle shadow-lg" style="max-width: 120px;" alt="Logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instagram da Loja -->
+                <p class="text-center mt-4">
+                    <span class="fw-bold text-dark">Instagram da Loja:</span>
+                    <a href="https://www.instagram.com/reizinhoimportsofc" target="_blank" class="text-decoration-none ms-2">
+                        <i class="bi bi-instagram text-danger fs-4"></i> @reizinhoimportsofc
+                    </a>
+                </p>
+
+                <!-- Seção de Informações -->
+                <div class="container">
+                    <p class="lead fw-normal text-center mt-3 animate__animated animate__fadeIn">
+                        <strong>O empreendedorismo</strong> é o processo de identificar oportunidades, desenvolver ideias inovadoras e criar valor por meio da implementação dessas ideias. Os empreendedores são indivíduos visionários que estão dispostos a assumir riscos, enfrentar desafios e buscar soluções criativas para problemas.
                     </p>
                 </div>
-            </header>
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="{% static 'img/reizinho.ico' %}" class="d-block mx-auto img-fluid" style="max-width: 100px; max-height: 100px;" alt="Imagem">
-                  </div>
-                </div>
-              </div>
-                        <!-- Instagram da loja -->
-                        <p class="text-center mt-3">
-                            <span style="font-family: 'Arial', sans-serif; font-size: 18px; font-weight: bold; color: #333;">Instagram da loja:</span>
-                            <a href="https://www.instagram.com/reizinhoimportsofc?igsh=NTJvcWVqY2tlcGIz" target="_blank">
-                                <i class="bi bi-instagram"></i>
-                              </a>
-                              <a href="https://www.instagram.com/reizinhoimportsofc?igsh=NTJvcWVqY2tlcGIz" target="_blank">Reizinho-importe</a>
-                          </p>
-                    <p class="lead fw-normal">
-                        <span class="fw-bold">O empreendedorismo</span> é o processo de identificar oportunidades, desenvolver ideias inovadoras e
-                        criar valor por meio da implementação dessas ideias. Os empreendedores são indivíduos visionários
-                        que estão dispostos a assumir riscos, enfrentar desafios e buscar soluções criativas para
-                        problemas.
-                    </p>
-                </div>
-            </div>
-                <!-- Outro conteúdo do texto aqui... --><div class="container">
-  <div class="row">
-    <div class="col">
-      <h1 class="fw-light text-center mt-4 mb-0">Produtos da Loja</h1>
-    </div>
-  </div>
-</div>
 
-<div class="container">
-  <div class="row mt-4">
-
-               
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/tenis.ico' %}" class="img-fluid rounded" alt="Tênis">
+                <!-- Produtos da Loja -->
+                <div class="container">
+                    <div class="row text-center">
+                        <div class="col-md-12">
+                            <h1 class="fw-light mt-4 mb-0">Produtos da Loja</h1>
+                        </div>
                     </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/bone.ico' %}" class="img-fluid rounded" alt="Boné">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/calçao.ico' %}" class="img-fluid rounded" alt="Calção">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/jaqueta.ico' %}" class="img-fluid rounded" alt="Jaqueta">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/meia.ico' %}" class="img-fluid rounded" alt="Meia">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/basquete.ico' %}" class="img-fluid rounded" alt="Basquete">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/perfume.ico' %}" class="img-fluid rounded" alt="Perfume">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/feminino.ico' %}" class="img-fluid rounded" alt="Feminina">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/tenis2.ico' %}" class="img-fluid rounded" alt="Tênis 2">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/mila.ico' %}" class="img-fluid rounded" alt="Mila">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/flamengo.ico' %}" class="img-fluid rounded" alt="Flamengo">
-                    </div>
-                    <div class="col-sm-6 col-md-3 mb-3">
-                        <img src="{% static 'img/morro.ico' %}" class="img-fluid rounded" alt="Flamengo">
+                    <div class="row justify-content-center mt-4">
+                        <!-- Produtos Aqui -->
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/tenis.ico' %}" class="img-fluid rounded" alt="Tênis">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/bone.ico' %}" class="img-fluid rounded" alt="Boné">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/calçao.ico' %}" class="img-fluid rounded" alt="Calção">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/jaqueta.ico' %}" class="img-fluid rounded" alt="Jaqueta">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/meia.ico' %}" class="img-fluid rounded" alt="Meia">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/basquete.ico' %}" class="img-fluid rounded" alt="Basquete">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/perfume.ico' %}" class="img-fluid rounded" alt="Perfume">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/feminino.ico' %}" class="img-fluid rounded" alt="Feminina">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/tenis2.ico' %}" class="img-fluid rounded" alt="Tênis 2">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/mila.ico' %}" class="img-fluid rounded" alt="Mila">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/flamengo.ico' %}" class="img-fluid rounded" alt="Flamengo">
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-3">
+                            <img src="{% static 'img/morro.ico' %}" class="img-fluid rounded" alt="Flamengo">
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
 </div>
+
+<!-- Adicionando animações do Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<!-- Ícones do FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Fonte do Google Fonts (Roboto) -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Adicionando estilo para o corpo com a nova fonte -->
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
 
 {% endblock body %}
